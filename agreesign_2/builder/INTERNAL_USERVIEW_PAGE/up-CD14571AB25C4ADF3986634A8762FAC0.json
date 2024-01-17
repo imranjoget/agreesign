@@ -1,0 +1,276 @@
+{
+    "elements": [
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "elements": [{
+                            "className": "org.joget.apps.userview.lib.HtmlPage",
+                            "properties": {
+                                "userviewCacheDuration": "20",
+                                "userviewCacheScope": "",
+                                "label": "Rich Text",
+                                "id": "9C7561E6E8F348D994A822826E03B985",
+                                "enableOffline": "",
+                                "customId": "",
+                                "content": "<h1><span style=\"color: rgb(22, 119, 255); font-size: 36pt;\"><strong>Mortage Master<\/strong><\/span><\/h1>\n<p style=\"text-align: justify;\"><strong>Mortgage Master<\/strong> is a cutting-edge application designed to revolutionize your mortgage management experience. With its intuitive interface and powerful features, Mortgage Master simplifies the complexities of mortgage tracking, helping you stay in control of your financial journey. Whether you're a seasoned homeowner or a first-time buyer, our app provides a comprehensive suite of tools to monitor your mortgage status, track payments, and explore insightful analytics. Stay informed about interest rates, receive timely payment reminders, and effortlessly manage your mortgage portfolio. Mortgage Master is your trusted ally in navigating the world of homeownership, ensuring a seamless and empowered financial future. Experience the convenience of advanced mortgage management &ndash; welcome to Mortgage Master.<\/p>"
+                            }
+                        }],
+                        "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                        "properties": {
+                            "style-mobile-max-width": "100%",
+                            "style-tablet-flex": "0 0 100%",
+                            "style-flex": "0 0 100%",
+                            "style-mobile-flex": "0 0 100%",
+                            "style-max-width": "100%",
+                            "style-tablet-max-width": "100%"
+                        }
+                    },
+                    {
+                        "elements": [],
+                        "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                        "properties": {
+                            "style-mobile-max-width": "0%",
+                            "style-tablet-flex": "0 0 0%",
+                            "style-flex": "0 0 40%",
+                            "style-mobile-flex": "0 0 0%",
+                            "style-max-width": "40%",
+                            "style-tablet-max-width": "0%",
+                            "style-tablet-display": "none"
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.userview.lib.component.ColumnsComponent",
+                "properties": {
+                    "attr-data-events-listening": [],
+                    "gutter": "5px",
+                    "col-1-style-tablet-display": "none",
+                    "columns": [
+                        {
+                            "style-mobile-max-width": "100%",
+                            "style-max-width": "100%",
+                            "style-tablet-max-width": "100%"
+                        },
+                        {
+                            "style-mobile-max-width": "0%",
+                            "style-max-width": "40%",
+                            "style-tablet-max-width": "0%"
+                        }
+                    ],
+                    "css-mobile-stack-columns": "true",
+                    "id": "9DF5B390293942A1532603C4ABC7FCBD",
+                    "customId": ""
+                }
+            }],
+            "className": "org.joget.apps.userview.lib.component.ContainerComponent",
+            "properties": {
+                "attr-data-events-listening": [],
+                "style-background-color": "var(--theme-content-background, #ffffffcc)",
+                "style-margin-bottom": "10px",
+                "id": "8D02B9B0F760494779C84D79A9DF1EE8",
+                "customId": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.userview.lib.component.HeadingComponent",
+                        "properties": {
+                            "attr-data-events-listening": [],
+                            "style-color": "#1677FF",
+                            "textContent": "How to create contract?",
+                            "id": "BE2C5C92F5A94B189F0AA8A515905339",
+                            "tagName": "h3",
+                            "customId": ""
+                        }
+                    },
+                    {
+                        "elements": [
+                            {
+                                "elements": [{
+                                    "className": "org.joget.apps.userview.lib.HtmlPage",
+                                    "properties": {
+                                        "userviewCacheDuration": "20",
+                                        "userviewCacheScope": "",
+                                        "enableOffline": "",
+                                        "id": "376FEC0349BE4BFC5B13528E0D3A75BC",
+                                        "label": "Rich Text",
+                                        "customId": "",
+                                        "content": "<p style=\"text-align: left;\"><span style=\"font-size: 14pt;\"><strong>1️\u20e3 Fill up the contract form<\/strong><\/span><br><span style=\"font-size: 14pt; color: rgb(102, 102, 102);\">Fill up the contract form and system will generate contract pdf file.<\/span><\/p>"
+                                    }
+                                }],
+                                "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                                "properties": {"id": "A10BBFDC482F4B7B1099A3B92DC2D502"}
+                            },
+                            {
+                                "elements": [{
+                                    "className": "org.joget.apps.userview.lib.HtmlPage",
+                                    "properties": {
+                                        "userviewCacheDuration": "20",
+                                        "userviewCacheScope": "",
+                                        "enableOffline": "",
+                                        "id": "51BBB01AFFCE419E3E7693C2C8551B5D",
+                                        "label": "Rich Text",
+                                        "customId": "",
+                                        "content": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 14pt;\">2️\u20e3 Trigger Document Sign App<\/span><\/strong><br><span style=\"font-size: 14pt; color: rgb(102, 102, 102);\">Start the document signinig process and assign the signatories and get the contract sign.<\/span><\/p>"
+                                    }
+                                }],
+                                "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                                "properties": {"id": "C585E7F53648422DD48738FC764EB0C6"}
+                            },
+                            {
+                                "elements": [{
+                                    "className": "org.joget.apps.userview.lib.HtmlPage",
+                                    "properties": {
+                                        "userviewCacheDuration": "20",
+                                        "userviewCacheScope": "",
+                                        "enableOffline": "",
+                                        "id": "0536A524ECFB4644320DF4B98F6F167B",
+                                        "label": "Rich Text",
+                                        "customId": "",
+                                        "content": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 14pt;\">3️\u20e3 Upload to FileCloud<\/span><\/strong><br><span style=\"color: rgb(102, 102, 102); font-size: 14pt;\">Once contract has been sign, intiait the seamless FileCloud upload.<\/span><\/p>"
+                                    }
+                                }],
+                                "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                                "properties": {"id": "B875C2D770CC44CD165D05808C4A23C1"}
+                            }
+                        ],
+                        "className": "org.joget.apps.userview.lib.component.ColumnsComponent",
+                        "properties": {
+                            "attr-data-events-listening": [],
+                            "gutter": "5px",
+                            "columns": [
+                                {
+                                    "style-mobile-max-width": "",
+                                    "style-max-width": "",
+                                    "style-tablet-max-width": ""
+                                },
+                                {
+                                    "style-mobile-max-width": "",
+                                    "style-max-width": "",
+                                    "style-tablet-max-width": ""
+                                },
+                                {
+                                    "style-mobile-max-width": "",
+                                    "style-max-width": "",
+                                    "style-tablet-max-width": ""
+                                }
+                            ],
+                            "css-mobile-stack-columns": "true",
+                            "id": "3FB6BBDF646E47E4149633C0139D92BD",
+                            "customId": ""
+                        }
+                    },
+                    {
+                        "elements": [
+                            {
+                                "elements": [],
+                                "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                                "properties": {"id": "FF78EE055A5E4CA4D7CA651B7AFFE3B1"}
+                            },
+                            {
+                                "elements": [],
+                                "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                                "properties": {"id": "B894FF63BAED41352A434A9BC4F1FCDB"}
+                            },
+                            {
+                                "elements": [],
+                                "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                                "properties": {"id": "E307ED38ED174C5AFA5A083E13199EEC"}
+                            }
+                        ],
+                        "className": "org.joget.apps.userview.lib.component.ColumnsComponent",
+                        "properties": {
+                            "attr-data-events-listening": [],
+                            "gutter": "5px",
+                            "columns": [
+                                {
+                                    "style-mobile-max-width": "",
+                                    "style-max-width": "",
+                                    "style-tablet-max-width": ""
+                                },
+                                {
+                                    "style-mobile-max-width": "",
+                                    "style-max-width": "",
+                                    "style-tablet-max-width": ""
+                                },
+                                {
+                                    "style-mobile-max-width": "",
+                                    "style-max-width": "",
+                                    "style-tablet-max-width": ""
+                                }
+                            ],
+                            "css-mobile-stack-columns": "true",
+                            "id": "8E4D0F644CEA4D618B6BF548A5FDA0E0",
+                            "customId": ""
+                        }
+                    },
+                    {
+                        "elements": [
+                            {
+                                "elements": [],
+                                "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                                "properties": {"id": "EAA2477C24C641FEBDA2BC911894950A"}
+                            },
+                            {
+                                "elements": [],
+                                "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                                "properties": {"id": "ADC8F6DAF29A4113C0EDD8DFE9E3DE80"}
+                            }
+                        ],
+                        "className": "org.joget.apps.userview.lib.component.ColumnsComponent",
+                        "properties": {
+                            "attr-data-events-listening": [],
+                            "gutter": "5px",
+                            "columns": [
+                                {
+                                    "style-mobile-max-width": "",
+                                    "style-max-width": "",
+                                    "style-tablet-max-width": ""
+                                },
+                                {
+                                    "style-mobile-max-width": "",
+                                    "style-max-width": "",
+                                    "style-tablet-max-width": ""
+                                }
+                            ],
+                            "css-mobile-stack-columns": "true",
+                            "id": "07277D1A8A2E486D26F76799A0DB4EC0",
+                            "customId": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.userview.lib.component.ContainerComponent",
+                "properties": {
+                    "attr-data-events-listening": [],
+                    "style-background-color": "var(--theme-content-background, #ffffffcc)",
+                    "style-padding-right": "30px",
+                    "style-margin-top": "10px",
+                    "style-padding-bottom": "30px",
+                    "id": "3575D9BE8C844CD3FE7407E7C2AFE502",
+                    "style-padding-top": "30px",
+                    "customId": "",
+                    "style-padding-left": "30px"
+                }
+            }],
+            "className": "org.joget.apps.userview.lib.component.ContainerComponent",
+            "properties": {"id": "EE5D2D629143494E67A8CE309B8CF13F"}
+        },
+        {
+            "elements": [],
+            "className": "org.joget.apps.userview.lib.component.ContainerComponent",
+            "properties": {
+                "attr-data-events-listening": [],
+                "style-padding-right": "0px",
+                "style-padding-bottom": "0px",
+                "id": "CB37EDC41A824D6824D6036AFEE5E1AC",
+                "style-padding-top": "0px",
+                "customId": "",
+                "style-padding-left": "0px"
+            }
+        }
+    ],
+    "className": "org.joget.apps.userview.model.UserviewPage",
+    "properties": {"id": "up-CD14571AB25C4ADF3986634A8762FAC0"}
+}

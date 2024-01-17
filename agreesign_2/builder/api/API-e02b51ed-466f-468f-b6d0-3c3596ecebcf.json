@@ -1,0 +1,17 @@
+{
+    "elements": [{
+        "className": "org.joget.api.lib.AppFormAPI",
+        "properties": {
+            "formDefId": "request",
+            "ignorePermission": "true",
+            "id": "534ECA9E-3296-4B95-01E0-E5C460E79C32",
+            "label": "",
+            "ENABLED_PATHS": "post:/addWithFiles"
+        }
+    }],
+    "properties": {
+        "name": "Create New Request",
+        "description": "",
+        "id": "API-e02b51ed-466f-468f-b6d0-3c3596ecebcf"
+    }
+}

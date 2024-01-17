@@ -1,0 +1,1005 @@
+{
+    "className": "org.joget.apps.userview.model.Userview",
+    "categories": [
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [
+                {
+                    "className": "org.joget.apps.userview.lib.FormMenu",
+                    "properties": {
+                        "loadDataWithKey": "",
+                        "redirectUrlOnCancel": "",
+                        "actionOnCancel": "",
+                        "redirectTargetOnCancel": "top",
+                        "permission_rules": {
+                            "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                            "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {}
+                        },
+                        "customFooter": "",
+                        "paramName": "id",
+                        "enableOffline": "",
+                        "afterSavedReloadTarget": "true",
+                        "customId": "home",
+                        "showInPopupDialog": "",
+                        "readonly": "",
+                        "cancelButtonLabel": "",
+                        "actionAfterSaved": "",
+                        "id": "cb523c59-cb89-439d-aaa4-8f109e5e1654",
+                        "redirectUrlAfterComplete": "C92F3D5A983A40408400F7ADAA34BF40",
+                        "fieldPassover": "id",
+                        "formId": "request",
+                        "customHeader": "",
+                        "permissionHidden": "",
+                        "fieldPassoverMethod": "param",
+                        "redirectTargetOnComplete": "",
+                        "keyName": "",
+                        "label": "<i class=\"zmdi zmdi-home\"><\/i> Home",
+                        "userviewCacheDuration": "20",
+                        "messageShowAfterComplete": "",
+                        "submitButtonLabel": "Sign Now",
+                        "userviewCacheScope": "",
+                        "permissionDeny": "true",
+                        "readonlyLabel": "true"
+                    }
+                },
+                {
+                    "className": "org.joget.apps.userview.lib.FormMenu",
+                    "properties": {
+                        "loadDataWithKey": "",
+                        "redirectUrlOnCancel": "",
+                        "actionOnCancel": "",
+                        "redirectTargetOnCancel": "top",
+                        "permission_rules": {
+                            "c57a0715-0abf-8002-01f2-b775d3c23a4b": {
+                                "permissionHidden": "",
+                                "permissionDeny": "true"
+                            },
+                            "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {
+                                "permissionHidden": "",
+                                "permissionDeny": "true"
+                            }
+                        },
+                        "customFooter": "",
+                        "paramName": "id",
+                        "enableOffline": "",
+                        "afterSavedReloadTarget": "true",
+                        "customId": "homepage",
+                        "showInPopupDialog": "",
+                        "readonly": "",
+                        "cancelButtonLabel": "",
+                        "actionAfterSaved": "",
+                        "id": "567f0e62-337a-4842-ab97-2a3aabe13103",
+                        "redirectUrlAfterComplete": "C92F3D5A983A40408400F7ADAA34BF40",
+                        "fieldPassover": "id",
+                        "formId": "request",
+                        "customHeader": "",
+                        "fieldPassoverMethod": "param",
+                        "redirectTargetOnComplete": "",
+                        "keyName": "",
+                        "label": "<i class=\"zmdi zmdi-home\"><\/i> Home",
+                        "userviewCacheDuration": "20",
+                        "messageShowAfterComplete": "",
+                        "submitButtonLabel": "",
+                        "userviewCacheScope": "",
+                        "readonlyLabel": "true"
+                    }
+                }
+            ],
+            "properties": {
+                "hide": "",
+                "permission_rules": {
+                    "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                    "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {}
+                },
+                "comment": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "id": "category-1EAD2FA0CEC14BA6DF117951AE42F0A2",
+                "label": "<i class=\"zmdi zmdi-home\"><\/i> Home",
+                "permissionDeny": ""
+            }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [
+                {
+                    "className": "org.joget.apps.userview.lib.FormMenu",
+                    "properties": {
+                        "loadDataWithKey": "",
+                        "redirectUrlOnCancel": "",
+                        "actionOnCancel": "",
+                        "permission_rules": {
+                            "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                            "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {}
+                        },
+                        "redirectTargetOnCancel": "top",
+                        "customFooter": "",
+                        "enableOffline": "",
+                        "paramName": "id",
+                        "customId": "signAgreement",
+                        "showInPopupDialog": "",
+                        "cancelButtonLabel": "",
+                        "readonly": "",
+                        "actionAfterSaved": "",
+                        "id": "202e5fd8-2daf-46b7-b5f3-0abc7d0ed62c",
+                        "fieldPassover": "id",
+                        "redirectUrlAfterComplete": "signAgreementSuccess",
+                        "formId": "signAgreement",
+                        "customHeader": "",
+                        "fieldPassoverMethod": "param",
+                        "keyName": "",
+                        "redirectTargetOnComplete": "",
+                        "label": "Sign Document",
+                        "messageShowAfterComplete": "",
+                        "userviewCacheDuration": "20",
+                        "submitButtonLabel": "Sign PDF",
+                        "userviewCacheScope": "",
+                        "readonlyLabel": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.userview.lib.HtmlPage",
+                    "properties": {
+                        "userviewCacheDuration": "20",
+                        "userviewCacheScope": "",
+                        "permission_rules": {
+                            "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                            "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {}
+                        },
+                        "enableOffline": "",
+                        "id": "53d9123d-8081-4721-b88e-c474e5581805",
+                        "label": "Sign Document Success",
+                        "customId": "signAgreementSuccess",
+                        "content": "<p><strong><span style=\"font-size: 14pt;\">Thank you for signing. <\/span><\/strong><\/p>\n<ul>\n<li>A copy of the signed document will be emailed to you after all parties have successfully signed.<\/li>\n<li>If you did not get a copy within 3 days, please send us an email and let us know via <a href=\"mailto:info+signdoc@joget.org\">info+signdoc@joget.org<\/a>&nbsp;and we will get it sorted out.<\/li>\n<\/ul>\n<p>Have a great day!!<\/p>\n<p>=) Joget Team<\/p>"
+                    }
+                }
+            ],
+            "properties": {
+                "hide": "yes",
+                "permission_rules": {
+                    "c57a0715-0abf-8002-01f2-b775d3c23a4b": {
+                        "hide": "yes",
+                        "permissionDeny": ""
+                    },
+                    "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {
+                        "hide": "yes",
+                        "permissionDeny": ""
+                    }
+                },
+                "id": "category-CE769B378959420B9ADE454BE2AF6DFD",
+                "label": "signatory",
+                "permissionDeny": ""
+            }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [{
+                "className": "org.joget.plugin.enterprise.CrudMenu",
+                "properties": {
+                    "add-afterSavedRedirectUrl": "C92F3D5A983A40408400F7ADAA34BF40",
+                    "list-customFooter": "",
+                    "cacheAllLinks": "",
+                    "editFormId": "viewRequest",
+                    "edit-saveButtonLabel": "",
+                    "list-showDeleteButton": "yes",
+                    "list-newButtonLabel": "Upload PDF For Signing",
+                    "add-afterSavedRedirectParamName": "id",
+                    "enableOffline": "",
+                    "list-deleteSubformData": "",
+                    "selectionType": "multiple",
+                    "addFormId": "request",
+                    "id": "936c5e76-11f9-46b4-bea7-23e55b27e778",
+                    "add-messageShowAfterComplete": "",
+                    "edit-readonlyLabel": "true",
+                    "list-editLinkLabel": "<i class=\"fas fa-eye\"><\/i> View",
+                    "add-cancelButtonLabel": "",
+                    "list-deleteFiles": "",
+                    "add-customHeader": "",
+                    "edit-readonly": "yes",
+                    "datalistId": "list_request",
+                    "edit-nextButtonLabel": "",
+                    "list-confirmation": "",
+                    "userviewCacheDuration": "",
+                    "add-afterSaved": "redirect",
+                    "add-afterSavedRedirectParamvalue": "id",
+                    "list-customHeader": "<style>\n    .statusBox {\n        padding: 3px !important;\n        border-radius: 4px !important;\n        white-space: nowrap !important;\n        color: white !important;\n        width: 100%;\n        display: inline-block;\n        text-align: center;\n    }\n    .dataList .rowActionsDropdown .dropdown-menu .row_action a{\n        display: block;\n        width: 100%;\n        padding: 0.25rem 1.5rem;\n        clear: both;\n        font-weight: 400;\n        color: #212529 !important;\n        text-align: inherit;\n        white-space: nowrap;\n        background-color: transparent !important;\n        border-color: transparent !important;\n        border: 0;\n        box-shadow: none !important;\n        width: auto;\n        \n    }\n<\/style>\n",
+                    "edit-customHeader": "<style>\nspan#signatories_annotation_data{\n    visibility: hidden;\n}\n\nspan#signatories_annotation_data > a{\n    visibility: visible;\n}\n\n<\/style>",
+                    "list-abortRelatedRunningProcesses": "",
+                    "permission_rules": {
+                        "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                        "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {}
+                    },
+                    "edit-prevButtonLabel": "",
+                    "customId": "myRequests",
+                    "edit-afterSaved": "list",
+                    "list-deleteButtonLabel": "",
+                    "checkboxPosition": "no",
+                    "add-customFooter": "",
+                    "list-deleteGridData": "",
+                    "edit-allowRecordTraveling": "yes",
+                    "rowCount": "true",
+                    "edit-customFooter": "",
+                    "edit-showEditButton": "",
+                    "keyName": "",
+                    "label": "<i class=\"zmdi zmdi-file-text\"><\/i> My Document",
+                    "list-newLinkTarget": "",
+                    "edit-lastButtonLabel": "",
+                    "buttonPosition": "topLeft",
+                    "edit-firstButtonLabel": "",
+                    "add-saveButtonLabel": "Sign Now",
+                    "edit-messageShowAfterComplete": "",
+                    "cacheListAction": "",
+                    "userviewCacheScope": "",
+                    "edit-moreActions": [],
+                    "list-moreActions": [],
+                    "edit-backButtonLabel": "",
+                    "list-editLinkTarget": ""
+                }
+            }],
+            "properties": {
+                "hide": "",
+                "permission_rules": {
+                    "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                    "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {}
+                },
+                "id": "category-1A22268E64644096AD14DC2EAC198FFF",
+                "label": "<i class=\"fa fa-tasks\"><\/i>Manage",
+                "permissionDeny": "true"
+            }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [{
+                "className": "org.joget.plugin.enterprise.CrudMenu",
+                "properties": {
+                    "add-afterSavedRedirectUrl": "C92F3D5A983A40408400F7ADAA34BF40",
+                    "list-customFooter": "",
+                    "cacheAllLinks": "",
+                    "editFormId": "viewRequest",
+                    "edit-saveButtonLabel": "",
+                    "list-showDeleteButton": "yes",
+                    "list-newButtonLabel": "Upload PDF For Signing",
+                    "add-afterSavedRedirectParamName": "id",
+                    "enableOffline": "",
+                    "list-deleteSubformData": "",
+                    "selectionType": "multiple",
+                    "addFormId": "request",
+                    "id": "2058bcc7-e3ba-435f-852b-2db737d68110",
+                    "add-messageShowAfterComplete": "",
+                    "edit-readonlyLabel": "true",
+                    "list-editLinkLabel": "<i class=\"fas fa-eye\"><\/i> View",
+                    "add-cancelButtonLabel": "",
+                    "list-deleteFiles": "",
+                    "add-customHeader": "",
+                    "edit-readonly": "yes",
+                    "datalistId": "requestListAll",
+                    "edit-nextButtonLabel": "",
+                    "list-confirmation": "",
+                    "userviewCacheDuration": "",
+                    "add-afterSaved": "redirect",
+                    "add-afterSavedRedirectParamvalue": "id",
+                    "list-customHeader": "<style>\n    .statusBox {\n        padding: 3px !important;\n        border-radius: 4px !important;\n        white-space: nowrap !important;\n        color: white !important;\n        width: 100%;\n        display: inline-block;\n        text-align: center;\n    }\n    .dataList .rowActionsDropdown .dropdown-menu .row_action a{\n        display: block;\n        width: 100%;\n        padding: 0.25rem 1.5rem;\n        clear: both;\n        font-weight: 400;\n        color: #212529 !important;\n        text-align: inherit;\n        white-space: nowrap;\n        background-color: transparent !important;\n        border-color: transparent !important;\n        border: 0;\n        box-shadow: none !important;\n        width: auto;\n        \n    }\n<\/style>\n",
+                    "edit-customHeader": "<style>\nspan#signatories_annotation_data{\n    visibility: hidden;\n}\n\nspan#signatories_annotation_data > a{\n    visibility: visible;\n}\n\n<\/style>",
+                    "list-abortRelatedRunningProcesses": "",
+                    "permission_rules": {
+                        "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                        "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {}
+                    },
+                    "edit-prevButtonLabel": "",
+                    "customId": "listing",
+                    "edit-afterSaved": "list",
+                    "list-deleteButtonLabel": "",
+                    "checkboxPosition": "no",
+                    "add-customFooter": "",
+                    "list-deleteGridData": "",
+                    "edit-allowRecordTraveling": "yes",
+                    "rowCount": "true",
+                    "edit-customFooter": "",
+                    "edit-showEditButton": "",
+                    "keyName": "",
+                    "label": "<i class=\"zmdi zmdi-file-text\"><\/i> All Document",
+                    "list-newLinkTarget": "",
+                    "edit-lastButtonLabel": "",
+                    "buttonPosition": "topLeft",
+                    "edit-firstButtonLabel": "",
+                    "add-saveButtonLabel": "Sign Now",
+                    "edit-messageShowAfterComplete": "",
+                    "cacheListAction": "",
+                    "userviewCacheScope": "",
+                    "edit-moreActions": [],
+                    "list-moreActions": [],
+                    "edit-backButtonLabel": "",
+                    "list-editLinkTarget": ""
+                }
+            }],
+            "properties": {
+                "hide": "",
+                "permission_rules": {
+                    "c57a0715-0abf-8002-01f2-b775d3c23a4b": {
+                        "hide": "",
+                        "permissionDeny": ""
+                    },
+                    "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {
+                        "hide": "",
+                        "permissionDeny": "true"
+                    }
+                },
+                "comment": "",
+                "permission": {
+                    "className": "org.joget.plugin.enterprise.AdminUserviewPermission",
+                    "properties": {}
+                },
+                "id": "category-40c4bd14-0377-4ad3-8bc7-9d60381621f9",
+                "label": "<i class=\"fa fa-tasks\"><\/i> Manage",
+                "permissionDeny": "true"
+            }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [
+                {
+                    "className": "org.joget.plugin.enterprise.CrudMenu",
+                    "properties": {
+                        "list-customFooter": "",
+                        "cacheAllLinks": "",
+                        "editFormId": "reportTrailMessage",
+                        "edit-saveButtonLabel": "",
+                        "list-showDeleteButton": "yes",
+                        "list-newButtonLabel": "",
+                        "enableOffline": "",
+                        "list-deleteSubformData": "",
+                        "selectionType": "multiple",
+                        "addFormId": "reportTrailMessage",
+                        "id": "48ba1653-3c86-4a08-85cb-312bdcf49c9d",
+                        "add-messageShowAfterComplete": "",
+                        "edit-readonlyLabel": "",
+                        "list-editLinkLabel": "",
+                        "add-cancelButtonLabel": "",
+                        "list-deleteFiles": "",
+                        "add-customHeader": "",
+                        "edit-readonly": "",
+                        "datalistId": "list_reportTrailMessage",
+                        "edit-nextButtonLabel": "",
+                        "list-confirmation": "",
+                        "userviewCacheDuration": "",
+                        "add-afterSaved": "list",
+                        "list-customHeader": "",
+                        "edit-customHeader": "",
+                        "list-abortRelatedRunningProcesses": "",
+                        "permission_rules": {
+                            "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                            "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {}
+                        },
+                        "edit-prevButtonLabel": "",
+                        "customId": "reportTrailMessage_crud",
+                        "edit-afterSaved": "list",
+                        "list-deleteButtonLabel": "",
+                        "checkboxPosition": "left",
+                        "add-customFooter": "",
+                        "list-deleteGridData": "",
+                        "edit-allowRecordTraveling": "",
+                        "rowCount": "true",
+                        "edit-customFooter": "",
+                        "keyName": "",
+                        "label": "Manage Report Trail Message",
+                        "list-newLinkTarget": "",
+                        "edit-lastButtonLabel": "",
+                        "buttonPosition": "topLeft",
+                        "edit-firstButtonLabel": "",
+                        "add-saveButtonLabel": "",
+                        "edit-messageShowAfterComplete": "",
+                        "cacheListAction": "",
+                        "userviewCacheScope": "",
+                        "edit-moreActions": [],
+                        "list-moreActions": [],
+                        "edit-backButtonLabel": "",
+                        "list-editLinkTarget": ""
+                    }
+                },
+                {
+                    "className": "org.joget.plugin.enterprise.CrudMenu",
+                    "properties": {
+                        "list-customFooter": "",
+                        "cacheAllLinks": "",
+                        "editFormId": "trail",
+                        "edit-saveButtonLabel": "",
+                        "list-showDeleteButton": "yes",
+                        "list-newButtonLabel": "",
+                        "enableOffline": "",
+                        "list-deleteSubformData": "",
+                        "selectionType": "multiple",
+                        "addFormId": "",
+                        "id": "69b126d3-de55-401b-bb59-bd73860e7c2d",
+                        "add-messageShowAfterComplete": "",
+                        "edit-readonlyLabel": "true",
+                        "list-editLinkLabel": "View",
+                        "add-cancelButtonLabel": "",
+                        "list-deleteFiles": "",
+                        "add-customHeader": "",
+                        "edit-readonly": "yes",
+                        "datalistId": "auditTrailAll",
+                        "edit-nextButtonLabel": "",
+                        "list-confirmation": "",
+                        "userviewCacheDuration": "",
+                        "add-afterSaved": "list",
+                        "list-customHeader": "",
+                        "edit-customHeader": "",
+                        "list-abortRelatedRunningProcesses": "",
+                        "permission_rules": {
+                            "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                            "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {}
+                        },
+                        "edit-prevButtonLabel": "",
+                        "customId": "trail_crud",
+                        "edit-afterSaved": "list",
+                        "list-deleteButtonLabel": "",
+                        "checkboxPosition": "left",
+                        "add-customFooter": "",
+                        "list-deleteGridData": "",
+                        "edit-allowRecordTraveling": "",
+                        "rowCount": "true",
+                        "edit-customFooter": "",
+                        "edit-showEditButton": "",
+                        "keyName": "",
+                        "label": "Manage Record Trail",
+                        "list-newLinkTarget": "",
+                        "edit-lastButtonLabel": "",
+                        "buttonPosition": "topLeft",
+                        "edit-firstButtonLabel": "",
+                        "add-saveButtonLabel": "",
+                        "edit-messageShowAfterComplete": "",
+                        "cacheListAction": "",
+                        "userviewCacheScope": "",
+                        "edit-moreActions": [],
+                        "list-moreActions": [],
+                        "edit-backButtonLabel": "",
+                        "list-editLinkTarget": ""
+                    }
+                },
+                {
+                    "className": "org.joget.marketplace.pluginTemplate.PluginTemplateManagementMenu",
+                    "properties": {
+                        "add-cancelButtonLabel": "",
+                        "edit-customHeader": "",
+                        "list-customFooter": "",
+                        "edit-customFooter": "",
+                        "edit-saveButtonLabel": "",
+                        "permission_rules": {
+                            "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                            "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {}
+                        },
+                        "list-newButtonLabel": "",
+                        "add-customHeader": "",
+                        "enableOffline": "",
+                        "label": "Plugin Template Management",
+                        "customId": "",
+                        "buttonPosition": "bottomLeft",
+                        "add-saveButtonLabel": "",
+                        "list-deleteButtonLabel": "",
+                        "checkboxPosition": "left",
+                        "selectionType": "multiple",
+                        "userviewCacheDuration": "20",
+                        "add-customFooter": "",
+                        "userviewCacheScope": "",
+                        "id": "644cf01b-3e1e-46ba-bdc4-57a628caf024",
+                        "edit-backButtonLabel": "",
+                        "list-customHeader": "",
+                        "list-editLinkLabel": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.userview.lib.HtmlPage",
+                    "properties": {
+                        "userviewCacheDuration": "20",
+                        "userviewCacheScope": "",
+                        "label": "User Manual",
+                        "id": "cb4a9d8a-4065-423f-b97c-ff96b3a6d257",
+                        "enableOffline": "",
+                        "customId": "",
+                        "content": "<p>📣<strong> User Manual - Setup<\/strong><\/p>\n<p><strong><\/strong><\/p>\n<p>Please ensure that the following requirements are met:<\/p>\n<p>✅ The user who added the document must have a valid email set in their profile.&nbsp;<br>✅ SMTP must be configured in Settings &gt; SMTP Settings. <br>✅ Now, you can start using the Signing Doc app.<\/p>"
+                    }
+                },
+                {
+                    "className": "org.joget.api.lib.ApiKeyMenu",
+                    "properties": {
+                        "list-customFooter": "",
+                        "edit-customHeader": "",
+                        "edit-saveButtonLabel": "",
+                        "list-newButtonLabel": "",
+                        "enableOffline": "",
+                        "customId": "key_manage",
+                        "list-deleteButtonLabel": "",
+                        "checkboxPosition": "left",
+                        "selectionType": "multiple",
+                        "add-customFooter": "",
+                        "id": "edf7858e-ab55-47ac-894f-0df60692751e",
+                        "apiId": "API-10defa02-7971-4ce4-bc76-f2b341d40a0a",
+                        "add-messageShowAfterComplete": "",
+                        "edit-readonlyLabel": "",
+                        "list-editLinkLabel": "",
+                        "add-cancelButtonLabel": "",
+                        "edit-customFooter": "",
+                        "label": "Manage API Key ",
+                        "add-customHeader": "",
+                        "edit-readonly": "",
+                        "buttonPosition": "bottomLeft",
+                        "add-saveButtonLabel": "",
+                        "userviewCacheDuration": "20",
+                        "edit-messageShowAfterComplete": "",
+                        "userviewCacheScope": "",
+                        "edit-backButtonLabel": "",
+                        "list-customHeader": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.userview.lib.FormMenu",
+                    "properties": {
+                        "loadDataWithKey": "",
+                        "redirectUrlOnCancel": "",
+                        "actionOnCancel": "",
+                        "permission_rules": {
+                            "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                            "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {}
+                        },
+                        "redirectTargetOnCancel": "top",
+                        "customFooter": "",
+                        "enableOffline": "",
+                        "paramName": "",
+                        "afterSavedReloadTarget": "true",
+                        "customId": "setup",
+                        "showInPopupDialog": "",
+                        "cancelButtonLabel": "",
+                        "readonly": "",
+                        "actionAfterSaved": "",
+                        "id": "c5ccc520-fce8-47b7-ad9a-d5256e66c701",
+                        "fieldPassover": "",
+                        "redirectUrlAfterComplete": "",
+                        "formId": "setup",
+                        "customHeader": "",
+                        "fieldPassoverMethod": "append",
+                        "keyName": "",
+                        "redirectTargetOnComplete": "",
+                        "label": "Setup",
+                        "messageShowAfterComplete": "",
+                        "userviewCacheDuration": "20",
+                        "submitButtonLabel": "",
+                        "userviewCacheScope": "",
+                        "readonlyLabel": "true"
+                    }
+                }
+            ],
+            "properties": {
+                "hide": "",
+                "permission_rules": {
+                    "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                    "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {
+                        "hide": "",
+                        "permissionDeny": "true"
+                    }
+                },
+                "id": "category-EDA7096B17C44983BA6E0A240D251FD1",
+                "label": "<i class=\"fa fa-tasks\"><\/i>System",
+                "permissionDeny": "true"
+            }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [
+                {
+                    "className": "org.joget.apps.userview.lib.FormMenu",
+                    "properties": {
+                        "loadDataWithKey": "",
+                        "redirectUrlOnCancel": "listing",
+                        "actionOnCancel": "",
+                        "permission_rules": {
+                            "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                            "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {}
+                        },
+                        "redirectTargetOnCancel": "top",
+                        "customFooter": "",
+                        "enableOffline": "",
+                        "paramName": "id",
+                        "customId": "",
+                        "showInPopupDialog": "",
+                        "cancelButtonLabel": "Back",
+                        "readonly": "",
+                        "actionAfterSaved": "",
+                        "id": "a06d9efe-1466-4b94-9503-9d9a61349b98",
+                        "fieldPassover": "id",
+                        "redirectUrlAfterComplete": "C92F3D5A983A40408400F7ADAA34BF40",
+                        "formId": "request",
+                        "customHeader": "",
+                        "fieldPassoverMethod": "param",
+                        "keyName": "",
+                        "redirectTargetOnComplete": "",
+                        "label": "Request Form",
+                        "messageShowAfterComplete": "",
+                        "userviewCacheDuration": "20",
+                        "submitButtonLabel": "Proceed to Annotate",
+                        "userviewCacheScope": "",
+                        "readonlyLabel": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.userview.lib.FormMenu",
+                    "properties": {
+                        "loadDataWithKey": "",
+                        "redirectUrlOnCancel": "",
+                        "actionOnCancel": "",
+                        "permission_rules": {
+                            "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                            "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {}
+                        },
+                        "redirectTargetOnCancel": "top",
+                        "customFooter": "",
+                        "enableOffline": "",
+                        "paramName": "",
+                        "customId": "reportTrail",
+                        "showInPopupDialog": "",
+                        "cancelButtonLabel": "",
+                        "readonly": "",
+                        "actionAfterSaved": "",
+                        "id": "b30bd159-1401-426f-aff3-a1298d044fe6",
+                        "fieldPassover": "",
+                        "redirectUrlAfterComplete": "",
+                        "formId": "requestTrail",
+                        "customHeader": "",
+                        "fieldPassoverMethod": "append",
+                        "keyName": "",
+                        "redirectTargetOnComplete": "",
+                        "label": "Request Trail",
+                        "messageShowAfterComplete": "",
+                        "userviewCacheDuration": "20",
+                        "submitButtonLabel": "",
+                        "userviewCacheScope": "",
+                        "readonlyLabel": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.userview.lib.FormMenu",
+                    "properties": {
+                        "loadDataWithKey": "",
+                        "redirectUrlOnCancel": "",
+                        "style-mobile-padding-right": "0px",
+                        "actionOnCancel": "",
+                        "permission_rules": {
+                            "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                            "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {}
+                        },
+                        "redirectTargetOnCancel": "top",
+                        "customFooter": "",
+                        "enableOffline": "",
+                        "paramName": "",
+                        "customId": "",
+                        "style-mobile-padding-top": "0px",
+                        "showInPopupDialog": "",
+                        "cancelButtonLabel": "",
+                        "readonly": "",
+                        "actionAfterSaved": "",
+                        "id": "0818b818-9a8b-425c-9d13-179d8a3ddb9e",
+                        "fieldPassover": "",
+                        "redirectUrlAfterComplete": "myRequests",
+                        "formId": "requestAnns",
+                        "customHeader": "<style>\nspan#signatories_annotation_data{\n    display: none;\n}\n\n<\/style>",
+                        "fieldPassoverMethod": "param",
+                        "style-mobile-padding-left": "0px",
+                        "keyName": "",
+                        "redirectTargetOnComplete": "",
+                        "label": "Assign Signatories",
+                        "messageShowAfterComplete": "PDF File is ready to sign. Please choose the Action to continue.",
+                        "userviewCacheDuration": "20",
+                        "submitButtonLabel": "Save",
+                        "style-mobile-padding-bottom": "0px",
+                        "userviewCacheScope": "",
+                        "readonlyLabel": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.userview.lib.DataListMenu",
+                    "properties": {
+                        "cacheAllLinks": "",
+                        "customHeader": "<style>\n    body .dataList td.row_action {\n        display: inline-block;\n        float: left;\n        padding: 0 !important;\n    }\n     \n    th.row_action.footable-visible {\n        display: inline;\n    }\n \n    .row_action_inner a {\n        padding: 10px;\n        float: left;\n    }\n<\/style>",
+                        "permission_rules": {
+                            "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                            "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {}
+                        },
+                        "keyName": "",
+                        "customFooter": "",
+                        "enableOffline": "",
+                        "label": "List of Signatories",
+                        "customId": "signatureList",
+                        "buttonPosition": "bottomLeft",
+                        "datalistId": "signatureList",
+                        "checkboxPosition": "left",
+                        "selectionType": "multiple",
+                        "userviewCacheDuration": "20",
+                        "cacheListAction": "",
+                        "userviewCacheScope": "",
+                        "id": "fd528b12-1ad6-459f-8dcb-50d43f498ac5",
+                        "rowCount": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.userview.lib.HtmlPage",
+                    "properties": {
+                        "userviewCacheDuration": "20",
+                        "userviewCacheScope": "",
+                        "permission_rules": {
+                            "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                            "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {}
+                        },
+                        "enableOffline": "",
+                        "id": "ad09ce6c-e7f2-4baa-8fd7-11a3bf853d6e",
+                        "label": "Successful",
+                        "customId": "formSaved",
+                        "content": "<p>Form Saved Successfully.<\/p>"
+                    }
+                },
+                {
+                    "className": "org.joget.apps.userview.lib.FormMenu",
+                    "properties": {
+                        "loadDataWithKey": "",
+                        "redirectUrlOnCancel": "",
+                        "actionOnCancel": "",
+                        "permission_rules": {
+                            "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                            "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {}
+                        },
+                        "redirectTargetOnCancel": "top",
+                        "customFooter": "",
+                        "enableOffline": "",
+                        "paramName": "",
+                        "customId": "signAgreementView",
+                        "showInPopupDialog": "",
+                        "cancelButtonLabel": "",
+                        "readonly": "Yes",
+                        "actionAfterSaved": "",
+                        "id": "3700d436-027f-4937-a772-61697b554ccc",
+                        "fieldPassover": "",
+                        "redirectUrlAfterComplete": "",
+                        "formId": "signAgreementView",
+                        "customHeader": "",
+                        "fieldPassoverMethod": "append",
+                        "keyName": "",
+                        "redirectTargetOnComplete": "",
+                        "label": "Sign Agreement View",
+                        "messageShowAfterComplete": "",
+                        "userviewCacheDuration": "20",
+                        "submitButtonLabel": "",
+                        "userviewCacheScope": "",
+                        "readonlyLabel": "true"
+                    }
+                },
+                {
+                    "className": "org.joget.apps.userview.lib.DataListMenu",
+                    "properties": {
+                        "cacheAllLinks": "",
+                        "customHeader": "",
+                        "permission_rules": {
+                            "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                            "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {}
+                        },
+                        "keyName": "",
+                        "customFooter": "<script>\n    // Remove the show button\n    $(\"div.filters\").hide();\n<\/script>",
+                        "enableOffline": "",
+                        "label": "Audit Trail (View Agreement)",
+                        "customId": "auditTrailViewAgreement",
+                        "buttonPosition": "bothLeft",
+                        "datalistId": "auditTrailViewAgreement",
+                        "checkboxPosition": "no",
+                        "selectionType": "multiple",
+                        "userviewCacheDuration": "20",
+                        "cacheListAction": "",
+                        "userviewCacheScope": "",
+                        "id": "9c57879e-42bd-41a2-b140-cea98bedae95",
+                        "rowCount": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.userview.lib.DataListMenu",
+                    "properties": {
+                        "cacheAllLinks": "",
+                        "customHeader": "",
+                        "permission_rules": {
+                            "c57a0715-0abf-8002-01f2-b775d3c23a4b": {},
+                            "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {}
+                        },
+                        "keyName": "",
+                        "customFooter": "",
+                        "enableOffline": "",
+                        "label": "My Request List",
+                        "customId": "myRequest_list",
+                        "buttonPosition": "bothLeft",
+                        "datalistId": "list_request",
+                        "checkboxPosition": "left",
+                        "selectionType": "multiple",
+                        "userviewCacheDuration": "20",
+                        "cacheListAction": "",
+                        "userviewCacheScope": "",
+                        "id": "debeb442-3feb-4ef6-a3bb-f45fa19c1d34",
+                        "rowCount": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.userview.lib.FormMenu",
+                    "properties": {
+                        "loadDataWithKey": "",
+                        "redirectUrlOnCancel": "",
+                        "actionOnCancel": "",
+                        "redirectTargetOnCancel": "top",
+                        "customFooter": "",
+                        "paramName": "",
+                        "enableOffline": "",
+                        "afterSavedReloadTarget": "true",
+                        "customId": "fc_upload",
+                        "showInPopupDialog": "",
+                        "readonly": "",
+                        "cancelButtonLabel": "",
+                        "actionAfterSaved": "",
+                        "showEditButton": "",
+                        "id": "31526ec6-c5da-4c49-89ed-8a71e8737a33",
+                        "redirectUrlAfterComplete": "myRequests",
+                        "fieldPassover": "",
+                        "formId": "filecloud_upload",
+                        "customHeader": "",
+                        "fieldPassoverMethod": "append",
+                        "redirectTargetOnComplete": "",
+                        "keyName": "",
+                        "label": "FileCloud Upload",
+                        "userviewCacheDuration": "20",
+                        "messageShowAfterComplete": "File has been upload to FileCloud Server",
+                        "submitButtonLabel": "Submit",
+                        "userviewCacheScope": "",
+                        "readonlyLabel": "true"
+                    }
+                }
+            ],
+            "properties": {
+                "hide": "",
+                "permission_rules": {
+                    "c57a0715-0abf-8002-01f2-b775d3c23a4b": {
+                        "hide": "yes",
+                        "permissionDeny": ""
+                    },
+                    "4ec46c89-a24d-d404-f7dc-0cca19e5f667": {
+                        "hide": "yes",
+                        "permissionDeny": ""
+                    }
+                },
+                "comment": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "id": "category-384DA7D5569A4464B58033068FF476F2",
+                "label": "hidden",
+                "permissionDeny": "true"
+            }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [],
+            "properties": {
+                "hide": "yes",
+                "permission": {
+                    "className": "org.joget.apps.userview.lib.LoggedInUserPermission",
+                    "properties": {}
+                },
+                "comment": "",
+                "label": "FileCloud",
+                "id": "category-F9DA52B295854F69CB055268AB594270"
+            }
+        }
+    ],
+    "properties": {
+        "logoutText": "Logout",
+        "welcomeMessage": "#date.EEE, d MMM yyyy#",
+        "name": "SigningDoc",
+        "description": "",
+        "footerMessage": "Powered by Joget",
+        "id": "v"
+    },
+    "setting": {"properties": {
+        "__": "",
+        "userviewDescription": "",
+        "userviewId": "v",
+        "hideThisUserviewInAppCenter": "",
+        "permission_rules": [
+            {
+                "permission_key": "c57a0715-0abf-8002-01f2-b775d3c23a4b",
+                "permission": {
+                    "className": "org.joget.plugin.enterprise.AdminUserviewPermission",
+                    "properties": {}
+                },
+                "permission_name": "Management"
+            },
+            {
+                "permission_key": "4ec46c89-a24d-d404-f7dc-0cca19e5f667",
+                "permission": {
+                    "className": "org.joget.apps.userview.lib.LoggedInUserPermission",
+                    "properties": {}
+                },
+                "permission_name": "Creator"
+            }
+        ],
+        "userview_thumbnail": "#appResource.signingDocIcon.png#",
+        "userview_category": "",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "theme": {
+            "className": "org.joget.apps.userview.lib.AjaxUniversalTheme",
+            "properties": {
+                "dx8navBadge": "#1677FF",
+                "customPrimaryLight": "#F6F6F6",
+                "css": "@media screen and (min-width: 1700px) {\r\n    body.horizontal_menu:not(.embeded) #content.page_content {\r\n        padding: 40px 200px !important;\r\n    }\r\n\r\n    body.horizontal_menu header.navbar .container-fluid {\r\n        padding: 16px 200px 16px 200px !important;\r\n    }\r\n    \r\n    body#signAgreement.horizontal_menu header.navbar .container-fluid {\r\n        padding: 16px 50px 16px 50px !important;\r\n    }\r\n}\r\n\r\nimg{\r\n    max-width: 100%;\r\n    max-height: 100%;\r\n}\r\nbody{\r\n    font-family: 'Source Sans 3', sans-serif;\r\n    font-size: 16px !important;\r\n}\r\n\r\nbody.horizontal_menu:not(.embeded) #content.page_content {\r\n    padding: 40px 50px;\r\n}\r\n\r\n\r\n\r\nbody.horizontal_menu header.navbar .container-fluid {\r\n    padding: 16px 50px 16px 50px;\r\n}\r\n\r\n@media (min-width: 900px){\r\n    body.horizontal_menu header.navbar .container-fluid {\r\n       padding: 32px 15px 6px 41px;\r\n       \r\n    }\r\n}\r\n\r\n.form-container {\r\n    font-size: 16px;\r\n}\r\n#navigation{\r\n    border-top:0px;\r\n}\r\n#sidebar{\r\n    box-shadow: none;\r\n}\r\n\r\nheader.navbar {\r\n    height: 80px;\r\n}\r\nbody.horizontal_menu #sidebar .nav > li > a,\r\nbody.horizontal_menu #sidebar .nav > li > a:hover{\r\n    margin-right: 10px;\r\n    border-radius: 5px;\r\n    font-weight: 500 !important;\r\n    font-size: 16px;\r\n}\r\nbody.horizontal_menu #sidebar .nav > li:not(.active) > a:hover, body.horizontal_menu #sidebar .nav > li > ul > li > a:hover, body.horizontal_menu #sidebar .nav > li > ul > li.active > a {\r\n    font-weight: 500 !important;\r\n}\r\nul.breadcrumb {\r\n    font-size: 20px;\r\n}\r\n#dataList_requestListAll > form:nth-child(6) > div.table-wrapper > div.list-group.p-0.border-0 > div > div.flex-fill.row > div > strong,\r\n#dataList_list_request > form:nth-child(6) > div.table-wrapper > div.list-group.p-0.border-0 > div > div.flex-fill.row > div > strong{\r\n    color: #a0a4a9;\r\n    font-weight: 500;\r\n}\r\n#dataList_list_request > form:nth-child(6) > div.table-wrapper > div.list-group.p-0.border-0 > div > div.dropdown.px-md-3.show > div > a.ph_rowActions.dropdown-item.rowaction_body.body_.link_ > i{\r\n    margin-right: 8px;\r\n}\r\n/*body.horizontal_menu #sidebar .nav > li.toggled:hover > ul, */\r\n/*body.horizontal_menu #sidebar li:hover > ul, */\r\n/*body.horizontal_menu #sidebar .nav > li.toggled > ul.focusVisible, */\r\n/*body.horizontal_menu #sidebar li > ul.focusVisible{*/\r\n/*    top: 43px;*/\r\n/*}*/\r\n#auditTrailViewAgreement i{\r\n    font-size: 25px;\r\n    margin-top: 25px;\r\n}\r\n#recordTraveling{\r\n    text-align: center;\r\n}\r\n.multiselect-container .multiselect-filter>input.multiselect-search {\r\n    padding-right: 8px;\r\n}\r\nbody.horizontal_menu #sidebar .nav > li > ul > li > a{\r\n    font-weight: 500;\r\n}\r\n.badge-primary {\r\n    color: #009ef7;\r\n    background-color: #f1faff;\r\n    border: 1px solid #009ef7;\r\n}\r\n.badge-secondary {\r\n    color: #7b7e85;\r\n    background-color: #F9F9F9;\r\n    border: 1px solid #9699a3;\r\n}\r\n.badge-success {\r\n    color: #41ab71;\r\n    background-color: #e8fff3;\r\n    border: 1px solid #50cd89;\r\n}\r\n.badge-info {\r\n    color: #7239ea;\r\n    background-color: #f8f5ff;\r\n    border: 1px solid #7239ea;\r\n}\r\n.badge-warning {\r\n    color:  #c19700;\r\n    background-color: #fff8dd;\r\n    border: 1px solid #ffc700;\r\n}\r\n.badge-danger {\r\n    color:  #d93f4e;\r\n    background-color: #fdd9dc;\r\n    border: 1px solid #e3818b;\r\n}\r\n.table-wrapper .badge{\r\n    padding: 5px 15px;\r\n    font-size: 12px;\r\n    min-width: 100px;\r\n    font-weight: 600;\r\n    float: left;\r\n}\r\n.badge-dark {\r\n    color: #071437;\r\n    background-color: #F1F1F2;\r\n    border: 1px solid #071437;\r\n}\r\n.form-fileupload.dropzone {\r\n    padding: 4.5rem 2.75rem !important;\r\n    border: 1px dashed #009ef7;\r\n    background-color: #f1faff;\r\n    border-radius: 0.475rem !important;\r\n}\r\n.dropzone .dz-message {\r\n    font-weight: 600 !important;\r\n    font-size: 1.15rem !important;\r\n    margin-bottom: 0.25rem !important;\r\n    color: #071437;\r\n}\r\nbody#myRequests .dataList th, body#myRequests .dataList td,\r\nbody#listing .dataList th, body#listing .dataList td{\r\n    padding: 10px 10px;\r\n}\r\nbody#myRequests .dataList .rowActionsDropdown .dropdown-menu .row_action a,\r\nbody#listing .dataList .rowActionsDropdown .dropdown-menu .row_action a{\r\n    padding: 0.25rem 0.7rem;\r\n    font-size: 16px;\r\n}\r\n#myRequests #section1 > div.form-column > div:nth-child(1) > label,\r\n#request #section1 > div.form-column > div:nth-child(1) > label{\r\n    width: 100%;\r\n    margin-bottom: 15px;\r\n}\r\n#myRequests .form-fileupload:not(.readonly),\r\n#request .form-fileupload:not(.readonly){\r\n    width: 100%;\r\n}\r\n.form-cell, .subform-cell {\r\n    padding-left: 35px;\r\n    padding-right: 35px;\r\n}\r\n.list-group-item {\r\n    border: 1px solid #F1F1F2;\r\n}\r\n#boostrapSection, #field8_requestStatusDisplay_boostrapSection{\r\n    background-color:transparent;\r\n    border: 0px;\r\n}\r\n.form-section-title, .subform-section-title {\r\n    padding: 1rem 1rem;\r\n}\r\n.HTML_Page_Menu{\r\n    border:0px !important;\r\n}\r\n#pc-B2A6ED67B85D4105059914080E9EC73A > div.viewForm-body-content, #request{\r\n    padding: 0px;\r\n}\r\nbody#home #section-actions{\r\n    padding-bottom: 15px;\r\n    padding-top: 0px;\r\n    background-color: var(--theme-content-background, #ffffffcc);\r\n}\r\nbody#home #section1{\r\n    border-bottom: 0px;\r\n}\r\nbody#home #section-actions > div.form-column.form-column-horizontal{\r\n    float: unset;\r\n    text-align: center;\r\n}\r\nbody#home .card{\r\n    border: 0px;\r\n    border-radius: 0px;\r\n}\r\n.header-nav .user-link > a.dropdown-toggle:not(.type-no){\r\n    font-weight:500;\r\n}\r\n#requestAnn #section1{\r\n    border: 0px;\r\n    margin-top: 50px;\r\n}\r\n#requestAnn #section2{\r\n    border-top: 1px solid rgba(5, 5, 5, 0.06);\r\n    margin-bottom: 30px;\r\n}\r\n#requestAnn #section1 > div.form-column > div:nth-child(10){\r\n    padding-left: 0px;\r\n}\r\n#requestAnn #section1 > div:nth-child(2) > div:nth-child(1) > label{\r\n    width: 40%;\r\n}\r\nbody#home .print-button{\r\n    display: none;\r\n}\r\n\r\nbody#home .viewForm-body-content{\r\n    padding: 0px;\r\n}\r\n#auditTrailViewAgreement{\r\n    border:0px !important;\r\n}\r\n.dropzone .dz-message{\r\n    color: rgb(22, 119, 255);\r\n}\r\n\r\nbody#signAgreement:not(.embeded) #content.page_content{\r\n    padding: 0px 0px !important;\r\n}\r\n\r\n#reviewSection{\r\n    margin: 0px;\r\n    padding: 0px;\r\n}\r\n\r\n#reviewSection .form-cell, #reviewSection .subform-cell {\r\n    padding-left: 0px;\r\n    padding-right: 0px;\r\n    margin-top: 0px;\r\n}\r\n\r\nbody #signAgreement.form-container [class*=form-cell-value]{\r\n    padding: 0px;\r\n}\r\n\r\nbody#signAgreement .viewForm-body-content{\r\n    padding: 0px;\r\n}\r\n\r\nbody#signAgreement ul.breadcrumb{\r\n    display:none;\r\n}\r\n\r\n#signAgreement.form-container{\r\n    padding: 0px;\r\n}\r\n\r\nbody#signAgreement #section9 > div.form-column > div{\r\n    padding: 0px;\r\n}\r\n\r\nbody#signAgreement #section2, body#signAgreement #section9{\r\n    margin: 30px 15vw;\r\n    margin-bottom: 0px;\r\n    border-bottom: 0px;\r\n}\r\n\r\nbody#signAgreement #section9{\r\n    background: transparent;\r\n    border: 0px;\r\n}\r\n\r\nbody#signAgreement #section4, body#signAgreement #section5, body#signAgreement #section8{\r\n    margin: 0px 15vw;\r\n    margin-top: 0px;\r\n}\r\nbody#signAgreement #section-actions{\r\n    margin: 40px 15vw;\r\n    margin-top: 5px;\r\n}\r\n\r\nbody#signAgreement{\r\n    overflow: hidden;\r\n}\r\nbody#signAgreement #section-actions > div.form-column.form-column-horizontal{\r\n    float: right;\r\n}\r\nform#requestAnn .form-section{\r\n    border: 0px;\r\n    padding: 0px;\r\n}\r\nform#requestAnn #section3 .form-cell{\r\n    padding-left: 0px;\r\n    padding-right: 0px;\r\n}\r\n\r\nform#requestAnn.form-container{\r\n    padding:0px;\r\n}\r\nform#requestAnn #section3 > div:nth-child(3){\r\n    padding: 30px;\r\n}\r\n\r\nbody.dark-mode .toolbar{\r\n    background-color: var(--theme-heading-bg);\r\n    border-bottom:var(--theme-heading-bg);\r\n}\r\n\t\r\nbody.dark-mode .grey-background #pdf-container {\r\n    background-color: var(--theme-content-background);\r\n}\r\n\r\nbody.dark-mode .grey-background .option__panel__title{\r\n    background-color: var(--theme-heading-bg);\r\n    color: var(--theme-heading-color);\r\n   \r\n}\r\nbody.dark-mode .grey-background #SignatureSidebar{\r\n    background: var(--theme-content-background);\r\n}\r\n\r\nbody.dark-mode .option__label__title, .option__title{\r\n    color:var(--theme-content-color)!important;\r\n}\r\nbody.dark-mode .option__panel__bottom{\r\n    background: var(--theme-content-background);\r\n}\r\nbody.dark-mode .toolbar .tool .tool-button{\r\n    background-color: var(--theme-background);\r\n}\r\nbody.dark-mode .toolbar .tool .tool-button-danger{\r\n    background-color: var(--theme-background);\r\n}\r\nbody#signAgreement.dark-mode input[type=checkbox]:checked::after{\r\n    border: solid var(--theme-content-background);\r\n}\r\nbody.dark-mode span.close{\r\n    color: var(--theme-content-color);\r\n}\r\nbody.dark-mode#login #loginForm{\r\n    background-color: var(--theme-content-background);\r\n}\r\nbody.dark-mode form.form fieldset {\r\n    background-color: var(--theme-content-background);\r\n}\r\nbody.dark-mode .grey-background {\r\n    background-color: var(--theme-heading-bg);\r\n}\r\n\r\n@media (min-width: 767px){\r\n    div.nav-no-collapse{\r\n        padding: 30px 0px 0px 0px;\r\n        width:100%;\r\n    }\r\n    \r\n    body#signAgreement div.nav-no-collapse{\r\n        padding-top: 0px;\r\n    }\r\n\r\n}\r\n@media (min-width: 900px){\r\n    div.nav-no-collapse{\r\n        padding: 65px 34px 0px 0px;\r\n    }\r\n    \r\n}\r\n@media (min-width: 1225px){\r\n    div.nav-no-collapse{\r\n        padding: 0px 0px 0px 0px;\r\n        width:30%;\r\n    }\r\n}\r\n\r\n@media (max-width: 766px){\r\n    body.horizontal_menu:not(.embeded) #content.page_content {\r\n        padding: 90px 50px;\r\n    }\r\n    body#signAgreement.horizontal_menu #sidebar .sidebar_brand, body#signAgreement.horizontal_menu #sidebar .user-menu {\r\n        display: block!important;\r\n    }\r\n    header.navbar {\r\n        height: 80px !important;\r\n    }\r\n}\r\n\r\n@media (min-width: 767px){\r\n    body#signAgreement div.nav-no-collapse {\r\n        padding: 0px 0px 0px 0px;\r\n        width: 30%;\r\n        }\r\n    body#signAgreement #sidebar .nav-tabs.user-menu .mm-profile > a {\r\n        padding: 5px 16px 25px 6px;\r\n        cursor: pointer;\r\n    }\r\n    body#signAgreement #sidebar .user-menu > li > a > img {\r\n        position: static;\r\n        border-radius: 50%;\r\n        top: 50%;\r\n        transform: none;\r\n    }\r\n    \r\n    body.horizontal_menu #sidebar .nav > li.toggled:hover > ul, \r\n    body.horizontal_menu #sidebar li:hover > ul, \r\n    body.horizontal_menu #sidebar .nav > li.toggled > ul.focusVisible, \r\n    body.horizontal_menu #sidebar li > ul.focusVisible{\r\n        top: 43px;\r\n    }\r\n    body#signAgreement.horizontal_menu #sidebar .nav > li:last-child:not(:first-child) > ul {\r\n        left: 0;\r\n    }\r\n    body#signAgreement.horizontal_menu #sidebar li:hover > ul,body.horizontal_menu #sidebar .nav > li.toggled:hover > ul{\r\n        min-width: 270px;\r\n        z-index: 1;\r\n    }\r\n}\r\n@media (max-width: 1225px){\r\n    body#signAgreement #header-info > #header-name > .logo, body#signAgreement #header-info > #header-name > #header-link,body#signAgreement #header-message, .header-nav .user-link {\r\n         display: none !important; \r\n    }\r\n    body#signAgreement.horizontal_menu #sidebar-trigger {\r\n    display: inline-block;\r\n    }\r\n    body#signAgreement #sidebar {\r\n    display: none;\r\n    z-index: 120;\r\n    }\r\n    \r\n}\r\n@media (max-width: 1279px){\r\n    body#signAgreement.sidebar-toggled #sidebar {\r\n        display: block;\r\n        width: 280px;\r\n        /*height:100%;*/\r\n    }\r\n}\r\n\r\n\r\n@media (min-width: 1225px){\r\n    body#signAgreement.horizontal_menu #sidebar .sidebar_brand, body#signAgreement.horizontal_menu #sidebar .user-menu {\r\n        display: none !important;\r\n    }\r\n}\r\n@media (max-width: 1225px){\r\n    body#signAgreement.horizontal_menu #sidebar .sidebar_brand, body#signAgreement.horizontal_menu #sidebar .user-menu {\r\n        display: block!important;\r\n    }\r\n}\r\n\r\n@media (max-width: 991px){\r\n    body.horizontal_menu:not(.embeded) #content.page_content {\r\n        padding: 20px 20px;\r\n    }\r\n    body:not(#signAgreement) header.navbar {\r\n        height: 120px;\r\n    }\r\n}\r\n\r\n@media (max-width: 767px){\r\n    body.horizontal_menu:not(.embeded) #content.page_content {\r\n        padding: 90px 15px;\r\n    }\r\n    .form-cell, .subform-cell {\r\n        padding-left: 15px;\r\n        padding-right: 15px;\r\n    }\r\n    .viewForm-body-content {\r\n        padding: 0px !important;\r\n    }\r\n    body#signAgreement #section2 {\r\n        margin: 30px 5vw;\r\n        margin-bottom: 0px;\r\n        border-bottom: 0px;\r\n        margin-top: 100px;\r\n    }\r\n    body#signAgreement #section4, body#signAgreement #section5, body#signAgreement #section8 {\r\n        margin: 0px 5vw;\r\n    }\r\n    body#signAgreement #section-actions {\r\n        margin: 0px 5vw;\r\n    }\r\n}\r\n.ma-backdrop {\r\n    z-index: 1000;\r\n    background-color: #0000004a;\r\n}\r\n\r\nbody.dark-mode .form-fileupload.dropzone{\r\n    color: var(--theme-header-font);\r\n    \r\n}\r\n",
+                "primaryColor": "custom",
+                "loginBackground": "",
+                "disablePush": "",
+                "dx8navLinkColor": "#222222",
+                "removeAssignmentTitle": "",
+                "shortcutLinkLabel": "Shortcut",
+                "disableHelpGuide": "",
+                "logo": "#appResource.signingDocIcon.png#",
+                "enableResponsiveSwitch": "true",
+                "dx8headerFontColor": "#222222",
+                "fav_icon": "#appResource.signingDocIcon.png#",
+                "dx8navLinkIcon": "#222222",
+                "horizontal_menu": "horizontal_inline",
+                "accentColor": "BLUE",
+                "profile": "",
+                "homeAttractBanner": "",
+                "dx8headingBgColor": "#FFFFFF",
+                "dx8linkColor": "#1677FF",
+                "customPrimary": "#022331",
+                "homeUrl": "",
+                "dx8linkActiveColor": "#69B1FF",
+                "disablePwa": "",
+                "dx8footerColor": "#222222",
+                "subheader": "<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\r\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\r\n<link href=\"https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap\" rel=\"stylesheet\">",
+                "dx8contentbackground": "#FFFFFF",
+                "loginPageBottom": "",
+                "dx8backgroundImage": "",
+                "themeScheme": "light",
+                "dx8navBadgeText": "#FFFFFF",
+                "dx8background": "#F0F2F5",
+                "dx8headerColor": "#FFFFFF",
+                "dx8colorScheme": "rgb(249, 250, 251);rgb(59, 67, 72);rgb(3, 169, 244);rgb(110, 206, 251);rgb(255, 255, 255);rgb(255, 255, 255)",
+                "dx8navBackground": "#FFFFFF",
+                "buttonColor": "ORANGE",
+                "displayCategoryLabel": "",
+                "js": "",
+                "dx8navActiveIconColor": "#1677FF",
+                "dx8navScrollbarThumb": "#C4C4C4",
+                "loginPageTop": "",
+                "urlsToCache": "",
+                "userMenu": [],
+                "dx8buttonColor": "#FFFFFF",
+                "shortcut": [],
+                "userImage": "",
+                "brand-name-style-font-weight": "600",
+                "fontControl": "",
+                "buttonTextColor": "WHITE",
+                "dx8navActiveLinkBackground": "#E6F4FF",
+                "dx8fontColor": "#222222",
+                "menuFontColor": "BLACK",
+                "dx8navLinkBackground": "#FFFFFF",
+                "customPrimaryDark": "",
+                "dx8buttonBackground": "#1677FF",
+                "dx8contentFontColor": "#222222",
+                "subfooter": "",
+                "dx8footerBackground": "#FFFFFF",
+                "dx8headingFontColor": "#222222",
+                "dx8primaryColor": "#1677FF",
+                "darkMode": "true",
+                "dx8navActiveLinkColor": "#1677FF",
+                "inbox": "current",
+                "fontColor": "WHITE"
+            }
+        },
+        "userviewName": "SigningDoc - Electronic Signatures For Every Enterprise"
+    }}
+}

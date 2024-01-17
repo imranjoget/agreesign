@@ -1,0 +1,31 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "columns": [
+        {
+            "name": "id",
+            "id": "column_0",
+            "label": "Action"
+        },
+        {
+            "name": "message",
+            "id": "column_1",
+            "label": "Message"
+        }
+    ],
+    "rowActions": [],
+    "orderBy": "",
+    "pageSize": 0,
+    "filters": [],
+    "buttonPosition": "bottomLeft",
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "checkboxPosition": "left",
+    "name": "List - Report Trail Message",
+    "id": "list_reportTrailMessage",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "reportTrailMessage"}
+    },
+    "actions": [],
+    "order": ""
+}

@@ -1,0 +1,359 @@
+{
+    "actions": [],
+    "binder": {
+        "className": "org.joget.plugin.enterprise.JdbcDataListBinder",
+        "properties": {
+            "jdbcDatasource": "default",
+            "optimisePaging": "",
+            "primaryKey": "id",
+            "sql": "SELECT sigs.*, re.c_title as 'agreement_title', re.c_status as 'agreement_status' FROM app_fd_ags_signatures sigs LEFT JOIN app_fd_ags_record re ON sigs.c_request_id = re.id"
+        }
+    },
+    "buttonPosition": "bottomLeft",
+    "checkboxPosition": "left",
+    "columns": [
+        {
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "alignment": "",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "filterable": true,
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "headerAlignment": "",
+            "hidden": "false",
+            "id": "column_3",
+            "label": "Document ID",
+            "name": "c_request_id",
+            "permission_rules": {"af2d7f85-2351-72ab-0956-c80e8714c0aa": {
+                "exclude_export": "",
+                "hidden": "true",
+                "include_export": "true"
+            }},
+            "sortable": "false",
+            "style": "",
+            "width": ""
+        },
+        {
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "alignment": "",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "filterable": true,
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "headerAlignment": "",
+            "hidden": "false",
+            "id": "column_2",
+            "label": "Document Title",
+            "name": "agreement_title",
+            "permission_rules": {"af2d7f85-2351-72ab-0956-c80e8714c0aa": {
+                "exclude_export": "",
+                "hidden": "true",
+                "include_export": "true"
+            }},
+            "sortable": "false",
+            "style": "",
+            "width": ""
+        },
+        {
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "alignment": "",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "filterable": true,
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "headerAlignment": "",
+            "hidden": "false",
+            "id": "column_0",
+            "label": "Name",
+            "name": "c_name",
+            "permission_rules": {"af2d7f85-2351-72ab-0956-c80e8714c0aa": {}},
+            "sortable": "false",
+            "style": "",
+            "width": ""
+        },
+        {
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "alignment": "",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "filterable": true,
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "headerAlignment": "",
+            "hidden": "false",
+            "id": "column_1",
+            "label": "Email",
+            "name": "c_email",
+            "permission_rules": {"af2d7f85-2351-72ab-0956-c80e8714c0aa": {}},
+            "sortable": "false",
+            "style": "",
+            "width": ""
+        },
+        {
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "alignment": "",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "filterable": true,
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "headerAlignment": "",
+            "hidden": "false",
+            "id": "column_4",
+            "label": "Status",
+            "name": "c_status",
+            "permission_rules": {"af2d7f85-2351-72ab-0956-c80e8714c0aa": {}},
+            "sortable": "false",
+            "style": "",
+            "width": ""
+        },
+        {
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "alignment": "",
+            "datalist_type": "column",
+            "filterable": true,
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "headerAlignment": "",
+            "hidden": "true",
+            "id": "column_5",
+            "include_export": "",
+            "label": "agreement_status",
+            "name": "agreement_status",
+            "sortable": "false",
+            "style": "",
+            "width": ""
+        }
+    ],
+    "considerFilterWhenGetTotal": "",
+    "description": "",
+    "filters": [
+        {
+            "datalist_type": "filter",
+            "filterParamName": "d-5531776-fn_c_request_id",
+            "hidden": "true",
+            "id": "filter_2",
+            "label": "c_request_id",
+            "name": "c_request_id",
+            "permission_rules": {"af2d7f85-2351-72ab-0956-c80e8714c0aa": {"hidden": "true"}},
+            "type": {
+                "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+                "properties": {"defaultValue": ""}
+            }
+        },
+        {
+            "datalist_type": "filter",
+            "filterParamName": "d-5531776-fn_agreement_title",
+            "hidden": "",
+            "id": "filter_0",
+            "label": "Search Document ID, Title, Signatory Name and Email",
+            "name": "agreement_title",
+            "permission_rules": {"af2d7f85-2351-72ab-0956-c80e8714c0aa": {}},
+            "type": {
+                "className": "org.joget.FullTextSearch",
+                "properties": {
+                    "columns": "agreement_title;c_email;c_name;c_request_id",
+                    "useCustomQuery": ""
+                }
+            }
+        },
+        {
+            "datalist_type": "filter",
+            "filterParamName": "d-5531776-fn_c_status",
+            "hidden": "",
+            "id": "filter_1",
+            "label": "Status",
+            "name": "c_status",
+            "permission_rules": {"af2d7f85-2351-72ab-0956-c80e8714c0aa": {}},
+            "type": {
+                "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+                "properties": {"defaultValue": ""}
+            }
+        }
+    ],
+    "id": "signatureList",
+    "name": "Signature List",
+    "order": "",
+    "orderBy": "",
+    "pageSize": "0",
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "permission_rules": [{
+        "permission": {
+            "className": "org.joget.apps.userview.lib.BeanShellPermission",
+            "properties": {"script": "return \"#requestParam.embed#\".equalsIgnoreCase(\"true\");"}
+        },
+        "permission_key": "af2d7f85-2351-72ab-0956-c80e8714c0aa",
+        "permission_name": "embedded mode"
+    }],
+    "rowActions": [
+        {
+            "className": "org.joget.marketplace.FormUpdateProcessToolDatalistAction",
+            "icon": "<i class=\"fas fa-tools\"><\/i>",
+            "id": "rowAction_2",
+            "label": "Form Update and Process Tool Datalist Action",
+            "name": "Form Update and Process Tool Datalist Action",
+            "permission_rules": {"af2d7f85-2351-72ab-0956-c80e8714c0aa": {}},
+            "properties": {
+                "additionalDataListAction": {
+                    "className": "",
+                    "properties": {}
+                },
+                "confirmation": "Are you sure?",
+                "datalist_type": "row_action",
+                "debug": "false",
+                "delay": "1",
+                "htmlScript": "",
+                "label": "Resend Invitation Email",
+                "popupFormId": "",
+                "processTool": {
+                    "className": "org.joget.marketplace.IteratorProcessToolRecord",
+                    "properties": {
+                        "debug": "false",
+                        "delay": "0",
+                        "executeProcessTool": {
+                            "className": "org.joget.apps.app.lib.MultiTools",
+                            "properties": {
+                                "comment": "",
+                                "runInMultiThread": "",
+                                "tools": [
+                                    {
+                                        "className": "org.joget.marketplace.EmailToolWithTemplate",
+                                        "properties": {
+                                            "bcc": "#form.ags_setup.email_bcc[0]#",
+                                            "bodyTemplate": "#form.ags_setup.email_template[0]?noescape#",
+                                            "cc": "",
+                                            "fields": [],
+                                            "files": [
+                                                {
+                                                    "embed": "true",
+                                                    "fileName": "logo.png",
+                                                    "path": "#request.domainURL##appResource.signingDoc-Header.png#",
+                                                    "type": "url"
+                                                },
+                                                {
+                                                    "embed": "true",
+                                                    "fileName": "footer.png",
+                                                    "path": "#request.domainURL##appResource.signingDoc-footer.png#",
+                                                    "type": "url"
+                                                },
+                                                {
+                                                    "embed": "true",
+                                                    "fileName": "email-icon.png",
+                                                    "path": "#request.domainURL##appResource.sign-doc-email-icon.png#",
+                                                    "type": "url"
+                                                }
+                                            ],
+                                            "formDefId": "",
+                                            "from": "",
+                                            "host": "",
+                                            "icsAttachement": "",
+                                            "isHtml": "true",
+                                            "message": "Hi {c_name},<br/><br/>\n\nYou are invited to review and sign the document: <strong>#form.ags_record.title[{form.ags_signatures.request_id}]#<\/strong>.\n\n<ul>\n<li>Please click the link <a href=\"#request.baseURL#/web/userview/agreesign/v/_/signAgreement?id={id}&otp={c_otp}\">here<\/a> or the button below to proceed.<\/li>\n<li>If you have any questions, please do not hesitate to send an email to <a href=\"mailto:info+signdoc@joget.org\">info+signdoc@joget.org<\/a>.<\/li>\n<\/ul>\n\nThanks and have a great day!!<br/><br/>\n\n=) Joget Team\n\n<\/div>\n<div style=\"margin:auto; width: 90%; background-color: #128ec8; padding:20px;\">\n\t<center>\n\t<a style=\"box-shadow: 0px 0px 5px 1px #074968; border-radius: 8px; background-color: #4CAF50; border: none; color: white; padding: 8px 30px; text-align: center; text-decoration: none; display: inline-block; font-size: 13px; margin: 4px 2px; cursor: pointer;\" href=\"#request.baseURL#/web/userview/agreesign/v/_/signAgreement?id={id}&otp={c_otp}\"><strong style=\"font-family:sans-serif; font-size:10pt; padding:10px;\">REVIEW & SIGN DOCUMENT<\/strong><img style=\"height:35px;\" align=\"absmiddle\" src=\"cid:email-icon.png\"><\/a>\n\t<\/center>",
+                                            "password": "%%%%pNB6wXKiC7J+VnlOlcovnQ==%%%%",
+                                            "port": "",
+                                            "security": "",
+                                            "subject": "Signing Request - #form.ags_record.title[{form.ags_signatures.request_id}]# (Resend)",
+                                            "toParticipantId": "",
+                                            "toSpecific": "{c_email}",
+                                            "username": ""
+                                        }
+                                    },
+                                    {
+                                        "className": "org.joget.apps.app.lib.DatabaseUpdateTool",
+                                        "properties": {
+                                            "jdbcDatasource": "default",
+                                            "query": "insert into app_fd_ags_trail (`c_request_id`, `dateCreated`, `dateModified`, `id`, `c_action`, `c_source`, `c_path`, `createdBy`, `c_invited`) VALUES ('#form.ags_signatures.request_id#', NOW(), NOW(), UUID(), 'Remind', '#beanshell.getClientIP#', '#request.requestURL#?#request.queryString#', '#currentUser.id#', '{c_name} - {c_email}')"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "iteratorMethod": "Process Tool",
+                        "iteratorProcessTool": {
+                            "className": "org.joget.marketplace.DatabaseQueryProcessTool",
+                            "properties": {
+                                "debug": "false",
+                                "query": "select id, c_name, c_email, c_status, c_otp from app_fd_ags_signatures where id = '@recordId@'"
+                            }
+                        },
+                        "iteratorToolId": "id"
+                    }
+                },
+                "rules": [
+                    {
+                        "field": "c_status",
+                        "join": "AND",
+                        "operator": "=",
+                        "value": "Waiting"
+                    },
+                    {
+                        "field": "agreement_status",
+                        "join": "AND",
+                        "operator": "=",
+                        "value": "Invited"
+                    }
+                ]
+            },
+            "type": "text"
+        },
+        {
+            "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+            "icon": "<i class=\"fas fa-link\"><\/i>",
+            "id": "rowAction_1",
+            "label": "Hyperlink",
+            "name": "Data List Hyperlink Action",
+            "permission_rules": {"af2d7f85-2351-72ab-0956-c80e8714c0aa": {}},
+            "properties": {
+                "confirmation": "",
+                "datalist_type": "row_action",
+                "href": "signAgreementView?embed=true",
+                "hrefColumn": "id",
+                "hrefParam": "id",
+                "label": "View Signature",
+                "rules": [{
+                    "field": "c_status",
+                    "join": "AND",
+                    "operator": "=",
+                    "value": "Signed"
+                }],
+                "target": "popup"
+            },
+            "type": "text"
+        }
+    ],
+    "showPageSizeSelector": "true",
+    "useSession": "false"
+}

@@ -1,0 +1,63 @@
+{
+    "elements": [
+        {"className": "menu-component"},
+        {
+            "className": "org.joget.plugin.enterprise.InformationTileComponent",
+            "properties": {
+                "template": "<!--{sampleWidth: '250px'}-->\n<div class=\"card flex-row align-items-center align-items-stretch border-0\" style=\"background-color:{{color||#348fe2}}; color:#fff;\">\n    <div class=\"stats-icon col-4 py-3 d-flex align-items-center justify-content-center rounded-left\" style=\"background:rgba(0,0,0,.4); font-size: 48px; color: #fff;\">\n        {{icon||<i class=\"fas fa-globe\"><\/i>}}\n    <\/div>\n    <div class=\"stats-info py-3 col-8\">\n        <p style=\"font-size: 24px; font-weight: 600; margin-bottom: 10px;\">{{value||3,291,922}}<\/p>\n        <h4 style=\"font-size: 12px;margin: 5px 0;\">{{title||TOTAL VISITORS}}<\/h4>\n    <\/div>\n<\/div>",
+                "attr-data-events-listening": [],
+                "color": "#348FE2",
+                "icon": "<i class=\"fas fa-globe\"><\/i>",
+                "link": "",
+                "id": "EA1243999D54472663CD6E984367B8C6",
+                "title": "NUMBER OF REQUESTS CREATED",
+                "value": "#datalist.total.myRequest_list#",
+                "customId": ""
+            }
+        },
+        {
+            "className": "org.joget.plugin.enterprise.InformationTileComponent",
+            "properties": {
+                "template": "<!--{sampleWidth: '250px'}-->\n<div class=\"card flex-row align-items-center align-items-stretch border-0\" style=\"background-color:{{color||#348fe2}}; color:#fff;\">\n    <div class=\"stats-icon col-4 py-3 d-flex align-items-center justify-content-center rounded-left\" style=\"background:rgba(0,0,0,.4); font-size: 48px; color: #fff;\">\n        {{icon||<i class=\"fas fa-globe\"><\/i>}}\n    <\/div>\n    <div class=\"stats-info py-3 col-8\">\n        <p style=\"font-size: 24px; font-weight: 600; margin-bottom: 10px;\">{{value||3,291,922}}<\/p>\n        <h4 style=\"font-size: 12px;margin: 5px 0;\">{{title||TOTAL VISITORS}}<\/h4>\n    <\/div>\n<\/div>",
+                "attr-data-events-listening": [],
+                "color": "#348FE2",
+                "icon": "<i class=\"fas fa-globe\"><\/i>",
+                "link": "",
+                "id": "23BF48FD5DAA42454A118E4BDAD27049",
+                "title": "TOTAL REQUESTS",
+                "value": "#datalist.total.listing#",
+                "customId": ""
+            }
+        },
+        {
+            "className": "org.joget.plugin.enterprise.InformationTileComponent",
+            "properties": {
+                "template": "<!--{sampleWidth: '250px'}-->\n<div class=\"card flex-row align-items-center align-items-stretch border-0\" style=\"background-color:{{color||#348fe2}}; color:#fff;\">\n    <div class=\"stats-icon col-4 py-3 d-flex align-items-center justify-content-center rounded-left\" style=\"background:rgba(0,0,0,.4); font-size: 48px; color: #fff;\">\n        {{icon||<i class=\"fas fa-globe\"><\/i>}}\n    <\/div>\n    <div class=\"stats-info py-3 col-8\">\n        <p style=\"font-size: 24px; font-weight: 600; margin-bottom: 10px;\">{{value||3,291,922}}<\/p>\n        <h4 style=\"font-size: 12px;margin: 5px 0;\">{{title||TOTAL VISITORS}}<\/h4>\n    <\/div>\n<\/div>",
+                "attr-data-events-listening": [],
+                "color": "#348FE2",
+                "icon": "<i class=\"fas fa-globe\"><\/i>",
+                "link": "",
+                "id": "EA0C357BFF0F4BC71B8A09C2D852BF97",
+                "title": "TOTAL REPORT TRAIL MESSAGES",
+                "value": "#datalist.total.reportTrailMessage_crud#",
+                "customId": ""
+            }
+        },
+        {
+            "className": "org.joget.plugin.enterprise.InformationTileComponent",
+            "properties": {
+                "template": "<!--{sampleWidth: '250px'}-->\n<div class=\"card flex-row align-items-center align-items-stretch border-0\" style=\"background-color:{{color||#348fe2}}; color:#fff;\">\n    <div class=\"stats-icon col-4 py-3 d-flex align-items-center justify-content-center rounded-left\" style=\"background:rgba(0,0,0,.4); font-size: 48px; color: #fff;\">\n        {{icon||<i class=\"fas fa-globe\"><\/i>}}\n    <\/div>\n    <div class=\"stats-info py-3 col-8\">\n        <p style=\"font-size: 24px; font-weight: 600; margin-bottom: 10px;\">{{value||3,291,922}}<\/p>\n        <h4 style=\"font-size: 12px;margin: 5px 0;\">{{title||TOTAL VISITORS}}<\/h4>\n    <\/div>\n<\/div>",
+                "attr-data-events-listening": [],
+                "color": "#348FE2",
+                "icon": "<i class=\"fas fa-globe\"><\/i>",
+                "link": "",
+                "id": "4118B0EFD2EC4FB03637819FCE798E30",
+                "title": "TOTAL RECORD TRAIL",
+                "value": "#datalist.total.trail_crud#",
+                "customId": ""
+            }
+        }
+    ],
+    "className": "org.joget.apps.userview.model.UserviewPage",
+    "properties": {"id": "up-7D86A85A4BA44D7B9C3E4BEC6813D359"}
+}

@@ -1,0 +1,351 @@
+{
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [{
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "id": "field2",
+                            "label": "",
+                            "value": "<style>\r\n.form-errors {\r\n    margin-bottom: 0rem;\r\n}\r\n#signAll{\r\n    top:8px;\r\n}\r\n.SignatureInfo{\r\n    border: 1px solid rgb(22, 119, 255);\r\n    position: absolute;\r\n    top: 11%;\r\n    left: 47%;\r\n    transform: translate(-50%, -50%);\r\n    padding: 10px;\r\n    z-index: 100;\r\n    background-color: #e6f4ff;\r\n    border-radius: 8px;\r\n    color: rgb(22, 119, 255);\r\n    display: none;\r\n}\r\n#SignatureInfo > p{\r\n    margin-bottom: 0px;\r\n}\r\n\r\n  @media (max-width: 991px) {\r\n    .grey-background {\r\n        height: 60vh !important;\r\n    }\r\n    .grey-background #pdf-container {\r\n        height: 60vh !important;\r\n    }\r\n    .toolbar .tool .tool-button:hover {\r\n        background-color: #fff;\r\n        border: 1px solid rgb(22, 119, 255);\r\n        color: rgb(22, 119, 255);\r\n    }\r\n  }\r\n  @media (max-width: 600px) {\r\n    .grey-background {\r\n        height: 75vh !important;\r\n    }\r\n    .grey-background #pdf-container {\r\n        height: 75vh !important;\r\n    }\r\n    .grey-background .toolbar {\r\n        top: -55px !important;\r\n    }\r\n  }\r\n  body .form-container [class*=form-cell-value] {\r\n    padding: 0px;\r\n  }\r\n\r\n  #section-actions {\r\n    display: none;\r\n  }\r\n\r\n  div.tool.editButton a {\r\n    padding: 8px 13px !important;\r\n  }\r\n\r\n  div.tool.doneButton {\r\n    float: right;\r\n  }\r\n\r\n  div.tool.doneButton a {\r\n    padding: 8px 13px !important;\r\n  }\r\n\r\n  body.popupBody {\r\n    padding: 0px 0px;\r\n  }\r\n\r\n  .grey-background {\r\n    background-color: #f3f0ec;\r\n    /*display: flex;*/\r\n    /*3.1*/\r\n    /*overflow: hidden;*/\r\n    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;\r\n    height: 93vh;\r\n  }\r\n\r\n  #signature-group>a>span {\r\n    font-weight: 600;\r\n  }\r\n\r\n  #signature-group>a>span>span {\r\n    display: block;\r\n    font-size: 11px;\r\n    font-weight: normal;\r\n    color: #bdc3c7;\r\n  }\r\n\r\n  #signature-count {\r\n    text-align: right;\r\n    margin-bottom: 15px;\r\n  }\r\n\r\n  .upper-canvas {\r\n    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;\r\n  }\r\n\r\n  .grey-background .toolbar {\r\n    width: 100%;\r\n    background-color: #f6f6f8;\r\n    height: 60px;\r\n    position: absolute;\r\n    top: 0px;\r\n    z-index: 10;\r\n    padding: 0 35px;\r\n    border-bottom: 1px solid #ccc;\r\n    text-align: center;\r\n  }\r\n\r\n  .grey-background .canvas-container {\r\n    margin: auto;\r\n    margin-bottom: 20px;\r\n  }\r\n\r\n  .grey-background #SignatureSidebar {\r\n    right: 0px;\r\n    top: 0;\r\n    width: 450px;\r\n    background: #fff;\r\n    z-index: 10;\r\n    -ms-flex-preferred-size: 450px;\r\n    flex-basis: 450px;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -ms-flex-direction: column;\r\n    flex-direction: column;\r\n    padding: 0 0 120px;\r\n    overflow-x: hidden;\r\n    overflow-y: auto;\r\n    position: relative;\r\n  }\r\n\r\n  .grey-background .content {\r\n    margin-top: 53px;\r\n    position: relative;\r\n    -webkit-box-sizing: border-box;\r\n    box-sizing: border-box;\r\n    -ms-flex: 1 1;\r\n    flex: 1 1;\r\n    display: block;\r\n  }\r\n\r\n  .grey-background .option__panel__title {\r\n    font-size: 24px;\r\n    font-weight: 600;\r\n    line-height: 34px;\r\n    letter-spacing: 0;\r\n    color: #000;\r\n    margin-bottom: 0;\r\n    text-transform: uppercase;\r\n    text-align: center;\r\n    padding: 21px;\r\n    border-bottom: 1px solid rgba(0, 0, 0, .2);\r\n    position: relative;\r\n    background-color: #fff;\r\n  }\r\n\r\n  .signature-group {\r\n    margin-bottom: 5px;\r\n  }\r\n\r\n  .grey-background #pdf-container {\r\n    padding-top: 72px;\r\n    padding-bottom: 72px;\r\n    text-align: center;\r\n    overflow: scroll;\r\n    overflow-x: hidden;\r\n    height: 93vh;\r\n  }\r\n\r\n  .pdf-container {\r\n    --scroll-size: 15px;\r\n    --scroll-radius: 0px;\r\n    --scroll-track: rgb(255 255 255 / 10%);\r\n    --scroll-thumb: linear-gradient(45deg, #00aeff, #a68eff);\r\n    --scroll-track: #ced4da;\r\n    scrollbar-color: var(--scroll-thumb-color, grey) var(--scroll-track, transparent);\r\n    scrollbar-width: thin;\r\n  }\r\n\r\n  .pdf-container::-webkit-scrollbar {\r\n    width: var(--scroll-size, 10px);\r\n    height: var(--scroll-size, 10px);\r\n  }\r\n\r\n  .pdf-container::-webkit-scrollbar-track {\r\n    background-color: var(--scroll-track, transparent);\r\n    border-radius: var(--scroll-track-radius, var(--scroll-radius));\r\n  }\r\n\r\n  .pdf-container::-webkit-scrollbar-thumb {\r\n    background-color: var(--scroll-thumb-color, grey);\r\n    background-image: var(--scroll-thumb, none);\r\n    border-radius: var(--scroll-thumb-radius, var(--scroll-radius));\r\n  }\r\n\r\n  .grey-background button:focus {\r\n    outline: 0;\r\n  }\r\n\r\n  .toolbar .tool {\r\n    display: inline-block;\r\n    color: #fff;\r\n    height: 100%;\r\n    padding: 15px 3px;\r\n  }\r\n\r\n  .toolbar .tool label,\r\n  .toolbar .tool select,\r\n  .toolbar .tool input {\r\n    display: inline-block;\r\n    width: auto;\r\n    height: auto !important;\r\n    padding-top: 0;\r\n    padding-bottom: 0;\r\n  }\r\n\r\n  .toolbar .tool .text-input {\r\n    width: 75px;\r\n  }\r\n\r\n  .toolbar .tool .tool-button {\r\n    width: 30px;\r\n    border-radius: 0.2rem;\r\n    background-color: #fff;\r\n    border: 1px solid rgb(22, 119, 255);\r\n    color: rgb(22, 119, 255);\r\n    cursor: pointer;\r\n    padding: 0px 6px;\r\n  }\r\n\r\n  .toolbar .tool .tool-button.active {\r\n    background-color: rgb(22, 119, 255);\r\n    border-color: rgb(22, 119, 255);\r\n    color: #fff;\r\n  }\r\n\r\n  .toolbar .tool .tool-button-danger {\r\n    width: 30px;\r\n    border-radius: 0.2rem;\r\n    background-color: #fff;\r\n    color: #fff;\r\n    cursor: pointer;\r\n    border: 0px;\r\n    color: #dc3545;\r\n    border: 1px solid #dc3545;\r\n  }\r\n\r\n  .toolbar .tool .tool-button-danger:hover {\r\n    background-color: #c82333;\r\n  }\r\n\r\n  .toolbar .tool .tool-button-info {\r\n    border-radius: 0.2rem;\r\n    background-color: #17a2b8;\r\n    color: #fff;\r\n    cursor: pointer;\r\n  }\r\n\r\n  .toolbar .tool .tool-button-info:hover {\r\n    background-color: #117a8b;\r\n  }\r\n\r\n  .toolbar .tool .tool-button-light {\r\n    border-radius: 0.2rem;\r\n    background-color: #f8f9fa;\r\n    color: #212529;\r\n    cursor: pointer;\r\n  }\r\n\r\n  .toolbar .tool .tool-button-light:hover {\r\n    background-color: #e2e6ea;\r\n  }\r\n\r\n  .signingSpots {\r\n    margin: 16px 24px;\r\n  }\r\n\r\n  .grey-background #SignatureSidebar>div.signingSpots>div>a>span {\r\n    margin-left: 25px;\r\n    font-size: 18px;\r\n  }\r\n\r\n  .grey-background #SignatureSidebar>div.signingSpots>div>a>input[type=checkbox] {\r\n    width: 5px;\r\n    height: 5px;\r\n    position: absolute;\r\n    top: 35px;\r\n    left: 40px;\r\n  }\r\n\r\n  .list-group-item {\r\n    padding: 1rem 1.25rem;\r\n  }\r\n\r\n  .option__label__title,\r\n  .option__title {\r\n    font-size: 18px;\r\n    font-weight: 500;\r\n    color: #212529;\r\n    letter-spacing: .3px;\r\n    line-height: 24px;\r\n    text-transform: uppercase;\r\n    margin-bottom: 15px;\r\n  }\r\n\r\n  .option__panel__bottom {\r\n    margin-bottom: 0;\r\n    padding: 21px;\r\n    background-color: #fff;\r\n    bottom: 0;\r\n    width: 450px;\r\n    position: absolute;\r\n    height: 140px;\r\n  }\r\n\r\n  #processTask {\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: rgb(22, 119, 255);\r\n    color: #fff;\r\n    font-size: 28px;\r\n    font-weight: 500;\r\n  }\r\n\r\n  #processTask span {\r\n    height: 24px;\r\n    display: -ms-inline-flexbox;\r\n    display: inline-flex;\r\n    -ms-flex-align: center;\r\n    align-items: center;\r\n    -ms-flex-pack: center;\r\n    justify-content: center;\r\n    padding: 40px;\r\n    position: relative;\r\n    vertical-align: bottom;\r\n    margin-left: 8px;\r\n  }\r\n\r\n  #processTask span,\r\n  #settingsRefresh span {\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    min-height: inherit;\r\n  }\r\n\r\n  .toolbar .tool.editButton {\r\n    float: right;\r\n    display: none;\r\n  }\r\n<\/style>\r\n<div class=\"grey-background\">\r\n    <div id=\"SignatureInfo\" class=\"SignatureInfo\"><p>To add signature location, simply click on the designated area below.<\/p><\/div>\r\n  <div class=\"toolbar\">\r\n    <div class=\"tool\">\r\n      <button class=\"tool-button\" title=\"Free Hand\" onclick=\"enableSelector(event)\">\r\n        <i class=\"fas fa-arrows-alt\"><\/i>\r\n      <\/button>\r\n    <\/div>\r\n    <div class=\"tool\">\r\n      <button class=\"tool-button\" title=\"Add Signature\" onclick=\"enableRectangle(event)\">\r\n        <i class=\"fas fa-signature\"><\/i>\r\n      <\/button>\r\n    <\/div>\r\n    <div class=\"tool\">\r\n      <button class=\"tool-button-danger\" title=\"Delete selected\" onclick=\"deleteSelectedObject(event)\">\r\n        <i class=\"far fa-trash-alt\"><\/i>\r\n      <\/button>\r\n    <\/div>\r\n    <div class=\"tool doneButton\">\r\n      <a class=\"tool-button\" title=\"Done\" onclick=\"closePanel('test')\">Save<\/a>\r\n    <\/div>\r\n    <div class=\"tool editButton\">\r\n      <a class=\"tool-button\" title=\"Edit\" onclick=\"editPanel('test')\">Edit<\/a>\r\n    <\/div>\r\n  <\/div>\r\n  <div class=\"content\">\r\n    <div id=\"pdf-container\" class=\"pdf-container\"><\/div>\r\n  <\/div>\r\n<\/div>\r\n<script src=\"#appResource.fabric.min.js#\"><\/script>\r\n<script src=\"#appResource.pdf.js#\"><\/script>\r\n<script>\r\n  pdfjsLib.GlobalWorkerOptions.workerSrc = \"#appResource.pdf.worker.js#\";\r\n<\/script>\r\n<script src=\"#appResource.pdfannotate.js#\"><\/script>\r\n<script type=\"text/javascript\">\r\n  // standard options type:\r\n  // If absolute URL from the remote server is provided, configure the CORS header on that server.\r\n  var pdf;\r\n  var url = '#request.domainURL#/jw/web/client/app/#appDef.appId#/#appDef.version#/form/download/request/#form.ags_record.id#/#form.ags_record.agreement#.';\r\n  var zoomScale = 1.2;\r\n  var outputJson = {};\r\n  var selectedObjects = new Set();\r\n  var originalSize;\r\n  let signatureCount = 0;\r\n  var screenWidth = window.innerWidth;\r\n\r\n    if (screenWidth <= 600) {\r\n        zoomScale = 0.35;\r\n    } else if(screenWidth <= 991 ) {\r\n        zoomScale = 0.7;\r\n    } else if(screenWidth >= 992 ) {\r\n        zoomScale = 1.2;\r\n    }\r\n\r\n  function renderPDF() {\r\n    pdf = new PDFAnnotate('pdf-container', url, {\r\n      onPageUpdated(page, oldData, newData) {\r\n      },\r\n      ready() {\r\n        const jsonData = FormUtil.getField(\"annotation_data\").val();\r\n        if (jsonData) {\r\n          const parsedData = JSON.parse(jsonData);\r\n          pdf.loadFromJSON(parsedData);\r\n          parsedData.pages.forEach((page) => {\r\n\t\t\tpage.objects.forEach((object) => {\r\n\t\t\t  signatureCount++\r\n\t\t\t});\r\n\t\t  });\r\n\t\t  FormUtil.getField(\"signature_count\").val(signatureCount);\r\n        }\r\n      },\r\n      scale: zoomScale,\r\n      pageImageCompression: 'MEDIUM', // FAST, MEDIUM, SLOW(Helps to control the new PDF file size)\r\n    });\r\n  }\r\n\r\n  function changeActiveTool(event) {\r\n    var element = $(event.target).hasClass('tool-button') ? $(event.target) : $(event.target).parents('.tool-button').first();\r\n    $('.tool-button.active').removeClass('active');\r\n    $(element).addClass('active');\r\n  }\r\n\r\n  function enableSelector(event) {\r\n    $('#SignatureInfo').hide();\r\n    event.preventDefault();\r\n    changeActiveTool(event);\r\n    pdf.enableSelector();\r\n  }\r\n\r\n  function enablePencil(event) {\r\n    event.preventDefault();\r\n    changeActiveTool(event);\r\n    pdf.enablePencil();\r\n  }\r\n\r\n  function enableAddText(event) {\r\n    event.preventDefault();\r\n    changeActiveTool(event);\r\n    pdf.enableAddText(function() {\r\n      $('.tool-button').first().find('i').click();\r\n    });\r\n  }\r\n\r\n  function enableAddArrow(event) {\r\n    event.preventDefault();\r\n    changeActiveTool(event);\r\n    pdf.enableAddArrow(function() {\r\n      $('.tool-button').first().find('i').click();\r\n    });\r\n  }\r\n\r\n  function addImage(event) {\r\n    event.preventDefault();\r\n    pdf.addImageToCanvas();\r\n  }\r\n\r\n  function enableRectangle(event) {\r\n    event.preventDefault();\r\n    $('#SignatureInfo').show()\r\n    changeActiveTool(event);\r\n    pdf.enableRectangle(function() {\r\n      $('.tool-button').first().find('i').click();\r\n    });\r\n  }\r\n\r\n  function undo(event) {\r\n    event.preventDefault();\r\n    pdf.undo();\r\n  }\r\n\r\n  function redo(event) {\r\n    event.preventDefault();\r\n    pdf.redo();\r\n  }\r\n\r\n  function deleteSelectedObject(event) {\r\n    event.preventDefault();\r\n    pdf.deleteSelectedObject();\r\n  }\r\n\r\n  function savePDF() {\r\n    // pdf.savePdf();\r\n    pdf.savePdf('output.pdf'); // save with given file name\r\n  }\r\n\r\n  function clearPage() {\r\n    pdf.clearActivePage();\r\n  }\r\n\r\n  function showPdfData() {\r\n    let objectNumber = 0;\r\n    var annotateData;\r\n    pdf.serializePdf(function(string) {\r\n      const parsedJson = JSON.parse(string);\r\n      parsedJson.pages.forEach((page) => {\r\n        page.objects.forEach((object) => {\r\n          objectNumber++;\r\n        });\r\n      });\r\n      annotateData = JSON.stringify(JSON.parse(string));\r\n      FormUtil.getField(\"signature_count\").val(objectNumber);\r\n      FormUtil.getField(\"annotation_data\").val(annotateData);\r\n    });\r\n  }\r\n\r\n  function showVal(a) {\r\n    pdf.serializePdf(function(string) {\r\n      outputJson = JSON.parse(string);\r\n    });\r\n    zoomScale = Number(a);\r\n    renderPDF();\r\n  }\r\n  // Get a reference to the select box\r\n  var selectBox = document.getElementById('signature-spot');\r\n  // Function to select the next option\r\n  function selectNext() {\r\n    var selectedIndex = selectBox.selectedIndex;\r\n    if (selectedIndex < selectBox.options.length - 1) {\r\n      selectBox.selectedIndex = selectedIndex + 1;\r\n      $(selectBox).trigger('change');\r\n    }\r\n  }\r\n  // Function to select the previous option\r\n  function selectPrevious() {\r\n    var selectedIndex = selectBox.selectedIndex;\r\n    if (selectedIndex > 0) {\r\n      selectBox.selectedIndex = selectedIndex - 1;\r\n      $(selectBox).trigger('change');\r\n    }\r\n  }\r\n\r\n  function updateHiddenField(value) {\r\n    $('#SignSelected').text(selectedObjects.size + \" /\" + originalSize);\r\n    FormUtil.getField(\"selectedSignature\").val(value);\r\n  }\r\n\r\n  function closePanel(value) {\r\n    showPdfData();\r\n    $('#section-actions').show();\r\n    $('.tool').hide();\r\n    $('.editButton').show();\r\n    $(\".grey-background .content\").css(\"filter\", \"brightness(0.5)\");\r\n  }\r\n\r\n  function editPanel(value) {\r\n    $('#section-actions').hide();\r\n    $('.tool').show();\r\n    $('.editButton').hide();\r\n    $(\".grey-background .content\").css(\"filter\", \"brightness(1)\");\r\n  }\r\n  $(function() {\r\n    $('#signature-spot').on('change', function() {\r\n      var pageNumber = parseInt(this.value);\r\n      var $elementToScroll = $(\"#page-\" + pageNumber + \"-canvas\");\r\n      var divElement = document.getElementById('pdf-container');\r\n      var currentScrollPosition = divElement.scrollTop;\r\n      // Calculate the position to scroll to (middle of the element)\r\n      var scrollPosition = $elementToScroll.offset().top;\r\n      // Scroll to the calculated position\r\n      $('#pdf-container').animate({\r\n        scrollTop: currentScrollPosition + scrollPosition - 150\r\n      }, 500);\r\n    });\r\n  });\r\n  renderPDF();\r\n\r\n  fabric.LabeledRect = fabric.util.createClass(fabric.Rect, {\r\n    type: 'labeledRect',\r\n    initialize: function(options) {\r\n      options || (options = {});\r\n      var label = 'Signature';\r\n      this.callSuper('initialize', options);\r\n      this.set('label', label || '');\r\n    },\r\n    toObject: function() {\r\n      return fabric.util.object.extend(this.callSuper('toObject'), {\r\n        label: this.get('label')\r\n      });\r\n    },\r\n    _render: function(ctx) {\r\n      this.callSuper('_render', ctx);\r\n      ctx.font = '20px Helvetica';\r\n      ctx.fillStyle = 'rgb(22, 119, 255)';\r\n      ctx.textAlign = 'center'; // Center text h\r\n      ctx.textBaseline = 'middle';\r\n      var textY = -this.height / 2 + this.height / 2;\r\n      ctx.fillText(this.label, 0, textY);\r\n    }\r\n  });\r\n  fabric.LabeledRect.fromObject = function(object, callback) {\r\n    return fabric.Object._fromObject('LabeledRect', object, callback);\r\n  }\r\n<\/script>"
+                        }
+                    }],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "horizontal": "",
+                        "customWidth": "70%",
+                        "width": "70%",
+                        "style-tablet-width": "100%",
+                        "label": ""
+                    }
+                },
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "autoPopulate": "",
+                                "label": "",
+                                "id": "field13",
+                                "value": "<p class=\"form-message form-success\">\n    <strong>How To Add Signature Location<\/strong><br>\n    1) Add Signature Location on the left panel<br>\n    2) Fill In Signer Name and Email Address\n<\/p>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.marketplace.MultiFormValidator",
+                                    "properties": {
+                                        "thirdValidator": {
+                                            "className": "",
+                                            "properties": {}
+                                        },
+                                        "firstValidator": {
+                                            "className": "org.joget.apps.form.lib.DefaultValidator",
+                                            "properties": {
+                                                "type": "",
+                                                "message": "",
+                                                "mandatory": "true"
+                                            }
+                                        },
+                                        "isReverse2": "",
+                                        "isReverse1": "",
+                                        "secondValidator": {
+                                            "className": "org.joget.apps.form.lib.BeanShellValidator",
+                                            "properties": {
+                                                "decoration": "",
+                                                "script": "import org.joget.apps.app.service.AppUtil;\nimport org.joget.apps.form.model.Element;\nimport org.joget.apps.form.model.Form;\nimport org.joget.apps.form.model.FormData;\nimport org.joget.apps.form.service.FormUtil;\nimport org.joget.commons.util.LogUtil;\nimport org.json.JSONArray;\nimport org.json.JSONException;\nimport org.json.JSONObject;\n\n//validate marker data\nboolean markerValid = false;\n\nString markerDataID = \"signature_count\";\nForm form = FormUtil.findRootForm(element);\nElement markerField = FormUtil.findElement(markerDataID, form, formData);\n\nif (markerField != null) {\n    String[] markerData = FormUtil.getElementPropertyValues(markerField, formData);\n    try{\n        String jsonData = markerData[0];\n        if(jsonData.equals(\"0\")){\n            markerValid = false;\n        }else{\n            markerValid = true;\n        }\n    }catch(Exception ex){\n        LogUtil.info(\"#appDef.name# Form 3.1\", \"Cannot get validate annotation data\");\n    }\n}\n\nif(markerValid){\n    return true;\n}else{\n    String id = FormUtil.getElementParameterName(element);\n    formData.addFormError(id, \"No Signature Location Found\");\n    result = false;\n}"
+                                            }
+                                        },
+                                        "fifthValidator": {
+                                            "className": "",
+                                            "properties": {}
+                                        },
+                                        "fourthValidator": {
+                                            "className": "",
+                                            "properties": {}
+                                        }
+                                    }
+                                },
+                                "label": "Signer Name",
+                                "style-margin-top": "20px",
+                                "encryption": "",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "name",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.marketplace.MultiFormValidator",
+                                    "properties": {
+                                        "thirdValidator": {
+                                            "className": "",
+                                            "properties": {}
+                                        },
+                                        "firstValidator": {
+                                            "className": "org.joget.apps.form.lib.DefaultValidator",
+                                            "properties": {
+                                                "type": "email",
+                                                "message": "Email ERROR",
+                                                "mandatory": "true"
+                                            }
+                                        },
+                                        "isReverse1": "",
+                                        "secondValidator": {
+                                            "className": "",
+                                            "properties": {}
+                                        },
+                                        "fifthValidator": {
+                                            "className": "",
+                                            "properties": {}
+                                        },
+                                        "fourthValidator": {
+                                            "className": "",
+                                            "properties": {}
+                                        }
+                                    }
+                                },
+                                "label": "Signer Email",
+                                "encryption": "",
+                                "readonly": "",
+                                "size": "",
+                                "style-margin-bottom": "30px",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "email",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CheckBox",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [{
+                                    "label": "",
+                                    "value": "true",
+                                    "grouping": ""
+                                }],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Sign All",
+                                "id": "signAll",
+                                "value": "true",
+                                "readonlyLabel": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "horizontal": "",
+                        "customWidth": "",
+                        "width": "calc((100% - 70%)/1)",
+                        "style-tablet-width": "100%",
+                        "label": "",
+                        "style-tablet-margin-bottom": "100px"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "controlField2",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "assignSpot",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section3",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "signature_count",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "workflowVariable": "",
+                            "id": "annotation_data",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "workflowVariable": "",
+                            "id": "signature_type",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "controlField",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "workflowVariable": "",
+                            "id": "annotation_image",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "workflowVariable": "",
+                            "id": "original_image",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "workflowVariable": "",
+                            "id": "request_id",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "workflowVariable": "",
+                            "id": "annotation_page",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "workflowVariable": "",
+                            "id": "sort",
+                            "value": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Section",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "style-display": "none",
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section2",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "3.1-Assign Signatory",
+        "description": "",
+        "postProcessorRunOn": "create",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "requestAnn",
+        "postProcessor": {
+            "className": "",
+            "properties": {}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "ags_annotation"
+    }
+}

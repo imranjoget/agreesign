@@ -1,0 +1,315 @@
+{
+    "elements": [
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "elements": [{
+                            "className": "org.joget.apps.userview.lib.HtmlPage",
+                            "properties": {
+                                "userviewCacheDuration": "20",
+                                "userviewCacheScope": "",
+                                "label": "Rich Text",
+                                "id": "38C5872F914B4F4B1CD19C607326E25B",
+                                "enableOffline": "",
+                                "customId": "",
+                                "content": "<div style=\"margin: auto; max-width: fit-content;\">\n<div>\n<h1><span style=\"color: rgb(22, 119, 255); font-size: 36pt;\"><strong>Simplify Signatures <br>with Joget SigningDoc App<\/strong><\/span><\/h1>\n<p><span style=\"color: rgb(22, 119, 255);\"><strong>&nbsp;<\/strong><\/span><\/p>\n<\/div>\n<p style=\"font-size: 13pt;\"><span style=\"color: rgb(126, 140, 141); font-size: 18pt;\">Streamline document signing for enterprises with the Joget SigningDoc App. Obtain electronic signatures from multiple parties seamlessly. Upload, assign, and sign &ndash; all in one place.<\/span><\/p>\n<\/div>"
+                            }
+                        }],
+                        "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                        "properties": {
+                            "style-flex": "0 0 60%",
+                            "style-max-width": "60%"
+                        }
+                    },
+                    {
+                        "elements": [{
+                            "className": "org.joget.apps.userview.lib.component.ImageComponent",
+                            "properties": {
+                                "attr-data-events-listening": [],
+                                "style-custom": "    filter: drop-shadow(4px 5px 6px #666);",
+                                "attr-width": "550",
+                                "attr-height": "400",
+                                "attr-src": "/jw/web/app/agreesign/resources/save.png",
+                                "id": "7ABF6876D72A4C29627AE70DCCA39A68",
+                                "customId": ""
+                            }
+                        }],
+                        "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                        "properties": {
+                            "style-flex": "0 0 40%",
+                            "style-max-width": "40%"
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.userview.lib.component.ColumnsComponent",
+                "properties": {
+                    "attr-data-events-listening": [],
+                    "gutter": "5px",
+                    "columns": [
+                        {
+                            "style-mobile-max-width": "",
+                            "style-max-width": "60%",
+                            "style-tablet-max-width": ""
+                        },
+                        {
+                            "style-mobile-max-width": "",
+                            "style-max-width": "40%",
+                            "style-tablet-max-width": ""
+                        }
+                    ],
+                    "css-mobile-stack-columns": "true",
+                    "id": "9DF5B390293942A1532603C4ABC7FCBD",
+                    "customId": ""
+                }
+            }],
+            "className": "org.joget.apps.userview.lib.component.ContainerComponent",
+            "properties": {
+                "attr-data-events-listening": [],
+                "style-background-color": "var(--theme-content-background, #ffffffcc)",
+                "style-margin-bottom": "10px",
+                "id": "8D02B9B0F760494779C84D79A9DF1EE8",
+                "customId": ""
+            }
+        },
+        {
+            "elements": [
+                {
+                    "className": "org.joget.apps.userview.lib.component.HeadingComponent",
+                    "properties": {
+                        "attr-data-events-listening": [],
+                        "style-color": "#1677FF",
+                        "textContent": "How to sign PDF with Joget SigningDoc App:",
+                        "id": "241DE9D104994E191861AC00F4119BB6",
+                        "tagName": "h3",
+                        "customId": ""
+                    }
+                },
+                {
+                    "elements": [
+                        {
+                            "elements": [{
+                                "className": "org.joget.apps.userview.lib.HtmlPage",
+                                "properties": {
+                                    "userviewCacheDuration": "20",
+                                    "userviewCacheScope": "",
+                                    "enableOffline": "",
+                                    "id": "8EA0A8AC17864A7D63D5DC43A477878F",
+                                    "label": "Rich Text",
+                                    "customId": "",
+                                    "content": "<p style=\"text-align: left;\"><span style=\"font-size: 14pt;\"><strong>1️\u20e3 Upload Your PDF File on Joget SigningDoc App<\/strong>:<\/span><br><span style=\"font-size: 14pt; color: rgb(102, 102, 102);\">Initiate the process by uploading your PDF document to the Joget SigningDoc App.<\/span><\/p>"
+                                }
+                            }],
+                            "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                            "properties": {"id": "71A354E660A04B3512912420C103E62B"}
+                        },
+                        {
+                            "elements": [{
+                                "className": "org.joget.apps.userview.lib.HtmlPage",
+                                "properties": {
+                                    "userviewCacheDuration": "20",
+                                    "userviewCacheScope": "",
+                                    "enableOffline": "",
+                                    "id": "88DE8C3DA2364A8B1A34301A1A09D192",
+                                    "label": "Rich Text",
+                                    "customId": "",
+                                    "content": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 14pt;\">2️\u20e3 Assign Signatories:<\/span><\/strong><br><span style=\"font-size: 14pt; color: rgb(102, 102, 102);\">Designate individuals who need to sign the document, specifying their names and email addresses for the signing process.<\/span><\/p>"
+                                }
+                            }],
+                            "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                            "properties": {"id": "35F23518D755496AB5B30D6A011C40F4"}
+                        },
+                        {
+                            "elements": [{
+                                "className": "org.joget.apps.userview.lib.HtmlPage",
+                                "properties": {
+                                    "userviewCacheDuration": "20",
+                                    "userviewCacheScope": "",
+                                    "enableOffline": "",
+                                    "id": "26FE791015BA4578D61AAB44D710F84D",
+                                    "label": "Rich Text",
+                                    "customId": "",
+                                    "content": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 14pt;\">3️\u20e3 Send Invites to Sign Document:<\/span><\/strong><br><span style=\"color: rgb(102, 102, 102); font-size: 14pt;\">Send invitations to the designated signatories, prompting them to participate in signing the document through email.<\/span><\/p>"
+                                }
+                            }],
+                            "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                            "properties": {"id": "B476120DFB80412EFDDF956BB079C937"}
+                        }
+                    ],
+                    "className": "org.joget.apps.userview.lib.component.ColumnsComponent",
+                    "properties": {
+                        "attr-data-events-listening": [],
+                        "gutter": "5px",
+                        "columns": [
+                            {
+                                "style-mobile-max-width": "",
+                                "style-max-width": "",
+                                "style-tablet-max-width": ""
+                            },
+                            {
+                                "style-mobile-max-width": "",
+                                "style-max-width": "",
+                                "style-tablet-max-width": ""
+                            },
+                            {
+                                "style-mobile-max-width": "",
+                                "style-max-width": "",
+                                "style-tablet-max-width": ""
+                            }
+                        ],
+                        "css-mobile-stack-columns": "true",
+                        "id": "AE07000E20FB411E3E10E47B9C5608E5",
+                        "customId": ""
+                    }
+                },
+                {
+                    "elements": [
+                        {
+                            "elements": [{
+                                "className": "org.joget.apps.userview.lib.HtmlPage",
+                                "properties": {
+                                    "userviewCacheDuration": "20",
+                                    "userviewCacheScope": "",
+                                    "enableOffline": "",
+                                    "id": "2FED686BB02B4A2D84A824FFABAB7387",
+                                    "label": "Rich Text",
+                                    "customId": "",
+                                    "content": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 14pt;\">4️\u20e3 Send Documents to Creator:<\/span><\/strong><br><span style=\"font-size: 14pt; color: rgb(102, 102, 102);\">Collect all signatures, append them to the original PDF, and forward the completed document to the creator for record-keeping.<\/span><\/p>"
+                                }
+                            }],
+                            "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                            "properties": {"id": "DEF0DBCC88894944D3E6741D32BF5FA5"}
+                        },
+                        {
+                            "elements": [{
+                                "className": "org.joget.apps.userview.lib.HtmlPage",
+                                "properties": {
+                                    "userviewCacheDuration": "20",
+                                    "userviewCacheScope": "",
+                                    "enableOffline": "",
+                                    "id": "1CCC5E35A9ED41C00B56AAE8809E3279",
+                                    "label": "Rich Text",
+                                    "customId": "",
+                                    "content": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 14pt;\">5️\u20e3 Refresh Document:<\/span><\/strong><br><span style=\"font-size: 14pt; color: rgb(102, 102, 102);\">Stay updated on the signing progress by using the \"Refresh Document \" feature to track completed signatures and pending actions.<\/span><\/p>"
+                                }
+                            }],
+                            "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                            "properties": {"id": "FCC7E814FD18426778AA09A29B9CFE78"}
+                        },
+                        {
+                            "elements": [{
+                                "className": "org.joget.apps.userview.lib.HtmlPage",
+                                "properties": {
+                                    "userviewCacheDuration": "20",
+                                    "userviewCacheScope": "",
+                                    "enableOffline": "",
+                                    "id": "4890FDF4703949785B951CEE67C3770B",
+                                    "label": "Rich Text",
+                                    "customId": "",
+                                    "content": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 14pt;\">6️\u20e3 Close:<\/span><\/strong><br><span style=\"font-size: 14pt; color: rgb(102, 102, 102);\">Conclude the signing process when all parties have signed, indicating that the document is fully executed and no further changes are needed.<\/span><\/p>"
+                                }
+                            }],
+                            "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                            "properties": {"id": "EEBA5DF30BFB47FB42865CA75F69EC22"}
+                        }
+                    ],
+                    "className": "org.joget.apps.userview.lib.component.ColumnsComponent",
+                    "properties": {
+                        "attr-data-events-listening": [],
+                        "gutter": "5px",
+                        "columns": [
+                            {
+                                "style-mobile-max-width": "",
+                                "style-max-width": "",
+                                "style-tablet-max-width": ""
+                            },
+                            {
+                                "style-mobile-max-width": "",
+                                "style-max-width": "",
+                                "style-tablet-max-width": ""
+                            },
+                            {
+                                "style-mobile-max-width": "",
+                                "style-max-width": "",
+                                "style-tablet-max-width": ""
+                            }
+                        ],
+                        "css-mobile-stack-columns": "true",
+                        "id": "171F4D3B64E44095E171D93812AA8130",
+                        "customId": ""
+                    }
+                },
+                {
+                    "elements": [
+                        {
+                            "elements": [{
+                                "className": "org.joget.apps.userview.lib.HtmlPage",
+                                "properties": {
+                                    "userviewCacheDuration": "20",
+                                    "userviewCacheScope": "",
+                                    "enableOffline": "",
+                                    "id": "FC7EB98465104C885EA519E9D2503CEF",
+                                    "label": "Rich Text",
+                                    "customId": "",
+                                    "content": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 14pt;\">7️\u20e3 View:<\/span><\/strong><br><span style=\"font-size: 14pt; color: rgb(102, 102, 102);\">Access the document to see the current signing status, including completed and pending signatures.<\/span><\/p>"
+                                }
+                            }],
+                            "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                            "properties": {"id": "9CE98062F08644C41173CEC4E81D48A3"}
+                        },
+                        {
+                            "elements": [{
+                                "className": "org.joget.apps.userview.lib.HtmlPage",
+                                "properties": {
+                                    "userviewCacheDuration": "20",
+                                    "userviewCacheScope": "",
+                                    "enableOffline": "",
+                                    "id": "B28E1CEFF1114117A50B0C391BE689F0",
+                                    "label": "Rich Text",
+                                    "customId": "",
+                                    "content": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 14pt;\">8️\u20e3 Reopen:<\/span><\/strong><br><span style=\"font-size: 14pt; color: rgb(102, 102, 102);\">If revisions or additional signatures are required, use the \"Reopen\" option to revisit the signing process and make necessary adjustments.<\/span><\/p>"
+                                }
+                            }],
+                            "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                            "properties": {"id": "FC11EC653A8643C64DB8DA718572D153"}
+                        }
+                    ],
+                    "className": "org.joget.apps.userview.lib.component.ColumnsComponent",
+                    "properties": {
+                        "attr-data-events-listening": [],
+                        "gutter": "5px",
+                        "columns": [
+                            {
+                                "style-mobile-max-width": "",
+                                "style-max-width": "",
+                                "style-tablet-max-width": ""
+                            },
+                            {
+                                "style-mobile-max-width": "",
+                                "style-max-width": "",
+                                "style-tablet-max-width": ""
+                            }
+                        ],
+                        "css-mobile-stack-columns": "true",
+                        "id": "D56D894A99B84E08F541A79F918F4070",
+                        "customId": ""
+                    }
+                }
+            ],
+            "className": "org.joget.apps.userview.lib.component.ContainerComponent",
+            "properties": {
+                "attr-data-events-listening": [],
+                "style-background-color": "var(--theme-content-background, #ffffffcc)",
+                "style-padding-right": "30px",
+                "style-margin-top": "10px",
+                "style-padding-bottom": "30px",
+                "id": "71A58C12099044176AACC757CCDF094F",
+                "style-padding-top": "30px",
+                "customId": "",
+                "style-padding-left": "30px"
+            }
+        }
+    ],
+    "className": "org.joget.apps.userview.model.UserviewPage",
+    "properties": {"id": "up-567f0e62-337a-4842-ab97-2a3aabe13103"}
+}

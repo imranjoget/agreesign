@@ -1,0 +1,167 @@
+{
+    "considerFilterWhenGetTotal": "",
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [{
+        "icon": "",
+        "name": "PDF File Download Signature",
+        "className": "org.joget.marketplace.PDFFileDownloadSignature",
+        "id": "rowAction_0",
+        "label": "PDF File Download Signature",
+        "type": "text",
+        "properties": {
+            "bodyStamping": "",
+            "trailHeaderFormDefId": "",
+            "footerWatermark": "Document - #form.ags_record.id[{assignment.processId}]# - #date.EEE,d MMM yyyy h:mm:ss a|GMT# GMT",
+            "footerFontFamily": "0",
+            "formDefId": "request",
+            "footerFontSize": "8",
+            "trailFormDefId": "requestTrail",
+            "footerFontColor": "#020202",
+            "rules": [],
+            "documentTrail": "true",
+            "header_label": "",
+            "trailFormatting": "@page { \n    size: 8.27in 11.69in; \n}\n\ntable {\n    width: 100%;\n}\n\nthead {\n    display: none !important;\n}\n\ntd {\n    border: none !important;\n}",
+            "footerFontStyle": "0",
+            "signatureStampingCanvasWidth": "320",
+            "stylishFont": "LemonTuesday.ttf",
+            "headerStamping": "",
+            "attachmentField": "agreement",
+            "label": "Download Signed Document",
+            "datalist_type": "row_action",
+            "footerStamping": "true",
+            "signatureStamping": "true",
+            "appPrefix": "ags",
+            "stylishFontSize": "20",
+            "debugMode": "",
+            "signatureStampingCanvasHeight": "220",
+            "footerFontOpacity": "0.8"
+        }
+    }],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "ID",
+            "sortable": "true",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "headerAlignment": "",
+            "name": "id",
+            "width": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_0",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Document Title",
+            "sortable": "true",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "headerAlignment": "",
+            "name": "title",
+            "width": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_1",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Status",
+            "sortable": "true",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "headerAlignment": "",
+            "name": "status",
+            "width": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_2",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Date Created",
+            "sortable": "true",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "headerAlignment": "",
+            "name": "dateCreated",
+            "width": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_3",
+            "alignment": ""
+        }
+    ],
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "filters": [{
+        "name": "title",
+        "id": "filter_0",
+        "label": "Document Title",
+        "type": {
+            "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+            "properties": {}
+        },
+        "filterParamName": "d-7402985-fn_title"
+    }],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bottomLeft",
+    "checkboxPosition": "left",
+    "name": "Request (For PDF Generation Only)",
+    "id": "requestPDFGeneration",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {
+            "joins": [],
+            "formDefId": "request",
+            "customSelectionValue": "",
+            "extraCondition": "",
+            "filters": [],
+            "groupBy": "",
+            "functionColumns": []
+        }
+    },
+    "actions": [],
+    "order": ""
+}

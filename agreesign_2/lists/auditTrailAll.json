@@ -1,0 +1,143 @@
+{
+    "considerFilterWhenGetTotal": "",
+    "responsiveView": [
+        {
+            "view": "Mobile",
+            "columns": "",
+            "breakpoint": ""
+        },
+        {
+            "view": "Tablet",
+            "columns": "",
+            "breakpoint": ""
+        }
+    ],
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "useSession": "",
+    "searchPopup": "",
+    "showPageSizeSelector": "true",
+    "columns": [
+        {
+            "hidden": "false",
+            "permission_rules": {},
+            "renderHtml": "",
+            "format": {
+                "className": "org.joget.plugin.enterprise.BeanShellFormatter",
+                "properties": {"script": "if(value.equalsIgnoreCase(\"Sign\")){\n    return \"<i class=\\\"zmdi zmdi-assignment-check\\\"><\/i>\";\n}else if(value.equalsIgnoreCase(\"View\")){\n    return \"<i class=\\\"far fa-eye\\\"><\/i>\";\n}else if(value.equalsIgnoreCase(\"Invite\")){\n    return \"<i class=\\\"zmdi zmdi-accounts-add\\\"><\/i>\";\n}else if(value.equalsIgnoreCase(\"Complete\")){\n    return \"<i class=\\\"zmdi zmdi-check-circle\\\"><\/i>\";\n}else if(value.equalsIgnoreCase(\"Remind\")){\n    return \"<i class=\\\"zmdi zmdi-notifications-none\\\"><\/i>\";\n}else{\n    return value;\n}"}
+            },
+            "label": "Action",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "action",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_0",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "permission_rules": {},
+            "name": "source",
+            "id": "column_5",
+            "label": "Source",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "path",
+            "id": "column_2",
+            "label": "Path",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "invited",
+            "id": "column_8",
+            "label": "Invited",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "createdBy",
+            "id": "column_6",
+            "label": "Created By",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "createdByName",
+            "id": "column_7",
+            "label": "Created By Name",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "permission_rules": {},
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Date Created",
+            "sortable": "true",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "headerAlignment": "",
+            "name": "dateCreated",
+            "width": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_3",
+            "alignment": ""
+        }
+    ],
+    "permission_rules": [],
+    "rowActions": [],
+    "description": "",
+    "orderBy": "dateCreated",
+    "pageSize": "50",
+    "filters": [{
+        "hidden": "",
+        "permission_rules": {},
+        "name": "request_id",
+        "id": "filter_0",
+        "label": "Document ID",
+        "datalist_type": "filter",
+        "type": {
+            "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+            "properties": {"defaultValue": ""}
+        },
+        "filterParamName": "d-6253804-fn_request_id"
+    }],
+    "showDataWhenFilterSet": "",
+    "buttonPosition": "bottomLeft",
+    "disableResponsive": "",
+    "hidePageSize": "",
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "checkboxPosition": "left",
+    "name": "Audit Trail Record",
+    "id": "auditTrailAll",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "trail"}
+    },
+    "actions": [],
+    "order": "1"
+}

@@ -1,0 +1,99 @@
+{
+    "elements": [{
+        "elements": [{
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.lib.CustomHTML",
+                    "properties": {
+                        "autoPopulate": "",
+                        "label": "",
+                        "id": "field2",
+                        "value": "<style>\r\n    div.step-icon i {\r\n        margin-bottom: 5px;\r\n    }\r\n    div.stepsIcon .step {\r\n        min-width: 13vw;\r\n    }\r\n    @media only screen and (max-width: 440px) {\r\n        div.stepsIcon .step {\r\n            min-width:0px!important;\r\n        }\r\n    }\r\n<\/style>"
+                    }
+                },
+                {
+                    "className": "org.joget.marketplace.BootstrapStepsDisplayField",
+                    "properties": {
+                        "iconBackgroundColorComplete": "#1677FF",
+                        "connector": "line",
+                        "iconBackgroundColor": "#CFCFCF",
+                        "iconColor": "#FFFFFF",
+                        "options": [
+                            {
+                                "numbering": "1",
+                                "icon": "fas fa-file",
+                                "label": "New",
+                                "value": "New"
+                            },
+                            {
+                                "numbering": "2",
+                                "icon": "fas fa-clipboard-list",
+                                "label": "Preparing",
+                                "value": "Preparing"
+                            },
+                            {
+                                "numbering": "3",
+                                "icon": "fas fa-envelope",
+                                "label": "Invited",
+                                "value": "Invited"
+                            },
+                            {
+                                "numbering": "4",
+                                "icon": "fas fa-check-circle",
+                                "label": "Completed",
+                                "value": "Completed"
+                            },
+                            {
+                                "numbering": "5",
+                                "icon": "fas fa-times-circle",
+                                "label": "Closed",
+                                "value": "Closed"
+                            }
+                        ],
+                        "statusFieldId": "status",
+                        "scale": "1",
+                        "theme": "2",
+                        "id": "status_display"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Column",
+            "properties": {"width": "100%"}
+        }],
+        "className": "org.joget.apps.form.model.Section",
+        "properties": {
+            "visibilityControl": "",
+            "permissionReadonly": "",
+            "permission": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "",
+            "reverse": "",
+            "storeBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "visibilityValue": "",
+            "regex": "",
+            "loadBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "readonly": "",
+            "comment": "",
+            "id": "boostrapSection",
+            "join": "",
+            "readonlyLabel": ""
+        }
+    }],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "name": "Request Status Display",
+        "description": "",
+        "id": "requestStatusDisplay",
+        "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "tableName": "ags_record"
+    }
+}

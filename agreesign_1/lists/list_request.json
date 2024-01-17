@@ -1,0 +1,677 @@
+{
+    "considerFilterWhenGetTotal": "",
+    "responsiveView": [
+        {
+            "view": "Mobile",
+            "columns": "",
+            "breakpoint": ""
+        },
+        {
+            "view": "Tablet",
+            "columns": "",
+            "breakpoint": ""
+        }
+    ],
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "showPageSizeSelector": "true",
+    "responsiveMode": "",
+    "rowActions": [
+        {
+            "icon": "<i class=\"fas fa-link\"><\/i>",
+            "name": "Data List Hyperlink Action",
+            "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+            "id": "rowAction_1",
+            "label": "Hyperlink",
+            "type": "text",
+            "properties": {
+                "hrefColumn": "id",
+                "hrefParam": "id",
+                "rules": [{
+                    "field": "status",
+                    "join": "AND",
+                    "value": "Closed;Aborted",
+                    "operator": "NOT IN"
+                }],
+                "href": "C92F3D5A983A40408400F7ADAA34BF40",
+                "label": "<i class=\"fas fa-user-edit\"><\/i> &nbsp;Assign Signatories",
+                "confirmation": "",
+                "datalist_type": "row_action",
+                "link-css-display-type": "btn btn-sm btn-secondary",
+                "target": "_self",
+                "header_label": ""
+            }
+        },
+        {
+            "icon": "<i class=\"fas fa-tools\"><\/i>",
+            "name": "Form Update and Process Tool Datalist Action",
+            "className": "org.joget.marketplace.FormUpdateProcessToolDatalistAction",
+            "id": "rowAction_3",
+            "label": "Form Update and Process Tool Datalist Action",
+            "type": "text",
+            "properties": {
+                "htmlScript": "",
+                "delay": "3",
+                "debug": "true",
+                "popupFormId": "",
+                "processTool": {
+                    "className": "org.joget.marketplace.IteratorProcessToolRecord",
+                    "properties": {
+                        "iteratorMethod": "Process Tool",
+                        "executeProcessTool": {
+                            "className": "org.joget.apps.app.lib.MultiTools",
+                            "properties": {
+                                "runInMultiThread": "",
+                                "comment": "",
+                                "tools": [
+                                    {
+                                        "className": "org.joget.apps.app.lib.EmailTool",
+                                        "properties": {
+                                            "cc": "",
+                                            "toSpecific": "{c_email}",
+                                            "bcc": "",
+                                            "icsAttachement": "",
+                                            "subject": "Signing Request - #form.ags_record.agreement#",
+                                            "retryCount": "",
+                                            "formDefId": "",
+                                            "toParticipantId": "",
+                                            "message": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional //EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">\n<head>\n<!--[if gte mso 9]>\n<xml>\n  <o:OfficeDocumentSettings>\n    <o:AllowPNG/>\n    <o:PixelsPerInch>96<\/o:PixelsPerInch>\n  <\/o:OfficeDocumentSettings>\n<\/xml>\n<![endif]-->\n  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <meta name=\"x-apple-disable-message-reformatting\">\n  <!--[if !mso]><!--><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"><!--<![endif]-->\n  <title><\/title>\n  \n    <style type=\"text/css\">\n      @media only screen and (min-width: 670px) {\n  .u-row {\n    width: 650px !important;\n  }\n  .u-row .u-col {\n    vertical-align: top;\n  }\n\n  .u-row .u-col-100 {\n    width: 650px !important;\n  }\n\n}\n\n@media (max-width: 670px) {\n  .u-row-container {\n    max-width: 100% !important;\n    padding-left: 0px !important;\n    padding-right: 0px !important;\n  }\n  .u-row .u-col {\n    min-width: 320px !important;\n    max-width: 100% !important;\n    display: block !important;\n  }\n  .u-row {\n    width: 100% !important;\n  }\n  .u-col {\n    width: 100% !important;\n  }\n  .u-col > div {\n    margin: 0 auto;\n  }\n}\nbody {\n  margin: 0;\n  padding: 0;\n}\n\ntable,\ntr,\ntd {\n  vertical-align: top;\n  border-collapse: collapse;\n}\n\np {\n  margin: 0;\n}\n\n.ie-container table,\n.mso-container table {\n  table-layout: fixed;\n}\n\n* {\n  line-height: inherit;\n}\n\na[x-apple-data-detectors='true'] {\n  color: inherit !important;\n  text-decoration: none !important;\n}\n\ntable, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: underline; }\n    <\/style>\n  \n  \n\n<!--[if !mso]><!--><link href=\"https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap\" rel=\"stylesheet\" type=\"text/css\"><!--<![endif]-->\n\n<\/head>\n\n<body class=\"clean-body u_body\" style=\"margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #ffffff;color: #000000\">\n  <!--[if IE]><div class=\"ie-container\"><![endif]-->\n  <!--[if mso]><div class=\"mso-container\"><![endif]-->\n  <table id=\"u_body\" style=\"border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #ffffff;width:100%\" cellpadding=\"0\" cellspacing=\"0\">\n  <tbody>\n  <tr style=\"vertical-align: top\">\n    <td style=\"word-break: break-word;border-collapse: collapse !important;vertical-align: top\">\n    <!--[if (mso)|(IE)]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td align=\"center\" style=\"background-color: #ffffff;\"><![endif]-->\n    \n  \n  \n<div class=\"u-row-container\" style=\"padding: 0px;background-color: transparent\">\n  <div class=\"u-row\" style=\"margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #dff1ff;\">\n    <div style=\"border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;\">\n      <!--[if (mso)|(IE)]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding: 0px;background-color: transparent;\" align=\"center\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:650px;\"><tr style=\"background-color: #dff1ff;\"><![endif]-->\n      \n<!--[if (mso)|(IE)]><td align=\"center\" width=\"650\" style=\"width: 650px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;\" valign=\"top\"><![endif]-->\n<div class=\"u-col u-col-100\" style=\"max-width: 320px;min-width: 650px;display: table-cell;vertical-align: top;\">\n  <div style=\"height: 100%;width: 100% !important;\">\n  <!--[if (!mso)&(!IE)]><!--><div style=\"box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;\"><!--<![endif]-->\n  \n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:25px 0px 10px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\">\n  <tr>\n    <td style=\"padding-right: 0px;padding-left: 0px;\" align=\"center\">\n      \n      <img align=\"center\" border=\"0\" src=\"cid:image-1.png\" alt=\"Image\" title=\"Image\" style=\"outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 14%;max-width: 91px;\" width=\"91\"/>\n      \n    <\/td>\n  <\/tr>\n<\/table>\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:0px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n  <div style=\"font-size: 14px; color: #018eea; line-height: 170%; text-align: left; word-wrap: break-word;\">\n    <p style=\"font-size: 14px; line-height: 170%; text-align: center;\"><span style=\"font-size: 26px; line-height: 44.2px;\"><strong><span style=\"line-height: 23.8px;\">JOGET SigningDoc<\/span><\/strong><\/span><\/p>\n<p style=\"font-size: 14px; line-height: 170%; text-align: center;\"> <\/p>\n  <\/div>\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:0px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\">\n  <tr>\n    <td style=\"padding-right: 0px;padding-left: 0px;\" align=\"center\">\n      \n      <img align=\"center\" border=\"0\" src=\"cid:image-2.png\" alt=\"Image\" title=\"Image\" style=\"outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 51%;max-width: 331.5px;\" width=\"331.5\"/>\n      \n    <\/td>\n  <\/tr>\n<\/table>\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n  <!--[if (!mso)&(!IE)]><!--><\/div><!--<![endif]-->\n  <\/div>\n<\/div>\n<!--[if (mso)|(IE)]><\/td><![endif]-->\n      <!--[if (mso)|(IE)]><\/tr><\/table><\/td><\/tr><\/table><![endif]-->\n    <\/div>\n  <\/div>\n  <\/div>\n  \n\n\n  \n  \n<div class=\"u-row-container\" style=\"padding: 0px;background-color: transparent\">\n  <div class=\"u-row\" style=\"margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #f3fbfd;\">\n    <div style=\"border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;\">\n      <!--[if (mso)|(IE)]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding: 0px;background-color: transparent;\" align=\"center\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:650px;\"><tr style=\"background-color: #f3fbfd;\"><![endif]-->\n      \n<!--[if (mso)|(IE)]><td align=\"center\" width=\"650\" style=\"width: 650px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;\" valign=\"top\"><![endif]-->\n<div class=\"u-col u-col-100\" style=\"max-width: 320px;min-width: 650px;display: table-cell;vertical-align: top;\">\n  <div style=\"height: 100%;width: 100% !important;\">\n  <!--[if (!mso)&(!IE)]><!--><div style=\"box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;\"><!--<![endif]-->\n  \n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:40px 10px 10px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n  <div style=\"font-size: 14px; color: #1b262c; line-height: 140%; text-align: center; word-wrap: break-word;\">\n    <p style=\"font-size: 14px; line-height: 140%;\"><strong><span style=\"font-size: 26px; line-height: 36.4px;\">Hi {c_name},<\/span><\/strong><\/p>\n  <\/div>\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:10px 50px 20px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n  <div style=\"font-size: 14px; color: #1b262c; line-height: 140%; text-align: center; word-wrap: break-word;\">\n    <p style=\"line-height: 140%;\">You are cordially invited to review and sign the document:<\/p>\n    <p style=\"line-height: 140%;\"><strong>#form.ags_record.agreement#<\/strong><\/p>\n<p style=\"line-height: 140%;\">Kindly click on the provided button below to proceed with the process. Should you have any questions, please do not hesitate to send an email to <a rel=\"noopener\" href=\"mailto:info+signdoc@joget.org\" target=\"_blank\">info+signdoc@joget.org<\/a>.<\/p>\n<p style=\"line-height: 140%;\"> <\/p>\n<p style=\"line-height: 140%;\">Thank you, and may you have an excellent day.<\/p>\n<p style=\"line-height: 140%;\"> <\/p>\n<p style=\"line-height: 140%;\">Warm regards,<\/p>\n<p style=\"line-height: 140%;\">The Joget Team<\/p>\n  <\/div>\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:10px 10px 30px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n  <!--[if mso]><style>.v-button {background: transparent !important;}<\/style><![endif]-->\n<div align=\"center\">\n  <!--[if mso]><v:roundrect xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:w=\"urn:schemas-microsoft-com:office:word\" href=\"\" style=\"height:49px; v-text-anchor:middle; width:293px;\" arcsize=\"122.5%\"  stroke=\"f\" fillcolor=\"#0088ee\"><w:anchorlock/><center style=\"color:#FFFFFF;\"><![endif]-->\n    <a href=\"#request.baseURL#/web/userview/agreesign/v/_/signAgreement?id={id}&otp={c_otp}\" target=\"_blank\" class=\"v-button\" style=\"box-sizing: border-box;display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #0088ee; border-radius: 60px;-webkit-border-radius: 60px; -moz-border-radius: 60px; width:auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;border-top-color: #CCC; border-top-style: solid; border-top-width: 0px; border-left-color: #CCC; border-left-style: solid; border-left-width: 0px; border-right-color: #CCC; border-right-style: solid; border-right-width: 0px; border-bottom-color: #0275a4; border-bottom-style: solid; border-bottom-width: 5px;font-size: 14px;\">\n      <span style=\"display:block;padding:15px 40px;line-height:120%;\"><strong><span style=\"font-size: 16px; line-height: 19.2px;\">Review &amp; Sign <\/span><\/strong><span style=\"font-size: 16px; line-height: 19.2px;\"><strong>Document<\/strong><\/span><\/span>\n    <\/a>\n    <!--[if mso]><\/center><\/v:roundrect><![endif]-->\n<\/div>\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n  <!--[if (!mso)&(!IE)]><!--><\/div><!--<![endif]-->\n  <\/div>\n<\/div>\n<!--[if (mso)|(IE)]><\/td><![endif]-->\n      <!--[if (mso)|(IE)]><\/tr><\/table><\/td><\/tr><\/table><![endif]-->\n    <\/div>\n  <\/div>\n  <\/div>\n  \n\n\n  \n  \n<div class=\"u-row-container\" style=\"padding: 0px;background-color: transparent\">\n  <div class=\"u-row\" style=\"margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #151418;\">\n    <div style=\"border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;\">\n      <!--[if (mso)|(IE)]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding: 0px;background-color: transparent;\" align=\"center\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:650px;\"><tr style=\"background-color: #151418;\"><![endif]-->\n      \n<!--[if (mso)|(IE)]><td align=\"center\" width=\"650\" style=\"width: 650px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;\" valign=\"top\"><![endif]-->\n<div class=\"u-col u-col-100\" style=\"max-width: 320px;min-width: 650px;display: table-cell;vertical-align: top;\">\n  <div style=\"height: 100%;width: 100% !important;\">\n  <!--[if (!mso)&(!IE)]><!--><div style=\"box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;\"><!--<![endif]-->\n  \n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:18px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n  <div style=\"font-size: 14px; color: #ffffff; line-height: 140%; text-align: center; word-wrap: break-word;\">\n    <p style=\"font-size: 14px; line-height: 140%; text-align: left;\"><span style=\"font-size: 10px; line-height: 14px;\">Important Note:<\/span><br /><span style=\"font-size: 10px; line-height: 14px;\">1) Do NOT share this Email. This email contains a secure link to your document on the Joget SigningDoc app where you have been invited to sign a document electronically.<\/span><br /><span style=\"font-size: 10px; line-height: 14px;\">2) If you are not the intended recipient of this email, please report to info+signdoc@joget.org. Thank you.<\/span><br /><span style=\"font-size: 10px; line-height: 14px;\">3) This email is sent by the Joget SigningDoc App. Download SigningDoc App from the Joget Marketplace.<\/span><\/p>\n  <\/div>\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n  <!--[if (!mso)&(!IE)]><!--><\/div><!--<![endif]-->\n  <\/div>\n<\/div>\n<!--[if (mso)|(IE)]><\/td><![endif]-->\n      <!--[if (mso)|(IE)]><\/tr><\/table><\/td><\/tr><\/table><![endif]-->\n    <\/div>\n  <\/div>\n  <\/div>\n  \n\n\n    <!--[if (mso)|(IE)]><\/td><\/tr><\/table><![endif]-->\n    <\/td>\n  <\/tr>\n  <\/tbody>\n  <\/table>\n  <!--[if mso]><\/div><![endif]-->\n  <!--[if IE]><\/div><![endif]-->\n<\/body>\n\n<\/html>",
+                                            "p12": "",
+                                            "security": "",
+                                            "password": "%%%%pcLP98CR2bLX82x/9TXRaA==%%%%",
+                                            "storepass": "%%%%pcLP98CR2bLX82x/9TXRaA==%%%%",
+                                            "port": "",
+                                            "isHtml": "true",
+                                            "host": "",
+                                            "alias": "",
+                                            "files": [
+                                                {
+                                                    "path": "#request.baseURL#/web/app/agreesign/resources/image-1.png",
+                                                    "fileName": "image-1.png",
+                                                    "embed": "true",
+                                                    "type": "url"
+                                                },
+                                                {
+                                                    "path": "#request.baseURL#/web/app/agreesign/resources/image-2.png",
+                                                    "fileName": "image-2.png",
+                                                    "embed": "true",
+                                                    "type": "url"
+                                                }
+                                            ],
+                                            "from": "",
+                                            "retryInterval": "",
+                                            "fields": [],
+                                            "username": ""
+                                        }
+                                    },
+                                    {
+                                        "className": "org.joget.apps.app.lib.DatabaseUpdateTool",
+                                        "properties": {
+                                            "query": "insert into app_fd_ags_trail (`createdBy`, `modifiedBy`, `createdByName`, `modifiedByName`, `c_request_id`, `dateCreated`, `dateModified`, `id`, `c_action`, `c_source`, `c_path`, `c_invited`) VALUES ('#currentUser.id#','#currentUser.id#','#currentUser.fullName#','#currentUser.fullName#','#form.ags_record.id#', NOW(), NOW(), UUID(), 'Invite', '#beanshell.getClientIP#', '#request.requestURL#?#request.queryString#', '{c_name} - {c_email}')",
+                                            "jdbcDatasource": "default"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "delay": "5",
+                        "iteratorProcessTool": {
+                            "className": "org.joget.marketplace.DatabaseQueryProcessTool",
+                            "properties": {
+                                "query": "select id, c_name, c_email, c_status, c_otp from app_fd_ags_signatures where c_request_id = '@recordId@'",
+                                "debugMode": ""
+                            }
+                        },
+                        "iteratorToolId": "id",
+                        "debugMode": ""
+                    }
+                },
+                "additionalDataListAction": {
+                    "className": "org.joget.plugin.enterprise.JdbcDatalistAction",
+                    "properties": {
+                        "query": "UPDATE app_fd_ags_record SET c_status = 'Invited' WHERE id = {id}",
+                        "label": "JDBC",
+                        "confirmation": "",
+                        "jdbcDatasource": "default"
+                    }
+                },
+                "rules": [{
+                    "field": "status",
+                    "join": "AND",
+                    "value": "Closed;Aborted",
+                    "operator": "NOT IN"
+                }],
+                "label": "<i class=\"fas fa-paper-plane\"><\/i> &nbsp;&nbsp;Send Invites to Sign Document",
+                "confirmation": "Are You Sure?",
+                "datalist_type": "row_action",
+                "header_label": ""
+            }
+        },
+        {
+            "icon": "<i class=\"fas fa-tools\"><\/i>",
+            "name": "Form Update and Process Tool Datalist Action",
+            "className": "org.joget.marketplace.FormUpdateProcessToolDatalistAction",
+            "id": "rowAction_6",
+            "label": "Form Update and Process Tool Datalist Action",
+            "type": "text",
+            "properties": {
+                "htmlScript": "",
+                "delay": "0",
+                "debug": "false",
+                "popupFormId": "",
+                "processTool": {
+                    "className": "org.joget.apps.app.lib.EmailTool",
+                    "properties": {
+                        "cc": "",
+                        "toSpecific": "$$beanshell.getAllRequestSignatoriesEmailsByAGSRecordID[rid=@recordId@]$$",
+                        "bcc": "",
+                        "icsAttachement": "",
+                        "subject": "#form.ags_record.id# - #form.ags_record.agreement# - Everyone has Signed",
+                        "retryCount": "",
+                        "formDefId": "viewRequest",
+                        "toParticipantId": "",
+                        "message": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional //EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">\n<head>\n<!--[if gte mso 9]>\n<xml>\n  <o:OfficeDocumentSettings>\n    <o:AllowPNG/>\n    <o:PixelsPerInch>96<\/o:PixelsPerInch>\n  <\/o:OfficeDocumentSettings>\n<\/xml>\n<![endif]-->\n  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <meta name=\"x-apple-disable-message-reformatting\">\n  <!--[if !mso]><!--><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"><!--<![endif]-->\n  <title><\/title>\n  \n    <style type=\"text/css\">\n      @media only screen and (min-width: 670px) {\n  .u-row {\n    width: 650px !important;\n  }\n  .u-row .u-col {\n    vertical-align: top;\n  }\n\n  .u-row .u-col-100 {\n    width: 650px !important;\n  }\n\n}\n\n@media (max-width: 670px) {\n  .u-row-container {\n    max-width: 100% !important;\n    padding-left: 0px !important;\n    padding-right: 0px !important;\n  }\n  .u-row .u-col {\n    min-width: 320px !important;\n    max-width: 100% !important;\n    display: block !important;\n  }\n  .u-row {\n    width: 100% !important;\n  }\n  .u-col {\n    width: 100% !important;\n  }\n  .u-col > div {\n    margin: 0 auto;\n  }\n}\nbody {\n  margin: 0;\n  padding: 0;\n}\n\ntable,\ntr,\ntd {\n  vertical-align: top;\n  border-collapse: collapse;\n}\n\np {\n  margin: 0;\n}\n\n.ie-container table,\n.mso-container table {\n  table-layout: fixed;\n}\n\n* {\n  line-height: inherit;\n}\n\na[x-apple-data-detectors='true'] {\n  color: inherit !important;\n  text-decoration: none !important;\n}\n\ntable, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: underline; }\n    <\/style>\n  \n  \n\n<!--[if !mso]><!--><link href=\"https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap\" rel=\"stylesheet\" type=\"text/css\"><!--<![endif]-->\n\n<\/head>\n\n<body class=\"clean-body u_body\" style=\"margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #ffffff;color: #000000\">\n  <!--[if IE]><div class=\"ie-container\"><![endif]-->\n  <!--[if mso]><div class=\"mso-container\"><![endif]-->\n  <table id=\"u_body\" style=\"border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #ffffff;width:100%\" cellpadding=\"0\" cellspacing=\"0\">\n  <tbody>\n  <tr style=\"vertical-align: top\">\n    <td style=\"word-break: break-word;border-collapse: collapse !important;vertical-align: top\">\n    <!--[if (mso)|(IE)]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td align=\"center\" style=\"background-color: #ffffff;\"><![endif]-->\n    \n  \n  \n<div class=\"u-row-container\" style=\"padding: 0px;background-color: transparent\">\n  <div class=\"u-row\" style=\"margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #dff1ff;\">\n    <div style=\"border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;\">\n      <!--[if (mso)|(IE)]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding: 0px;background-color: transparent;\" align=\"center\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:650px;\"><tr style=\"background-color: #dff1ff;\"><![endif]-->\n      \n<!--[if (mso)|(IE)]><td align=\"center\" width=\"650\" style=\"width: 650px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;\" valign=\"top\"><![endif]-->\n<div class=\"u-col u-col-100\" style=\"max-width: 320px;min-width: 650px;display: table-cell;vertical-align: top;\">\n  <div style=\"height: 100%;width: 100% !important;\">\n  <!--[if (!mso)&(!IE)]><!--><div style=\"box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;\"><!--<![endif]-->\n  \n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:25px 0px 10px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\">\n  <tr>\n    <td style=\"padding-right: 0px;padding-left: 0px;\" align=\"center\">\n      \n      <img align=\"center\" border=\"0\" src=\"cid:image-1.png\" alt=\"Image\" title=\"Image\" style=\"outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 14%;max-width: 91px;\" width=\"91\"/>\n      \n    <\/td>\n  <\/tr>\n<\/table>\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:0px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n  <div style=\"font-size: 14px; color: #018eea; line-height: 170%; text-align: left; word-wrap: break-word;\">\n    <p style=\"font-size: 14px; line-height: 170%; text-align: center;\"><span style=\"font-size: 26px; line-height: 44.2px;\"><strong><span style=\"line-height: 23.8px;\">JOGET SigningDoc<\/span><\/strong><\/span><\/p>\n<p style=\"font-size: 14px; line-height: 170%; text-align: center;\"> <\/p>\n  <\/div>\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:0px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\">\n  <tr>\n    <td style=\"padding-right: 0px;padding-left: 0px;\" align=\"center\">\n      \n      <img align=\"center\" border=\"0\" src=\"cid:image-2.png\" alt=\"Image\" title=\"Image\" style=\"outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 51%;max-width: 331.5px;\" width=\"331.5\"/>\n      \n    <\/td>\n  <\/tr>\n<\/table>\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n  <!--[if (!mso)&(!IE)]><!--><\/div><!--<![endif]-->\n  <\/div>\n<\/div>\n<!--[if (mso)|(IE)]><\/td><![endif]-->\n      <!--[if (mso)|(IE)]><\/tr><\/table><\/td><\/tr><\/table><![endif]-->\n    <\/div>\n  <\/div>\n  <\/div>\n  \n\n\n  \n  \n<div class=\"u-row-container\" style=\"padding: 0px;background-color: transparent\">\n  <div class=\"u-row\" style=\"margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #f3fbfd;\">\n    <div style=\"border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;\">\n      <!--[if (mso)|(IE)]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding: 0px;background-color: transparent;\" align=\"center\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:650px;\"><tr style=\"background-color: #f3fbfd;\"><![endif]-->\n      \n<!--[if (mso)|(IE)]><td align=\"center\" width=\"650\" style=\"width: 650px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;\" valign=\"top\"><![endif]-->\n<div class=\"u-col u-col-100\" style=\"max-width: 320px;min-width: 650px;display: table-cell;vertical-align: top;\">\n  <div style=\"height: 100%;width: 100% !important;\">\n  <!--[if (!mso)&(!IE)]><!--><div style=\"box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;\"><!--<![endif]-->\n  \n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:40px 10px 10px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n  <div style=\"font-size: 14px; color: #1b262c; line-height: 140%; text-align: center; word-wrap: break-word;\">\n    <p style=\"font-size: 14px; line-height: 140%;\"><strong><span style=\"font-size: 26px; line-height: 36.4px;\">Hi there,<\/span><\/strong><\/p>\n  <\/div>\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:10px 50px 20px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n  <div style=\"font-size: 14px; color: #1b262c; line-height: 140%; text-align: center; word-wrap: break-word;\">\n    <p style=\"line-height: 140%;\">Please see the attached signed document for your reference and storage.<\/p>\n    <p style=\"line-height: 140%;\">If you have any questions, please do not hesitate to send an email to <a href=\"mailto:info+signdoc@joget.org\" target=\"_blank\">info+signdoc@joget.org<\/a><\/p>\n<p style=\"line-height: 140%;\"> <\/p>\n<p style=\"line-height: 140%;\">Thank you, and may you have an excellent day.<\/p>\n<p style=\"line-height: 140%;\"> <\/p>\n<p style=\"line-height: 140%;\">Warm regards,<\/p>\n<p style=\"line-height: 140%;\">The Joget Team<\/p>\n  <\/div>\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:10px 10px 30px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n  <!--[if mso]><style>.v-button {background: transparent !important;}<\/style><![endif]-->\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n  <!--[if (!mso)&(!IE)]><!--><\/div><!--<![endif]-->\n  <\/div>\n<\/div>\n<!--[if (mso)|(IE)]><\/td><![endif]-->\n      <!--[if (mso)|(IE)]><\/tr><\/table><\/td><\/tr><\/table><![endif]-->\n    <\/div>\n  <\/div>\n  <\/div>\n  \n\n\n  \n  \n<div class=\"u-row-container\" style=\"padding: 0px;background-color: transparent\">\n  <div class=\"u-row\" style=\"margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #151418;\">\n    <div style=\"border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;\">\n      <!--[if (mso)|(IE)]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding: 0px;background-color: transparent;\" align=\"center\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:650px;\"><tr style=\"background-color: #151418;\"><![endif]-->\n      \n<!--[if (mso)|(IE)]><td align=\"center\" width=\"650\" style=\"width: 650px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;\" valign=\"top\"><![endif]-->\n<div class=\"u-col u-col-100\" style=\"max-width: 320px;min-width: 650px;display: table-cell;vertical-align: top;\">\n  <div style=\"height: 100%;width: 100% !important;\">\n  <!--[if (!mso)&(!IE)]><!--><div style=\"box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;\"><!--<![endif]-->\n  \n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:18px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n  <div style=\"font-size: 14px; color: #ffffff; line-height: 140%; text-align: center; word-wrap: break-word;\">\n    <p style=\"font-size: 14px; line-height: 140%; text-align: left;\"><span style=\"font-size: 10px; line-height: 14px;\">Important Note:<\/span><br /><span style=\"font-size: 10px; line-height: 14px;\">1) Do NOT share this Email. This email contains a secure link to your document on the Joget SigningDoc app where you have been invited to sign a document electronically.<\/span><br /><span style=\"font-size: 10px; line-height: 14px;\">2) If you are not the intended recipient of this email, please report to info+signdoc@joget.org. Thank you.<\/span><br /><span style=\"font-size: 10px; line-height: 14px;\">3) This email is sent by the Joget SigningDoc App. Download SigningDoc App from the Joget Marketplace.<\/span><\/p>\n  <\/div>\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n  <!--[if (!mso)&(!IE)]><!--><\/div><!--<![endif]-->\n  <\/div>\n<\/div>\n<!--[if (mso)|(IE)]><\/td><![endif]-->\n      <!--[if (mso)|(IE)]><\/tr><\/table><\/td><\/tr><\/table><![endif]-->\n    <\/div>\n  <\/div>\n  <\/div>\n  \n\n\n    <!--[if (mso)|(IE)]><\/td><\/tr><\/table><![endif]-->\n    <\/td>\n  <\/tr>\n  <\/tbody>\n  <\/table>\n  <!--[if mso]><\/div><![endif]-->\n  <!--[if IE]><\/div><![endif]-->\n<\/body>\n\n<\/html>",
+                        "p12": "",
+                        "security": "",
+                        "password": "%%%%/xg4CciOeBsnUNBbIa7O7w==%%%%",
+                        "storepass": "%%%%upB+flv7kIrLi0CvTIk95Q==%%%%",
+                        "port": "",
+                        "isHtml": "true",
+                        "host": "",
+                        "alias": "",
+                        "files": [
+                            {
+                                "path": "#request.baseURL#/web/app/agreesign/resources/image-1.png",
+                                "fileName": "image-1.png",
+                                "embed": "true",
+                                "type": "url"
+                            },
+                            {
+                                "path": "#request.baseURL#/web/app/agreesign/resources/image-2.png",
+                                "fileName": "image-2.png",
+                                "embed": "true",
+                                "type": "url"
+                            }
+                        ],
+                        "from": "",
+                        "retryInterval": "",
+                        "fields": [{
+                            "field": "agreement_generated",
+                            "embed": "false"
+                        }],
+                        "username": ""
+                    }
+                },
+                "additionalDataListAction": {
+                    "className": "",
+                    "properties": {}
+                },
+                "rules": [{
+                    "field": "status",
+                    "join": "AND",
+                    "value": "Closed;Completed",
+                    "operator": "IN"
+                }],
+                "label": "<i class=\"zmdi zmdi-email\"><\/i> &nbsp;&nbsp;Send Signed Document to All",
+                "confirmation": "Are you sure?",
+                "datalist_type": "row_action",
+                "header_label": ""
+            }
+        },
+        {
+            "icon": "<i class=\"fas fa-tools\"><\/i>",
+            "name": "Form Update and Process Tool Datalist Action",
+            "className": "org.joget.marketplace.FormUpdateProcessToolDatalistAction",
+            "id": "rowAction_5",
+            "label": "Form Update and Process Tool Datalist Action",
+            "type": "text",
+            "properties": {
+                "htmlScript": "",
+                "delay": "0",
+                "debug": "false",
+                "popupFormId": "",
+                "processTool": {
+                    "className": "org.joget.apps.app.lib.EmailTool",
+                    "properties": {
+                        "cc": "",
+                        "toSpecific": "#form.ags_record.createdBy#",
+                        "bcc": "",
+                        "icsAttachement": "",
+                        "subject": "#form.ags_record.id# - #form.ags_record.agreement# - Agreement Generated",
+                        "retryCount": "",
+                        "formDefId": "viewRequest",
+                        "toParticipantId": "",
+                        "message": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional //EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">\n<head>\n<!--[if gte mso 9]>\n<xml>\n  <o:OfficeDocumentSettings>\n    <o:AllowPNG/>\n    <o:PixelsPerInch>96<\/o:PixelsPerInch>\n  <\/o:OfficeDocumentSettings>\n<\/xml>\n<![endif]-->\n  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <meta name=\"x-apple-disable-message-reformatting\">\n  <!--[if !mso]><!--><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"><!--<![endif]-->\n  <title><\/title>\n  \n    <style type=\"text/css\">\n      @media only screen and (min-width: 670px) {\n  .u-row {\n    width: 650px !important;\n  }\n  .u-row .u-col {\n    vertical-align: top;\n  }\n\n  .u-row .u-col-100 {\n    width: 650px !important;\n  }\n\n}\n\n@media (max-width: 670px) {\n  .u-row-container {\n    max-width: 100% !important;\n    padding-left: 0px !important;\n    padding-right: 0px !important;\n  }\n  .u-row .u-col {\n    min-width: 320px !important;\n    max-width: 100% !important;\n    display: block !important;\n  }\n  .u-row {\n    width: 100% !important;\n  }\n  .u-col {\n    width: 100% !important;\n  }\n  .u-col > div {\n    margin: 0 auto;\n  }\n}\nbody {\n  margin: 0;\n  padding: 0;\n}\n\ntable,\ntr,\ntd {\n  vertical-align: top;\n  border-collapse: collapse;\n}\n\np {\n  margin: 0;\n}\n\n.ie-container table,\n.mso-container table {\n  table-layout: fixed;\n}\n\n* {\n  line-height: inherit;\n}\n\na[x-apple-data-detectors='true'] {\n  color: inherit !important;\n  text-decoration: none !important;\n}\n\ntable, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: underline; }\n    <\/style>\n  \n  \n\n<!--[if !mso]><!--><link href=\"https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap\" rel=\"stylesheet\" type=\"text/css\"><!--<![endif]-->\n\n<\/head>\n\n<body class=\"clean-body u_body\" style=\"margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #ffffff;color: #000000\">\n  <!--[if IE]><div class=\"ie-container\"><![endif]-->\n  <!--[if mso]><div class=\"mso-container\"><![endif]-->\n  <table id=\"u_body\" style=\"border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #ffffff;width:100%\" cellpadding=\"0\" cellspacing=\"0\">\n  <tbody>\n  <tr style=\"vertical-align: top\">\n    <td style=\"word-break: break-word;border-collapse: collapse !important;vertical-align: top\">\n    <!--[if (mso)|(IE)]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td align=\"center\" style=\"background-color: #ffffff;\"><![endif]-->\n    \n  \n  \n<div class=\"u-row-container\" style=\"padding: 0px;background-color: transparent\">\n  <div class=\"u-row\" style=\"margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #dff1ff;\">\n    <div style=\"border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;\">\n      <!--[if (mso)|(IE)]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding: 0px;background-color: transparent;\" align=\"center\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:650px;\"><tr style=\"background-color: #dff1ff;\"><![endif]-->\n      \n<!--[if (mso)|(IE)]><td align=\"center\" width=\"650\" style=\"width: 650px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;\" valign=\"top\"><![endif]-->\n<div class=\"u-col u-col-100\" style=\"max-width: 320px;min-width: 650px;display: table-cell;vertical-align: top;\">\n  <div style=\"height: 100%;width: 100% !important;\">\n  <!--[if (!mso)&(!IE)]><!--><div style=\"box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;\"><!--<![endif]-->\n  \n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:25px 0px 10px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\">\n  <tr>\n    <td style=\"padding-right: 0px;padding-left: 0px;\" align=\"center\">\n      \n      <img align=\"center\" border=\"0\" src=\"cid:image-1.png\" alt=\"Image\" title=\"Image\" style=\"outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 14%;max-width: 91px;\" width=\"91\"/>\n      \n    <\/td>\n  <\/tr>\n<\/table>\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:0px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n  <div style=\"font-size: 14px; color: #018eea; line-height: 170%; text-align: left; word-wrap: break-word;\">\n    <p style=\"font-size: 14px; line-height: 170%; text-align: center;\"><span style=\"font-size: 26px; line-height: 44.2px;\"><strong><span style=\"line-height: 23.8px;\">JOGET SigningDoc<\/span><\/strong><\/span><\/p>\n<p style=\"font-size: 14px; line-height: 170%; text-align: center;\"> <\/p>\n  <\/div>\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:0px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\">\n  <tr>\n    <td style=\"padding-right: 0px;padding-left: 0px;\" align=\"center\">\n      \n      <img align=\"center\" border=\"0\" src=\"cid:image-2.png\" alt=\"Image\" title=\"Image\" style=\"outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 51%;max-width: 331.5px;\" width=\"331.5\"/>\n      \n    <\/td>\n  <\/tr>\n<\/table>\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n  <!--[if (!mso)&(!IE)]><!--><\/div><!--<![endif]-->\n  <\/div>\n<\/div>\n<!--[if (mso)|(IE)]><\/td><![endif]-->\n      <!--[if (mso)|(IE)]><\/tr><\/table><\/td><\/tr><\/table><![endif]-->\n    <\/div>\n  <\/div>\n  <\/div>\n  \n\n\n  \n  \n<div class=\"u-row-container\" style=\"padding: 0px;background-color: transparent\">\n  <div class=\"u-row\" style=\"margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #f3fbfd;\">\n    <div style=\"border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;\">\n      <!--[if (mso)|(IE)]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding: 0px;background-color: transparent;\" align=\"center\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:650px;\"><tr style=\"background-color: #f3fbfd;\"><![endif]-->\n      \n<!--[if (mso)|(IE)]><td align=\"center\" width=\"650\" style=\"width: 650px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;\" valign=\"top\"><![endif]-->\n<div class=\"u-col u-col-100\" style=\"max-width: 320px;min-width: 650px;display: table-cell;vertical-align: top;\">\n  <div style=\"height: 100%;width: 100% !important;\">\n  <!--[if (!mso)&(!IE)]><!--><div style=\"box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;\"><!--<![endif]-->\n  \n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:40px 10px 10px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n  <div style=\"font-size: 14px; color: #1b262c; line-height: 140%; text-align: center; word-wrap: break-word;\">\n  <\/div>\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:10px 50px 20px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n  <div style=\"font-size: 14px; color: #1b262c; line-height: 140%; text-align: center; word-wrap: break-word;\">\n    <p style=\"line-height: 140%;\">This email is sent to the creator of the document. Please see the attached document for your reference.<\/p>\n<p style=\"line-height: 140%;\"> <\/p>\n<p style=\"line-height: 140%;\">Thank you, and may you have an excellent day.<\/p>\n<p style=\"line-height: 140%;\"> <\/p>\n<p style=\"line-height: 140%;\">Warm regards,<\/p>\n<p style=\"line-height: 140%;\">The Joget Team<\/p>\n  <\/div>\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:10px 10px 30px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n  <!--[if mso]><style>.v-button {background: transparent !important;}<\/style><![endif]-->\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n  <!--[if (!mso)&(!IE)]><!--><\/div><!--<![endif]-->\n  <\/div>\n<\/div>\n<!--[if (mso)|(IE)]><\/td><![endif]-->\n      <!--[if (mso)|(IE)]><\/tr><\/table><\/td><\/tr><\/table><![endif]-->\n    <\/div>\n  <\/div>\n  <\/div>\n  \n\n\n  \n  \n<div class=\"u-row-container\" style=\"padding: 0px;background-color: transparent\">\n  <div class=\"u-row\" style=\"margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #151418;\">\n    <div style=\"border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;\">\n      <!--[if (mso)|(IE)]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding: 0px;background-color: transparent;\" align=\"center\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:650px;\"><tr style=\"background-color: #151418;\"><![endif]-->\n      \n<!--[if (mso)|(IE)]><td align=\"center\" width=\"650\" style=\"width: 650px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;\" valign=\"top\"><![endif]-->\n<div class=\"u-col u-col-100\" style=\"max-width: 320px;min-width: 650px;display: table-cell;vertical-align: top;\">\n  <div style=\"height: 100%;width: 100% !important;\">\n  <!--[if (!mso)&(!IE)]><!--><div style=\"box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;\"><!--<![endif]-->\n  \n<table style=\"font-family:'Montserrat',sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\n  <tbody>\n    <tr>\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:18px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n        \n  <div style=\"font-size: 14px; color: #ffffff; line-height: 140%; text-align: center; word-wrap: break-word;\">\n    <p style=\"font-size: 14px; line-height: 140%; text-align: left;\"><span style=\"font-size: 10px; line-height: 14px;\">Important Note:<\/span><br /><span style=\"font-size: 10px; line-height: 14px;\">1) Do NOT share this Email. This email contains a secure link to your document on the Joget SigningDoc app where you have been invited to sign a document electronically.<\/span><br /><span style=\"font-size: 10px; line-height: 14px;\">2) If you are not the intended recipient of this email, please report to info+signdoc@joget.org. Thank you.<\/span><br /><span style=\"font-size: 10px; line-height: 14px;\">3) This email is sent by the Joget SigningDoc App. Download SigningDoc App from the Joget Marketplace.<\/span><\/p>\n  <\/div>\n\n      <\/td>\n    <\/tr>\n  <\/tbody>\n<\/table>\n\n  <!--[if (!mso)&(!IE)]><!--><\/div><!--<![endif]-->\n  <\/div>\n<\/div>\n<!--[if (mso)|(IE)]><\/td><![endif]-->\n      <!--[if (mso)|(IE)]><\/tr><\/table><\/td><\/tr><\/table><![endif]-->\n    <\/div>\n  <\/div>\n  <\/div>\n  \n\n\n    <!--[if (mso)|(IE)]><\/td><\/tr><\/table><![endif]-->\n    <\/td>\n  <\/tr>\n  <\/tbody>\n  <\/table>\n  <!--[if mso]><\/div><![endif]-->\n  <!--[if IE]><\/div><![endif]-->\n<\/body>\n\n<\/html>",
+                        "p12": "",
+                        "security": "",
+                        "password": "%%%%/xg4CciOeBsnUNBbIa7O7w==%%%%",
+                        "storepass": "%%%%Qy+V1DXpfdKkKc6Ljl1iLQ==%%%%",
+                        "port": "",
+                        "isHtml": "true",
+                        "host": "",
+                        "alias": "",
+                        "files": [
+                            {
+                                "path": "#request.baseURL#/web/app/agreesign/resources/image-1.png",
+                                "fileName": "image-1.png",
+                                "embed": "true",
+                                "type": "url"
+                            },
+                            {
+                                "path": "#request.baseURL#/web/app/agreesign/resources/image-2.png",
+                                "fileName": "image-2.png",
+                                "embed": "true",
+                                "type": "url"
+                            }
+                        ],
+                        "from": "",
+                        "retryInterval": "",
+                        "fields": [{
+                            "field": "agreement_generated",
+                            "embed": "false"
+                        }],
+                        "username": ""
+                    }
+                },
+                "additionalDataListAction": {
+                    "className": "",
+                    "properties": {}
+                },
+                "rules": [{
+                    "field": "status",
+                    "join": "AND",
+                    "value": "Closed;Aborted",
+                    "operator": "NOT IN"
+                }],
+                "label": "<i class=\"zmdi zmdi-mail-send\"><\/i> &nbsp;&nbsp;Send Document to Creator",
+                "confirmation": "Are You Sure?",
+                "datalist_type": "row_action",
+                "header_label": ""
+            }
+        },
+        {
+            "icon": "<i class=\"fas fa-tools\"><\/i>",
+            "name": "Form Update and Process Tool Datalist Action",
+            "className": "org.joget.marketplace.FormUpdateProcessToolDatalistAction",
+            "id": "rowAction_9",
+            "label": "Form Update and Process Tool Datalist Action",
+            "type": "text",
+            "properties": {
+                "htmlScript": "",
+                "delay": "0",
+                "debug": "false",
+                "popupFormId": "",
+                "processTool": {
+                    "className": "org.joget.apps.app.lib.MultiTools",
+                    "properties": {
+                        "runInMultiThread": "",
+                        "comment": "",
+                        "tools": [{
+                            "className": "org.joget.marketplace.pluginTemplate.template.PluginTemplateProcessTool",
+                            "properties": {"templateId": "pt-generatePDFRecordID"}
+                        }]
+                    }
+                },
+                "additionalDataListAction": {
+                    "className": "",
+                    "properties": {}
+                },
+                "rules": [],
+                "label": "<i class=\"zmdi zmdi-refresh-alt\"><\/i> &nbsp;&nbsp;Refresh Document",
+                "confirmation": "Are You Sure?",
+                "datalist_type": "row_action",
+                "header_label": ""
+            }
+        },
+        {
+            "icon": "<i class=\"fas fa-database\"><\/i>",
+            "name": "JDBC Datalist Action",
+            "className": "org.joget.plugin.enterprise.JdbcDatalistAction",
+            "id": "rowAction_0",
+            "label": "JDBC",
+            "type": "text",
+            "properties": {
+                "query": "UPDATE app_fd_ags_record SET c_status = 'Aborted' WHERE id = {id}",
+                "rules": [{
+                    "field": "status",
+                    "join": "AND",
+                    "value": "Invited",
+                    "operator": "="
+                }],
+                "confirmation": "",
+                "jdbcDatasource": "default",
+                "label": "<i class=\"fas fa-hand-paper\"><\/i> &nbsp;&nbsp;Abort",
+                "datalist_type": "row_action",
+                "header_label": ""
+            }
+        },
+        {
+            "icon": "<i class=\"fas fa-database\"><\/i>",
+            "name": "JDBC Datalist Action",
+            "className": "org.joget.plugin.enterprise.JdbcDatalistAction",
+            "id": "rowAction_7",
+            "label": "JDBC",
+            "type": "text",
+            "properties": {
+                "query": "UPDATE app_fd_ags_record SET c_status = 'Closed' WHERE id = {id}",
+                "rules": [{
+                    "field": "status",
+                    "join": "AND",
+                    "value": "Completed",
+                    "operator": "="
+                }],
+                "confirmation": "",
+                "jdbcDatasource": "default",
+                "label": "<i class=\"zmdi zmdi-close-circle\"><\/i> &nbsp;&nbsp;Close",
+                "datalist_type": "row_action",
+                "header_label": ""
+            }
+        },
+        {
+            "icon": "<i class=\"fas fa-database\"><\/i>",
+            "name": "JDBC Datalist Action",
+            "className": "org.joget.plugin.enterprise.JdbcDatalistAction",
+            "id": "rowAction_8",
+            "label": "JDBC",
+            "type": "text",
+            "properties": {
+                "query": "UPDATE app_fd_ags_record SET c_status = 'Completed' WHERE id = {id}",
+                "rules": [{
+                    "field": "status",
+                    "join": "AND",
+                    "value": "Closed;Aborted",
+                    "operator": "IN"
+                }],
+                "label": "<i class=\"fas fa-folder-open\"><\/i> &nbsp;&nbsp;Reopen",
+                "confirmation": "",
+                "jdbcDatasource": "default",
+                "datalist_type": "row_action",
+                "header_label": ""
+            }
+        },
+        {
+            "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+            "id": "rowAction_2",
+            "properties": {
+                "hrefColumn": "id",
+                "hrefParam": "id",
+                "rules": [{
+                    "field": "fc_status",
+                    "join": "AND",
+                    "value": "Sent",
+                    "operator": "<>"
+                }],
+                "label": "<i class=\"zmdi zmdi-mail-send\"><\/i> Send To FileCloud",
+                "href": "fc_upload",
+                "confirmation": "",
+                "link-css-display-type": "btn btn-sm btn-primary",
+                "datalist_type": "row_action",
+                "target": "_self",
+                "header_label": ""
+            }
+        }
+    ],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "org.joget.apps.datalist.lib.DefaultFormatter",
+                "properties": {
+                    "size": "17",
+                    "color": "",
+                    "field": "",
+                    "formDefId": "",
+                    "formatting": ""
+                }
+            },
+            "label": "Title",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "title",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_2",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "include_export": "",
+            "renderHtml": "",
+            "format": {
+                "className": "org.joget.apps.datalist.lib.DefaultFormatter",
+                "properties": {
+                    "size": "17px",
+                    "color": "",
+                    "field": "",
+                    "formDefId": "",
+                    "formatting": ""
+                }
+            },
+            "label": "Document",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "true",
+            "name": "agreement",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_0",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "true",
+            "include_export": "",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "fc_status",
+            "sortable": "false",
+            "datalist_type": "column",
+            "name": "fc_status",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_3",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "include_export": "",
+            "renderHtml": "",
+            "format": {
+                "className": "org.joget.plugin.enterprise.BeanShellFormatter",
+                "properties": {"script": "if(value.equalsIgnoreCase(\"New\")){\n    return \"<span class=\\\"badge badge-success me-10 mb-10\\\">New<\/span>\";\n}else if(value.equalsIgnoreCase(\"Preparing\")){\n    return \"<span class=\\\"badge badge-warning me-10 mb-10\\\">Preparing<\/span>\";\n}else if(value.equalsIgnoreCase(\"Invited\")){\n    return \"<span class=\\\"badge badge-info me-10 mb-10\\\">Invited<\/span>\";\n}else if(value.equalsIgnoreCase(\"Completed\")){\n    return \"<span class=\\\"badge badge-dark me-10 mb-10\\\">Completed<\/span>\";\n}else if(value.equalsIgnoreCase(\"Closed\")){\n    return \"<span class=\\\"badge badge-secondary me-10 mb-10\\\">Closed<\/span>\";\n}else if(value.equalsIgnoreCase(\"Aborted\")){\n    return \"<span class=\\\"badge badge-danger me-10 mb-10\\\">Aborted<\/span>\";\n}else{\n    return value;\n}"}
+            },
+            "label": "Status",
+            "sortable": "true",
+            "datalist_type": "column",
+            "exclude_export": "true",
+            "headerAlignment": "",
+            "name": "status",
+            "width": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_5",
+            "alignment": "dataListAlignCenter"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "include_export": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Created By",
+            "sortable": "true",
+            "datalist_type": "column",
+            "exclude_export": "true",
+            "headerAlignment": "",
+            "name": "createdByName",
+            "width": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_1",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "include_export": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Date Created",
+            "sortable": "true",
+            "datalist_type": "column",
+            "exclude_export": "true",
+            "headerAlignment": "",
+            "name": "dateCreated",
+            "width": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_4",
+            "alignment": ""
+        }
+    ],
+    "cardCollapsible": "",
+    "pageSize": "50",
+    "orderBy": "dateCreated",
+    "description": "",
+    "showDataWhenFilterSet": "",
+    "disableResponsive": "",
+    "checkboxPosition": "left",
+    "cardCollapseByDefault": "",
+    "id": "list_request",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {
+            "joins": [],
+            "aggregateField": [],
+            "formDefId": "request",
+            "customSelectionValue": "",
+            "extraCondition": "e.createdBy = '#currentUser.username#'",
+            "filters": [],
+            "groupBy": "",
+            "functionColumns": []
+        }
+    },
+    "order": "1",
+    "rowActionsDropdownLabel": "Action",
+    "useSession": "",
+    "searchPopup": "",
+    "draggabletable": "",
+    "filters": [
+        {
+            "hidden": "true",
+            "name": "id",
+            "id": "filter_0",
+            "label": "ID",
+            "datalist_type": "filter",
+            "type": {
+                "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+                "properties": {"defaultValue": ""}
+            },
+            "filterParamName": "d-6462712-fn_id"
+        },
+        {
+            "hidden": "",
+            "name": "title",
+            "id": "filter_1",
+            "label": "Document ID, Title",
+            "datalist_type": "filter",
+            "type": {
+                "className": "org.joget.marketplace.TextFieldDataListFilterTypeExtra",
+                "properties": {
+                    "defaultValue": "",
+                    "filterSelection": "",
+                    "searchFields": "agreement;title"
+                }
+            },
+            "filterParamName": "d-6462712-fn_title"
+        },
+        {
+            "hidden": "",
+            "name": "status",
+            "id": "filter_2",
+            "label": "Status",
+            "datalist_type": "filter",
+            "type": {
+                "className": "org.joget.plugin.enterprise.SelectBoxDataListFilterType",
+                "properties": {
+                    "controlField": "",
+                    "size": "",
+                    "optionsBinder": {
+                        "className": "",
+                        "properties": {}
+                    },
+                    "defaultValue": "",
+                    "multiple": "true",
+                    "options": [
+                        {
+                            "label": "New",
+                            "value": "New",
+                            "grouping": ""
+                        },
+                        {
+                            "label": "Preparing",
+                            "value": "Preparing",
+                            "grouping": ""
+                        },
+                        {
+                            "label": "Invited",
+                            "value": "Invited",
+                            "grouping": ""
+                        },
+                        {
+                            "label": "Completed",
+                            "value": "Completed",
+                            "grouping": ""
+                        }
+                    ]
+                }
+            },
+            "filterParamName": "d-6462712-fn_status"
+        }
+    ],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bottomLeft",
+    "hidePageSize": "",
+    "name": "Request (Creator View)",
+    "rowActionsMode": "dropdown",
+    "showhidecolumns": "",
+    "actions": []
+}

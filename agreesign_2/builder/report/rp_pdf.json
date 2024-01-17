@@ -1,0 +1,37 @@
+{
+    "footer": {"elements": []},
+    "header": {"elements": []},
+    "body": {"elements": [{
+        "className": "org.joget.rbuilder.lib.FormReportElement",
+        "properties": {
+            "recordId": "#reportParam.id#",
+            "formDefId": "create_contract",
+            "marginBottom": "",
+            "id": "1AAAC4C3-82B2-44E0-6F76-E6F364E4930D",
+            "showNotSelectedOptions": "",
+            "selectorClass": "",
+            "hideEmptyValueField": ""
+        }
+    }]},
+    "properties": {
+        "margins": "normal",
+        "orientation": "portrait",
+        "leftMargin": "10",
+        "description": "",
+        "pageHeight": "297",
+        "paperSize": "a4",
+        "pageWidth": "210",
+        "background_type": "cover",
+        "background_image": "",
+        "topMargin": "10",
+        "rightMargin": "10",
+        "background_color": "",
+        "bottomMargin": "10",
+        "reportParams": [{
+            "param": "appleId",
+            "value": "735096ca-2ef8-4a25-9473-5edd8e718e2a"
+        }],
+        "name": "convert to pdf",
+        "id": "rp_pdf"
+    }
+}

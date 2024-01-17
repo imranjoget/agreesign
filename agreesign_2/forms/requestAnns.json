@@ -1,0 +1,290 @@
+{
+    "elements": [
+        {
+            "elements": [{
+                "elements": [{
+                    "className": "org.joget.apps.form.lib.SubForm",
+                    "properties": {
+                        "parentSubFormId": "",
+                        "loadBinder": {
+                            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                            "properties": {}
+                        },
+                        "readonly": "",
+                        "formDefId": "requestStatusDisplay",
+                        "noframe": "true",
+                        "subFormParentId": "",
+                        "id": "field8",
+                        "label": "",
+                        "storeBinder": {
+                            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                            "properties": {}
+                        },
+                        "readonlyLabel": ""
+                    }
+                }],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "readonly": "",
+                "style-mobile-display": "none",
+                "comment": "",
+                "id": "boostrapSection",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.plugin.enterprise.FormGrid",
+                        "properties": {
+                            "validateMaxRow": "",
+                            "formDefId": "requestAnn",
+                            "validator": {
+                                "className": "org.joget.plugin.enterprise.MultirowBasicValidator",
+                                "properties": {"validationrules": [{
+                                    "validationType": "",
+                                    "message": "The email has already been used for this document. Please use a different email.",
+                                    "mandatory": "true",
+                                    "fieldId": "email"
+                                }]}
+                            },
+                            "pageSize": "20",
+                            "requestParams": [],
+                            "enableSorting": "true",
+                            "storeBinder": {
+                                "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                                "properties": {
+                                    "formDefId": "requestAnn",
+                                    "foreignKey": "request_id"
+                                }
+                            },
+                            "deleteGridData": "",
+                            "readonly": "",
+                            "options": [
+                                {
+                                    "format": "",
+                                    "width": "",
+                                    "label": "Signer",
+                                    "formatType": "text",
+                                    "value": "name"
+                                },
+                                {
+                                    "format": "",
+                                    "width": "",
+                                    "label": "Email",
+                                    "formatType": "text",
+                                    "value": "email"
+                                },
+                                {
+                                    "format": "",
+                                    "width": "150px",
+                                    "label": "Signature Count",
+                                    "formatType": "text",
+                                    "value": "signature_count"
+                                },
+                                {
+                                    "format": "",
+                                    "width": "400px",
+                                    "label": "Annotation",
+                                    "formatType": "text",
+                                    "value": "annotation_data"
+                                }
+                            ],
+                            "sortField": "sort",
+                            "id": "signatories",
+                            "abortRelatedRunningProcesses": "",
+                            "height": "500",
+                            "showRowNumber": "",
+                            "disabledDelete": "",
+                            "validateMinRow": "",
+                            "submit-label-normal": "",
+                            "uniqueKey": "email",
+                            "deleteSubformData": "",
+                            "errorMessage": "Invalid number of rows",
+                            "deleteMessage": "Delete row?",
+                            "label": "",
+                            "deleteFiles": "",
+                            "loadBinder": {
+                                "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                                "properties": {
+                                    "formDefId": "requestAnn",
+                                    "foreignKey": "request_id"
+                                }
+                            },
+                            "disabledAdd": "",
+                            "submit-label-readonly": "",
+                            "width": "2000",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "autoPopulate": "",
+                            "id": "field2",
+                            "label": "",
+                            "value": "<!-- The Modal -->\r\n<div id=\"myModal\" class=\"modal\">\r\n  <div class=\"grey-background\">\r\n        <div class=\"toolbar\">\r\n        <P><strong>#form.ags_record.agreement[{requestParam.id}]#<\/strong><\/P>\r\n        <span class=\"close\" onclick=\"closeModal()\">&times;<\/span>\r\n\t    <\/div>\r\n\t    <div class=\"content\">\r\n\t\t    <div id=\"pdf-container\" class=\"pdf-container\"><\/div>\r\n\t     <\/div>\r\n    <\/div>\r\n<\/div>\r\n<script src=\"#appResource.fabric.min.js#\"><\/script>\r\n<script src=\"#appResource.pdf.js#\"><\/script>\r\n<script>pdfjsLib.GlobalWorkerOptions.workerSrc=\"#appResource.pdf.worker.js#\";<\/script>\r\n<script src=\"#appResource.pdfannotate.js#\"><\/script>\r\n<script>\r\n\t$( document ).ready(function() {\r\n    $(function(){\r\n        //make formgrid popup wider\r\n        FormUtil.getField(\"signatories\").find(\"#width\").val(\"100%\");\r\n        FormUtil.getField(\"signatories\").find(\"#height\").val(\"100%\");\r\n        \r\n        FormUtil.getField(\"signatories\").change(function(){\r\n            $(\"span[name='signatories_annotation_data']\").each( function(){\r\n                if($(this).find(\"img\").size() == 0){\r\n                    if($(this).text() === ''){\r\n                        $(this).html(\"<a id=\\\"myimg\\\" class=\\\"btn button\\\" data-json='\" + JSON.stringify($(this).text()) + \"' onclick=\\\"openModal(this)\\\"> View Document <\/a>\");\r\n                    } else {\r\n                        $(this).html(\"<a id=\\\"myimg\\\" class=\\\"btn button\\\" data-json='\" + JSON.stringify($(this).text()) + \"' onclick=\\\"openModal(this)\\\"> View Document <\/a>\");\r\n                    }\r\n                }\r\n                $(this).show();\r\n            });\r\n        });\r\n        \r\n        \r\n        $(\"span[name='signatories_annotation_data']\").each(function(i){\r\n            if($(this).text() === ''){\r\n                $(this).html(\"<a id=\\\"myimg\\\" class=\\\"btn button\\\" data-json='\" + JSON.stringify($(this).text()) + \"' onclick=\\\"openModal(this)\\\"> View Document <\/a>\");\r\n            } else {\r\n                $(this).html(\"<a id=\\\"myimg\\\" class=\\\"btn button\\\" data-json='\" + JSON.stringify($(this).text()) + \"' onclick=\\\"openModal(this)\\\"> View Document <\/a>\");\r\n            }\r\n            $(this).show();\r\n        });\r\n    });\r\n    });\r\n    \r\n    function openModal(element) {\r\n        // Get the modal\r\n        var modal = document.getElementById(\"myModal\");\r\n        // Get the image and insert it inside the modal - use its \"alt\" text as a caption\r\n        var img = document.getElementById(\"myImg\");\r\n        var modalImg = document.getElementById(\"img01\");\r\n        //var captionText = document.getElementById(\"caption\");\r\n        // If absolute URL from the remote server is provided, configure the CORS header on that server.\r\n\t\tvar pdf;\r\n\t\tvar url = '#request.domainURL#/jw/web/client/app/#appDef.appId#/#appDef.version#/form/download/request/#requestParam.id#/#form.ags_record.agreement[{requestParam.id}]#.';\r\n\tvar zoomScale = 1.2;\r\n\tvar outputJson = {};\r\n\tvar selectedObjects = new Set();\r\n\tvar originalSize;\r\n\t\r\n\tvar screenWidth = window.innerWidth;\r\n\r\n    if (screenWidth <= 767) {\r\n        zoomScale = 0.35;\r\n    } else if(screenWidth <= 991 ) {\r\n        zoomScale = 0.7;\r\n    } else if(screenWidth >= 992 ) {\r\n        zoomScale = 1.2;\r\n    }\r\n\t\r\n\tfabric.LabeledRect = fabric.util.createClass(fabric.Rect, {\r\n    type: 'labeledRect',\r\n    initialize: function(options) {\r\n      options || (options = {});\r\n      var label = 'Signature';\r\n      this.callSuper('initialize', options);\r\n      this.set('label', label || '');\r\n    },\r\n    toObject: function() {\r\n      return fabric.util.object.extend(this.callSuper('toObject'), {\r\n        label: this.get('label')\r\n      });\r\n    },\r\n    _render: function(ctx) {\r\n      this.callSuper('_render', ctx);\r\n      ctx.font = '20px Helvetica';\r\n      ctx.fillStyle = 'rgb(22, 119, 255)';\r\n      ctx.textAlign = 'center'; // Center text h\r\n      ctx.textBaseline = 'middle';\r\n      var textY = -this.height / 2 + this.height / 2;\r\n      ctx.fillText(this.label, 0, textY);\r\n    }\r\n  });\r\n  fabric.LabeledRect.fromObject = function(object, callback) {\r\n    return fabric.Object._fromObject('LabeledRect', object, callback);\r\n  }\r\n\t\r\n\t  pdf = new PDFAnnotate('pdf-container', url, {\r\n\t\tonPageUpdated(page, oldData, newData) {\r\n\t\t},\r\n\t\tready() {\r\n\t\t  var jsonData = $(element).attr('data-json');\r\n\t\t  jsonData = jsonData.replace(/\\\\n/g, '');\r\n\t\t  jsonData = jsonData.replace(/\\s/g, '');\r\n\t\t  jsonData = jsonData.slice(1, -1);\r\n\t\t  jsonData = jsonData.replace(/\\\\/g, '');\r\n          const parsedData = JSON.parse(jsonData);\r\n          pdf.loadFromJSON(parsedData);\r\n\t\t},\r\n\t\tscale: zoomScale,\r\n\t\tpageImageCompression: 'MEDIUM', // FAST, MEDIUM, SLOW(Helps to control the new PDF file size)\r\n\t  });\r\n\t   modal.style.display = \"block\";\r\n    }\r\n\r\n    function closeModal() {\r\n        var modal = document.getElementById(\"myModal\");\r\n        modal.style.display = \"none\";\r\n    }\r\n<\/script>\r\n<style>\r\n@media (max-width: 767px){\r\n    .grey-background {\r\n        width: 90vw !important;    \r\n    }\r\n    .grey-background .toolbar {\r\n        width: 89% !important;\r\n        font-size: 14px;\r\n    }\r\n}\r\n#myImg {\r\n  border-radius: 5px;\r\n  cursor: pointer;\r\n  transition: 0.3s;\r\n}\r\n\r\n#myImg:hover {opacity: 0.7;}\r\n\r\n/* The Modal (background) */\r\n.modal {\r\n  display: none; /* Hidden by default */\r\n  position: fixed; /* Stay in place */\r\n  z-index: 10000000; /* Sit on top */\r\n  padding-top: 100px; /* Location of the box */\r\n  left: 0;\r\n  top: 0;\r\n  width: 100%; /* Full width */\r\n  height: 100%; /* Full height */\r\n  overflow: auto; /* Enable scroll if needed */\r\n  background-color: rgb(0,0,0); /* Fallback color */\r\n  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */\r\n}\r\n\r\n/* Modal Content (image) */\r\n.modal-content {\r\n  margin: auto;\r\n  display: block;\r\n  width: 90%;\r\n  max-width: 700px;\r\n}\r\n\r\n/* Caption of Modal Image */\r\n#caption {\r\n  margin: auto;\r\n  display: block;\r\n  width: 80%;\r\n  max-width: 700px;\r\n  text-align: center;\r\n  color: #ccc;\r\n  padding: 10px 0;\r\n  height: 150px;\r\n}\r\n\r\n/* Add Animation */\r\n.modal-content, #caption {  \r\n  -webkit-animation-name: zoom;\r\n  -webkit-animation-duration: 0.6s;\r\n  animation-name: zoom;\r\n  animation-duration: 0.6s;\r\n}\r\n\r\n@-webkit-keyframes zoom {\r\n  from {-webkit-transform:scale(0)} \r\n  to {-webkit-transform:scale(1)}\r\n}\r\n\r\n@keyframes zoom {\r\n  from {transform:scale(0)} \r\n  to {transform:scale(1)}\r\n}\r\n\r\n/* The Close Button */\r\n.close {\r\n  position: absolute;\r\n  top: 10px;\r\n  right: 15px;\r\n  color: #212529;\r\n  font-size: 40px;\r\n  font-weight: bold;\r\n  transition: 0.3s;\r\n}\r\n\r\n.close:hover,\r\n.close:focus {\r\n  color: #bbb;\r\n  text-decoration: none;\r\n  cursor: pointer;\r\n}\r\n\r\n/* 100% Image Width on Smaller Screens */\r\n@media only screen and (max-width: 700px){\r\n  .modal-content {\r\n    width: 100%;\r\n  }\r\n}\r\n\r\n    .grey-background {\r\n\t\tbackground-color: #f3f0ec;\r\n\t\tdisplay: flex;\r\n\t\toverflow: hidden;\r\n\t\tbox-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;\r\n\t\theight: 86vh;\r\n\t\twidth: 70vw;\r\n        margin: 0 auto;\r\n\t}\r\n\t\r\n\t#signature-group > a > span{\r\n\t    font-weight: 600;\r\n\t}\r\n\t\r\n\t#signature-group > a > span > span{\r\n\t    display: block;\r\n        font-size: 11px;\r\n        font-weight: normal;\r\n        color: #bdc3c7;\r\n\t}\r\n\t\r\n\t#signature-count{\r\n\t    text-align: right;\r\n\t    margin-bottom: 15px;\r\n\t}\r\n\t\r\n\t.upper-canvas {\r\n\t\tbox-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;\r\n\t}\r\n\t\r\n\t.grey-background .toolbar {\r\n\t\twidth: 70.3%;\r\n\t\tbackground-color: #f6f6f8;\r\n\t\theight: 60px;\r\n\t\tposition: absolute;\r\n\t\ttop: 100px;\r\n\t\tz-index: 10;\r\n\t\tpadding: 0 35px;    \r\n\t\tborder-bottom: 1px solid #ccc;\r\n\t\tpadding-top: 15px;\r\n\t}\r\n\t\r\n\t.grey-background .canvas-container{\r\n\t    margin: auto;\r\n\t    margin-bottom: 20px;\r\n\t    pointer-events: none;\r\n\t}\r\n\t\r\n\t.grey-background #SignatureSidebar {\r\n\t\tright: 0px;\r\n\t\ttop: 0;\r\n\t\twidth: 450px;\r\n\t\tbackground: #fff;\r\n\t\tz-index: 10;\r\n\t\t-ms-flex-preferred-size: 450px;\r\n\t\tflex-basis: 450px;\r\n\t\tdisplay: -ms-flexbox;\r\n\t\tdisplay: flex;\r\n\t\t-ms-flex-direction: column;\r\n\t\tflex-direction: column;\r\n\t\tpadding: 0 0 120px;\r\n\t\toverflow-x: hidden;\r\n\t\toverflow-y: auto;\r\n\t\tposition: relative;\r\n\t}\r\n\t\r\n\t.grey-background .content {\r\n\t\tposition: relative;\r\n\t\t-webkit-box-sizing: border-box;\r\n\t\tbox-sizing: border-box;\r\n\t\t-ms-flex: 1 1;\r\n\t\tflex: 1 1;\r\n\t\tdisplay: block;\r\n\t\tmargin-top: 59px;\r\n\t}\r\n\t\r\n\t.grey-background .option__panel__title {\r\n\t\tfont-size: 24px;\r\n\t\tfont-weight: 600;\r\n\t\tline-height: 34px;\r\n\t\tletter-spacing: 0;\r\n\t\tcolor: #000;\r\n\t\tmargin-bottom: 0;\r\n\t\ttext-transform: uppercase;\r\n\t\ttext-align: center;\r\n\t\tpadding: 21px;\r\n\t\tborder-bottom: 1px solid rgba(0, 0, 0, .2);\r\n\t\tposition: relative;\r\n\t\tbackground-color: #fff;\r\n\t}\r\n\t\r\n\t.signature-group{\r\n\t    margin-bottom: 5px;\r\n\t}\r\n\t\r\n\t.grey-background #pdf-container {\r\n\t\tpadding-top: 72px;\r\n\t\tpadding-bottom: 72px;\r\n\t\ttext-align: center;\r\n\t\toverflow: scroll;\r\n\t\toverflow-x: hidden;\r\n\t\theight: 80vh;\r\n\t}\r\n\t\r\n\t.pdf-container {\r\n\t\t--scroll-size: 15px;\r\n\t\t--scroll-radius: 0px;\r\n\t\t--scroll-track: rgb(255 255 255 / 10%);\r\n\t\t--scroll-thumb: linear-gradient(45deg, #00aeff, #a68eff);\r\n\t\t--scroll-track: #ced4da;\r\n\t\tscrollbar-color: var(--scroll-thumb-color, grey) var(--scroll-track, transparent);\r\n\t\tscrollbar-width: thin;\r\n\t}\r\n\t\r\n\t.pdf-container::-webkit-scrollbar {\r\n\t\twidth: var(--scroll-size, 10px);\r\n\t\theight: var(--scroll-size, 10px);\r\n\t}\r\n\t\r\n\t.pdf-container::-webkit-scrollbar-track {\r\n\t\tbackground-color: var(--scroll-track, transparent);\r\n\t\tborder-radius: var(--scroll-track-radius, var(--scroll-radius));\r\n\t}\r\n\t\r\n\t.pdf-container::-webkit-scrollbar-thumb {\r\n\t\tbackground-color: var(--scroll-thumb-color, grey);\r\n\t\tbackground-image: var(--scroll-thumb, none);\r\n\t\tborder-radius: var(--scroll-thumb-radius, var(--scroll-radius));\r\n\t}\r\n\t\r\n\t.grey-background button:focus {\r\n\t\toutline: 0;\r\n\t}\r\n\t\r\n\t.toolbar .tool {\r\n\t\tdisplay: inline-block;\r\n\t\tcolor: #fff;\r\n\t\theight: 100%;\r\n\t\tpadding: 15px 3px;\r\n\t}\r\n\t\r\n\t.toolbar .tool label,\r\n\t.toolbar .tool select,\r\n\t.toolbar .tool input {\r\n\t\tdisplay: inline-block;\r\n\t\twidth: auto;\r\n\t\theight: auto !important;\r\n\t\tpadding-top: 0;\r\n\t\tpadding-bottom: 0;\r\n\t\r\n\t}\r\n\t\r\n\t.toolbar .tool .text-input {\r\n\t\twidth: 75px;\r\n\t}\r\n\t\r\n\t.toolbar .tool .tool-button {\r\n\t\twidth: 30px;\r\n\t\tborder-radius: 0.2rem;\r\n\t\tbackground-color: #fff;\r\n\t\tborder: 1px solid rgb(22, 119, 255);\r\n\t\tcolor: rgb(22, 119, 255);\r\n\t\tcursor: pointer;\r\n\t\tpadding: 0px 6px;\r\n\t}\r\n\t\r\n\t.toolbar .tool .tool-button:hover,\r\n\t.toolbar .tool .tool-button.active {\r\n\t\tbackground-color: rgb(22, 119, 255);\r\n\t\tborder-color: rgb(22, 119, 255);\r\n\t\tcolor: #fff;\r\n\t}\r\n\t\r\n\t.toolbar .tool .tool-button-danger {\r\n\t\twidth: 30px;\r\n\t\tborder-radius: 0.2rem;\r\n\t\tbackground-color: #fff;\r\n\t\tcolor: #fff;\r\n\t\tcursor: pointer;\r\n\t\tborder: 0px;\r\n\t\tcolor: #dc3545;\r\n        border: 1px solid #dc3545;\r\n\t}\r\n\t\r\n\t.toolbar .tool .tool-button-danger:hover {\r\n\t\tbackground-color: #c82333;\r\n\t}\r\n\t\r\n\t.toolbar .tool .tool-button-info {\r\n\t\tborder-radius: 0.2rem;\r\n\t\tbackground-color: #17a2b8;\r\n\t\tcolor: #fff;\r\n\t\tcursor: pointer;\r\n\t}\r\n\t\r\n\t.toolbar .tool .tool-button-info:hover {\r\n\t\tbackground-color: #117a8b;\r\n\t}\r\n\t\r\n\t.toolbar .tool .tool-button-light {\r\n\t\tborder-radius: 0.2rem;\r\n\t\tbackground-color: #f8f9fa;\r\n\t\tcolor: #212529;\r\n\t\tcursor: pointer;\r\n\t}\r\n\t\r\n\t.toolbar .tool .tool-button-light:hover {\r\n\t\tbackground-color: #e2e6ea;\r\n\t}\r\n\t\r\n\t.signingSpots {\r\n\t\tmargin: 16px 24px;\r\n\t}\r\n\t\r\n\t.grey-background #SignatureSidebar>div.signingSpots>div>a>span {\r\n\t\tmargin-left: 25px;\r\n\t\tfont-size: 18px;\r\n\t}\r\n\t\r\n\t.grey-background #SignatureSidebar>div.signingSpots>div>a>input[type=checkbox] {\r\n\t\twidth: 5px;\r\n\t\theight: 5px;\r\n\t\tposition: absolute;\r\n\t\ttop: 35px;\r\n        left: 40px;\r\n\t}\r\n\t\r\n\t.list-group-item {\r\n\t\tpadding: 1rem 1.25rem;\r\n\t}\r\n\t\r\n\t.option__label__title, .option__title {\r\n\t\tfont-size: 18px;\r\n\t\tfont-weight: 500;\r\n\t\tcolor: #212529;\r\n\t\tletter-spacing: .3px;\r\n\t\tline-height: 24px;\r\n\t\ttext-transform: uppercase;\r\n\t\tmargin-bottom: 15px;\r\n\t}\r\n\t\r\n\t.option__panel__bottom{\r\n\t\tmargin-bottom: 0;\r\n\t\tpadding: 21px;\r\n\t\tbackground-color: #fff;\r\n\t\tbottom: 0;\r\n\t\twidth: 450px;\r\n\t\tposition: absolute;\r\n\t\theight: 140px;\r\n\t}\r\n\t#processTask{\r\n\t\twidth: 100%;\r\n\t\theight: 100%;\r\n\t\tbackground-color: rgb(22, 119, 255);\r\n\t\tcolor: #fff;\r\n\t\tfont-size: 28px;\r\n\t\tfont-weight: 500;\r\n\t}\r\n\t#processTask span{\r\n\t\theight: 24px;\r\n\t\tdisplay: -ms-inline-flexbox;\r\n\t\tdisplay: inline-flex;\r\n\t\t-ms-flex-align: center;\r\n\t\talign-items: center;\r\n\t\t-ms-flex-pack: center;\r\n\t\tjustify-content: center;\r\n\t\tpadding: 40px;\r\n\t\tposition: relative;\r\n\t\tvertical-align: bottom;\r\n\t\tmargin-left: 8px;\r\n\t}\r\n\t\r\n\t#processTask span, #settingsRefresh span {\r\n\t\tdisplay: -ms-flexbox;\r\n\t\tdisplay: flex;\r\n\t\tmin-height: inherit;\r\n\t}\r\n\t.toolbar .tool.editButton{\r\n        float: right;\r\n        display: none;\r\n    }\r\n<\/style>"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "workflowVariable": "",
+                            "id": "status",
+                            "value": "Preparing"
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Assign Signatories",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "readonly": "",
+                "comment": "",
+                "id": "section1",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "3-Assign Signatories",
+        "description": "",
+        "postProcessorRunOn": "update",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "requestAnns",
+        "postProcessor": {
+            "className": "org.joget.apps.app.lib.MultiTools",
+            "properties": {
+                "runInMultiThread": "",
+                "comment": "",
+                "tools": [
+                    {
+                        "className": "org.joget.apps.app.lib.DatabaseUpdateTool",
+                        "properties": {
+                            "query": "delete from app_fd_ags_signatures where c_request_id = \"#form.ags_record.id#\"",
+                            "jdbcDatasource": "default"
+                        }
+                    },
+                    {
+                        "className": "org.joget.marketplace.IteratorProcessToolRecord",
+                        "properties": {
+                            "iteratorMethod": "Process Tool",
+                            "executeProcessTool": {
+                                "className": "org.joget.plugin.enterprise.FormDataUpdateTool",
+                                "properties": {
+                                    "formDefId": "signAgreement",
+                                    "fields": [
+                                        {
+                                            "field": "request_id",
+                                            "value": "{request_id}"
+                                        },
+                                        {
+                                            "field": "email",
+                                            "value": "@recordId@"
+                                        },
+                                        {
+                                            "field": "status",
+                                            "value": "Waiting"
+                                        },
+                                        {
+                                            "field": "name",
+                                            "value": "{name}"
+                                        },
+                                        {
+                                            "field": "id",
+                                            "value": "$$beanshell.generateUUID$$"
+                                        },
+                                        {
+                                            "field": "otp",
+                                            "value": "$$beanshell.generateUUID$$"
+                                        },
+                                        {
+                                            "field": "signature_type",
+                                            "value": "{signature_type}"
+                                        },
+                                        {
+                                            "field": "annotation_data",
+                                            "value": "{annotation_data}"
+                                        },
+                                        {
+                                            "field": "signAll",
+                                            "value": "{signAll}"
+                                        }
+                                    ]
+                                }
+                            },
+                            "delay": "2",
+                            "iteratorProcessTool": {
+                                "className": "org.joget.marketplace.DatabaseQueryProcessTool",
+                                "properties": {
+                                    "query": "select * from (select trim(c_email) as `c_email`, min(c_name) as `name`, min(c_signAll) as `signAll`, \"#form.ags_record.id#\" as `request_id`, GROUP_CONCAT(c_signature_type) as `signature_type`, min(c_annotation_data) as `annotation_data` from app_fd_ags_annotation ann where ann.c_request_id = \"#form.ags_record.id#\" group by c_email) a",
+                                    "debugMode": ""
+                                }
+                            },
+                            "iteratorToolId": "c_email",
+                            "debugMode": ""
+                        }
+                    }
+                ]
+            }
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "ags_record"
+    }
+}

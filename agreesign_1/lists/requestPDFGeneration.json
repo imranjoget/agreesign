@@ -1,0 +1,176 @@
+{
+    "actions": [],
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {
+            "customSelectionValue": "",
+            "extraCondition": "",
+            "filters": [],
+            "formDefId": "request",
+            "functionColumns": [],
+            "groupBy": "",
+            "joins": []
+        }
+    },
+    "buttonPosition": "bottomLeft",
+    "checkboxPosition": "left",
+    "columns": [
+        {
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "alignment": "",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "filterable": true,
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "headerAlignment": "",
+            "hidden": "false",
+            "id": "column_0",
+            "label": "ID",
+            "name": "id",
+            "sortable": "true",
+            "style": "",
+            "width": ""
+        },
+        {
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "alignment": "",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "filterable": true,
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "headerAlignment": "",
+            "hidden": "false",
+            "id": "column_1",
+            "label": "Document Title",
+            "name": "title",
+            "sortable": "true",
+            "style": "",
+            "width": ""
+        },
+        {
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "alignment": "",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "filterable": true,
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "headerAlignment": "",
+            "hidden": "false",
+            "id": "column_2",
+            "label": "Status",
+            "name": "status",
+            "sortable": "true",
+            "style": "",
+            "width": ""
+        },
+        {
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "alignment": "",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "filterable": true,
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "headerAlignment": "",
+            "hidden": "false",
+            "id": "column_3",
+            "label": "Date Created",
+            "name": "dateCreated",
+            "sortable": "true",
+            "style": "",
+            "width": ""
+        }
+    ],
+    "considerFilterWhenGetTotal": "",
+    "description": "Please do not modify this list.",
+    "disableResponsive": "",
+    "filters": [{
+        "id": "filter_0",
+        "label": "Document Title",
+        "name": "title",
+        "type": {
+            "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+            "properties": {}
+        }
+    }],
+    "hidePageSize": "",
+    "id": "requestPDFGeneration",
+    "name": "Request (For PDF Generation Only)",
+    "order": "",
+    "orderBy": "",
+    "pageSize": "0",
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "responsiveView": [
+        {
+            "breakpoint": "",
+            "columns": "",
+            "view": "Mobile"
+        },
+        {
+            "breakpoint": "",
+            "columns": "",
+            "view": "Tablet"
+        }
+    ],
+    "rowActions": [{
+        "className": "org.joget.marketplace.PDFFileDownloadSignature",
+        "icon": "",
+        "id": "rowAction_0",
+        "label": "PDF File Download Signature",
+        "name": "PDF File Download Signature",
+        "properties": {
+            "appPrefix": "ags",
+            "attachmentField": "agreement",
+            "bodyStamping": "",
+            "datalist_type": "row_action",
+            "documentTrail": "true",
+            "footerFontColor": "#020202",
+            "footerFontFamily": "0",
+            "footerFontOpacity": "0.8",
+            "footerFontSize": "8",
+            "footerFontStyle": "0",
+            "footerStamping": "true",
+            "footerWatermark": "Document - #form.ags_record.id[{assignment.processId}]# - #date.EEE,d MMM yyyy h:mm:ss a|GMT# GMT",
+            "formDefId": "request",
+            "headerStamping": "",
+            "label": "Download Signed Document",
+            "rules": [],
+            "signatureStamping": "true",
+            "signatureStampingCanvasHeight": "220",
+            "signatureStampingCanvasWidth": "320",
+            "stylishFont": "LemonTuesday.ttf",
+            "stylishFontSize": "20",
+            "trailFormDefId": "requestTrail",
+            "trailFormatting": "@page { \n    size: 8.27in 11.69in; \n}\n\ntable {\n    width: 100%;\n}\n\nthead {\n    display: none !important;\n}\n\ntd {\n    border: none !important;\n}",
+            "trailHeaderFormDefId": ""
+        },
+        "type": "text"
+    }],
+    "searchPopup": "",
+    "showDataWhenFilterSet": "",
+    "showPageSizeSelector": "true",
+    "useSession": ""
+}

@@ -1,0 +1,30 @@
+{
+    "elements": [{
+        "className": "org.joget.api.lib.AppFormAPI",
+        "properties": {
+            "formDefId": "request",
+            "ignorePermission": "true",
+            "id": "77DCF43F-E43B-434D-7416-3DA2FE67B2B9",
+            "label": "",
+            "ENABLED_PATHS": ";post:/addWithFiles"
+        }
+    }],
+    "properties": {
+        "licenseUrl": "",
+        "internalPermission": {
+            "className": "org.joget.apps.userview.lib.LoggedInUserPermission",
+            "properties": {}
+        },
+        "contactEmail": "",
+        "contactName": "",
+        "description": "",
+        "externalDocUrl": "",
+        "termsOfService": "",
+        "licenseName": "",
+        "externalDocDesc": "",
+        "name": "Create New Request",
+        "id": "API-10defa02-7971-4ce4-bc76-f2b341d40a0a",
+        "internalKey": "2387498374ksafklshf82378374928437",
+        "enableInternal": ""
+    }
+}

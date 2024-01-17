@@ -1,0 +1,515 @@
+{
+    "elements": [
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "elements": [{"className": "menu-component"}],
+                        "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                        "properties": {
+                            "style-flex": "0 0 60%",
+                            "style-max-width": "60%"
+                        }
+                    },
+                    {
+                        "elements": [{
+                            "className": "org.joget.apps.userview.lib.component.ImageComponent",
+                            "properties": {
+                                "attr-data-events-listening": [],
+                                "style-custom": "    filter: drop-shadow(4px 5px 6px #666);",
+                                "attr-width": "550",
+                                "attr-height": "400",
+                                "attr-src": "/jw/web/app/agreesign/resources/save.png",
+                                "id": "7D23E61C6B1D4CC8EFEACCB639577255",
+                                "customId": ""
+                            }
+                        }],
+                        "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                        "properties": {
+                            "style-flex": "0 0 40%",
+                            "style-max-width": "40%"
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.userview.lib.component.ColumnsComponent",
+                "properties": {
+                    "attr-data-events-listening": [],
+                    "style-background-color": "var(--theme-content-background, #ffffffcc)",
+                    "gutter": "5px",
+                    "columns": [
+                        {
+                            "style-mobile-max-width": "",
+                            "style-max-width": "60%",
+                            "style-tablet-max-width": ""
+                        },
+                        {
+                            "style-mobile-max-width": "",
+                            "style-max-width": "40%",
+                            "style-tablet-max-width": ""
+                        }
+                    ],
+                    "css-mobile-stack-columns": "true",
+                    "id": "62B43A8B98304EBF2B10E23B348FB59C",
+                    "customId": ""
+                }
+            }],
+            "className": "org.joget.apps.userview.lib.component.ContainerComponent",
+            "properties": {
+                "attr-data-events-listening": [],
+                "style-padding-right": "0px",
+                "style-padding-bottom": "0px",
+                "style-margin-bottom": "10px",
+                "id": "5F1D1481DC78411C13ECD9E8C5B804EE",
+                "style-padding-top": "0px",
+                "customId": "",
+                "style-padding-left": "0px"
+            }
+        },
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "elements": [{
+                            "className": "org.joget.apps.userview.lib.FormMenu",
+                            "properties": {
+                                "loadDataWithKey": "",
+                                "redirectUrlOnCancel": "",
+                                "actionOnCancel": "",
+                                "redirectTargetOnCancel": "top",
+                                "customFooter": "",
+                                "enableOffline": "",
+                                "paramName": "id",
+                                "afterSavedReloadTarget": "true",
+                                "customId": "",
+                                "showInPopupDialog": "",
+                                "cancelButtonLabel": "",
+                                "readonly": "",
+                                "actionAfterSaved": "",
+                                "id": "B2A6ED67B85D4105059914080E9EC73A",
+                                "fieldPassover": "id",
+                                "redirectUrlAfterComplete": "C92F3D5A983A40408400F7ADAA34BF40",
+                                "formId": "request",
+                                "customHeader": "",
+                                "fieldPassoverMethod": "param",
+                                "keyName": "",
+                                "redirectTargetOnComplete": "top",
+                                "label": "Form",
+                                "messageShowAfterComplete": "",
+                                "userviewCacheDuration": "20",
+                                "submitButtonLabel": "Sign Now",
+                                "userviewCacheScope": "",
+                                "readonlyLabel": "true"
+                            }
+                        }],
+                        "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                        "properties": {
+                            "style-flex": "0 0 70%",
+                            "style-max-width": "70%"
+                        }
+                    },
+                    {
+                        "elements": [
+                            {
+                                "elements": [{
+                                    "className": "org.joget.plugin.enterprise.InformationTileComponent",
+                                    "properties": {
+                                        "attr-data-events-listening": [],
+                                        "template": "<!--{sampleWidth: '250px', tags: 'light-bg icon'}-->\n<div class=\"card flex-row align-items-center \n            align-items-stretch pr-2 pl-4\" \n     style=\"height:{{height}};\n            background-color:{{bgColor}}; \n            background-image:url('{{bgImg}}');\">\n    <div style=\"position: absolute;\n                top: 5px;\n                right: 5px;\n                z-index: 1;\">\n        {{reload}}\n    <\/div>\n    <div class=\"stats-icon col-4 p-0 d-flex align-items-center \n                justify-content-center rounded-left\">\n        <span style=\"font-size: 32px; \n                     height: 66px; \n                     width: 66px; \n                     line-height: 58px; \n                     border:4px solid #ffffffcf; \n                     text-align:center; \n                     border-radius:50%; \n                     background-color:{{color||#563d7c}}; \n                     color:#fff\">\n            {{icon||<i class=\"fas fa-globe\"><\/i>}}\n        <\/span>\n    <\/div>\n    <div class=\"stats-info py-3 pr-3 pl-2  col-8\">\n        <div class=\"d-flex flex-row align-items-center \n                    justify-content-between\" \n             style=\"font-size: 24px; \n                    margin-bottom: 10px;\">\n            <span>\n                {{value||1,000}}\n            <\/span>\n            <span class=\"pl-2\" \n                  style=\"font-size:12px; \n                         color:{{color||#563d7c}};\">\n                {{subvalue||12% <i class=\"fas fa-level-up-alt\"><\/i>}}\n            <\/span>\n        <\/div>\n        <h4 style=\"font-size: 12px;\n                   color: rgba(0,0,0,.6);\n                   margin: 5px 0;\">\n            {{title||TOTAL VISITORS}}\n        <\/h4>\n    <\/div>\n<\/div>\n<!---->",
+                                        "color": "#ADAFB1",
+                                        "icon": "<i class=\"far fa-file\"><\/i>",
+                                        "link": "",
+                                        "bgImg": "",
+                                        "title": "TOTAL DOCUMENTS",
+                                        "customId": "asddsadasd",
+                                        "reload": "",
+                                        "bgColor": "",
+                                        "subvalue": "",
+                                        "id": "76DF5C9F6BF6446DB02E4ED6B9B87AB1",
+                                        "value": "#datalist.total.list_request#",
+                                        "height": ""
+                                    }
+                                }],
+                                "className": "org.joget.apps.userview.lib.component.ContainerComponent",
+                                "properties": {
+                                    "attr-data-events-listening": [],
+                                    "style-background-color": "var(--theme-content-background, #ffffffcc)",
+                                    "style-padding-bottom": "8px",
+                                    "style-margin-bottom": "10px",
+                                    "id": "68ABA2152C644E6F0DEE32FCCBB9D7AF",
+                                    "style-padding-top": "8px",
+                                    "customId": ""
+                                }
+                            },
+                            {
+                                "elements": [{
+                                    "className": "org.joget.plugin.enterprise.InformationTileComponent",
+                                    "properties": {
+                                        "attr-data-events-listening": [],
+                                        "template": "<!--{sampleWidth: '250px', tags: 'light-bg icon'}-->\n<div class=\"card flex-row align-items-center \n            align-items-stretch pr-2 pl-4\" \n     style=\"height:{{height}};\n            background-color:{{bgColor}}; \n            background-image:url('{{bgImg}}');\">\n    <div style=\"position: absolute;\n                top: 5px;\n                right: 5px;\n                z-index: 1;\">\n        {{reload}}\n    <\/div>\n    <div class=\"stats-icon col-4 p-0 d-flex align-items-center \n                justify-content-center rounded-left\">\n        <span style=\"font-size: 32px; \n                     height: 66px; \n                     width: 66px; \n                     line-height: 58px; \n                     border:4px solid #ffffffcf; \n                     text-align:center; \n                     border-radius:50%; \n                     background-color:{{color||#563d7c}}; \n                     color:#fff\">\n            {{icon||<i class=\"fas fa-globe\"><\/i>}}\n        <\/span>\n    <\/div>\n    <div class=\"stats-info py-3 pr-3 pl-2  col-8\">\n        <div class=\"d-flex flex-row align-items-center \n                    justify-content-between\" \n             style=\"font-size: 24px; \n                    margin-bottom: 10px;\">\n            <span>\n                {{value||1,000}}\n            <\/span>\n            <span class=\"pl-2\" \n                  style=\"font-size:12px; \n                         color:{{color||#563d7c}};\">\n                {{subvalue||12% <i class=\"fas fa-level-up-alt\"><\/i>}}\n            <\/span>\n        <\/div>\n        <h4 style=\"font-size: 12px;\n                   color: rgba(0,0,0,.6);\n                   margin: 5px 0;\">\n            {{title||TOTAL VISITORS}}\n        <\/h4>\n    <\/div>\n<\/div>\n<!---->",
+                                        "color": "#50CD89",
+                                        "icon": "<i class=\"fas fa-file-signature\"><\/i>",
+                                        "link": "",
+                                        "bgImg": "",
+                                        "title": "SIGNED DOCUMENTS",
+                                        "customId": "",
+                                        "reload": "",
+                                        "bgColor": "",
+                                        "subvalue": "",
+                                        "id": "AA4ABDF9AA8743EE29A19CBFF8C87187",
+                                        "value": "#datalist.total.list_request[d-6462712-fn_status=Completed]#",
+                                        "height": ""
+                                    }
+                                }],
+                                "className": "org.joget.apps.userview.lib.component.ContainerComponent",
+                                "properties": {
+                                    "attr-data-events-listening": [],
+                                    "style-background-color": "var(--theme-content-background, #ffffffcc)",
+                                    "style-padding-bottom": "8px",
+                                    "style-margin-bottom": "10px",
+                                    "id": "70E9C81BA0CD4C0DD6C5C926868C2D79",
+                                    "style-padding-top": "8px",
+                                    "customId": ""
+                                }
+                            },
+                            {
+                                "elements": [{
+                                    "className": "org.joget.plugin.enterprise.InformationTileComponent",
+                                    "properties": {
+                                        "attr-data-events-listening": [],
+                                        "template": "<!--{sampleWidth: '250px', tags: 'light-bg icon'}-->\n<div class=\"card flex-row align-items-center \n            align-items-stretch pr-2 pl-4\" \n     style=\"height:{{height}};\n            background-color:{{bgColor}}; \n            background-image:url('{{bgImg}}');\">\n    <div style=\"position: absolute;\n                top: 5px;\n                right: 5px;\n                z-index: 1;\">\n        {{reload}}\n    <\/div>\n    <div class=\"stats-icon col-4 p-0 d-flex align-items-center \n                justify-content-center rounded-left\">\n        <span style=\"font-size: 32px; \n                     height: 66px; \n                     width: 66px; \n                     line-height: 58px; \n                     border:4px solid #ffffffcf; \n                     text-align:center; \n                     border-radius:50%; \n                     background-color:{{color||#563d7c}}; \n                     color:#fff\">\n            {{icon||<i class=\"fas fa-globe\"><\/i>}}\n        <\/span>\n    <\/div>\n    <div class=\"stats-info py-3 pr-3 pl-2  col-8\">\n        <div class=\"d-flex flex-row align-items-center \n                    justify-content-between\" \n             style=\"font-size: 24px; \n                    margin-bottom: 10px;\">\n            <span>\n                {{value||1,000}}\n            <\/span>\n            <span class=\"pl-2\" \n                  style=\"font-size:12px; \n                         color:{{color||#563d7c}};\">\n                {{subvalue||12% <i class=\"fas fa-level-up-alt\"><\/i>}}\n            <\/span>\n        <\/div>\n        <h4 style=\"font-size: 12px;\n                   color: rgba(0,0,0,.6);\n                   margin: 5px 0;\">\n            {{title||TOTAL VISITORS}}\n        <\/h4>\n    <\/div>\n<\/div>\n<!---->",
+                                        "color": "#FFC700",
+                                        "icon": "<i class=\"fas fa-ellipsis-h\"><\/i>",
+                                        "link": "",
+                                        "bgImg": "",
+                                        "title": "PENDING DOCUMENTS",
+                                        "customId": "",
+                                        "reload": "",
+                                        "bgColor": "",
+                                        "subvalue": "",
+                                        "id": "D1650D56A77444FC1B20AD8130B4F452",
+                                        "value": "#datalist.total.list_request[d-6462712-fn_status=Preparing]#",
+                                        "height": ""
+                                    }
+                                }],
+                                "className": "org.joget.apps.userview.lib.component.ContainerComponent",
+                                "properties": {
+                                    "attr-data-events-listening": [],
+                                    "style-background-color": "var(--theme-content-background, #ffffffcc)",
+                                    "style-padding-bottom": "8px",
+                                    "style-margin-bottom": "10px",
+                                    "id": "38BA8576EAB6421B3476FD3552BE2508",
+                                    "style-padding-top": "8px",
+                                    "customId": ""
+                                }
+                            },
+                            {
+                                "elements": [{
+                                    "className": "org.joget.plugin.enterprise.InformationTileComponent",
+                                    "properties": {
+                                        "attr-data-events-listening": [],
+                                        "template": "<!--{sampleWidth: '250px', tags: 'light-bg icon'}-->\n<div class=\"card flex-row align-items-center \n            align-items-stretch pr-2 pl-4\" \n     style=\"height:{{height}};\n            background-color:{{bgColor}}; \n            background-image:url('{{bgImg}}');\">\n    <div style=\"position: absolute;\n                top: 5px;\n                right: 5px;\n                z-index: 1;\">\n        {{reload}}\n    <\/div>\n    <div class=\"stats-icon col-4 p-0 d-flex align-items-center \n                justify-content-center rounded-left\">\n        <span style=\"font-size: 32px; \n                     height: 66px; \n                     width: 66px; \n                     line-height: 58px; \n                     border:4px solid #ffffffcf; \n                     text-align:center; \n                     border-radius:50%; \n                     background-color:{{color||#563d7c}}; \n                     color:#fff\">\n            {{icon||<i class=\"fas fa-globe\"><\/i>}}\n        <\/span>\n    <\/div>\n    <div class=\"stats-info py-3 pr-3 pl-2  col-8\">\n        <div class=\"d-flex flex-row align-items-center \n                    justify-content-between\" \n             style=\"font-size: 24px; \n                    margin-bottom: 10px;\">\n            <span>\n                {{value||1,000}}\n            <\/span>\n            <span class=\"pl-2\" \n                  style=\"font-size:12px; \n                         color:{{color||#563d7c}};\">\n                {{subvalue||12% <i class=\"fas fa-level-up-alt\"><\/i>}}\n            <\/span>\n        <\/div>\n        <h4 style=\"font-size: 12px;\n                   color: rgba(0,0,0,.6);\n                   margin: 5px 0;\">\n            {{title||TOTAL VISITORS}}\n        <\/h4>\n    <\/div>\n<\/div>\n<!---->",
+                                        "color": "#007BFF",
+                                        "icon": "<i class=\"zmdi zmdi-accounts-add\"><\/i>",
+                                        "link": "",
+                                        "bgImg": "",
+                                        "title": "TOTAL INVITATION SENT",
+                                        "customId": "",
+                                        "reload": "",
+                                        "bgColor": "",
+                                        "subvalue": "",
+                                        "id": "FD1F925AC91B4E8D5AED4561C79B2DC1",
+                                        "value": "#datalist.total.list_request[d-6462712-fn_status=Invited]#",
+                                        "height": ""
+                                    }
+                                }],
+                                "className": "org.joget.apps.userview.lib.component.ContainerComponent",
+                                "properties": {
+                                    "attr-data-events-listening": [],
+                                    "style-background-color": "var(--theme-content-background, #ffffffcc)",
+                                    "style-padding-bottom": "7px",
+                                    "id": "1DBEBE7627DC46AACD7D48168580990E",
+                                    "style-padding-top": "7px",
+                                    "customId": ""
+                                }
+                            }
+                        ],
+                        "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                        "properties": {
+                            "style-flex": "0 0 30%",
+                            "style-max-width": "30%"
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.userview.lib.component.ColumnsComponent",
+                "properties": {
+                    "attr-data-events-listening": [],
+                    "gutter": "5px",
+                    "columns": [
+                        {
+                            "style-mobile-max-width": "",
+                            "style-max-width": "70%",
+                            "style-tablet-max-width": ""
+                        },
+                        {
+                            "style-mobile-max-width": "",
+                            "style-max-width": "30%",
+                            "style-tablet-max-width": ""
+                        }
+                    ],
+                    "css-mobile-stack-columns": "true",
+                    "id": "5DBC412FE45F408E5B1D84612CA149B8",
+                    "customId": ""
+                }
+            }],
+            "className": "org.joget.apps.userview.lib.component.ContainerComponent",
+            "properties": {
+                "attr-data-events-listening": [],
+                "style-padding-right": "0px",
+                "style-padding-bottom": "0px",
+                "id": "D396C95A3C294F67B18B52FF817EFC95",
+                "style-padding-top": "0px",
+                "customId": "",
+                "style-padding-left": "0px"
+            }
+        },
+        {
+            "elements": [
+                {
+                    "className": "org.joget.apps.userview.lib.component.HeadingComponent",
+                    "properties": {
+                        "attr-data-events-listening": [],
+                        "style-color": "#1677FF",
+                        "textContent": "How to sign PDF with Joget SigningDoc App:",
+                        "id": "9E0E2A26176345B53C8B9B5078F324AB",
+                        "tagName": "h3",
+                        "customId": ""
+                    }
+                },
+                {
+                    "elements": [
+                        {
+                            "elements": [{
+                                "className": "org.joget.apps.userview.lib.HtmlPage",
+                                "properties": {
+                                    "userviewCacheDuration": "20",
+                                    "userviewCacheScope": "",
+                                    "enableOffline": "",
+                                    "id": "C68D02C2CAF04EEB5C50DD8BF56A152B",
+                                    "label": "Rich Text",
+                                    "customId": "",
+                                    "content": "<p style=\"text-align: left;\"><span style=\"font-size: 14pt;\"><strong>1️\u20e3 Upload Your PDF File on Joget SigningDoc App<\/strong>:<\/span><br><span style=\"font-size: 14pt; color: rgb(102, 102, 102);\">Initiate the process by uploading your PDF document to the Joget SigningDoc App.<\/span><\/p>"
+                                }
+                            }],
+                            "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                            "properties": {}
+                        },
+                        {
+                            "elements": [{
+                                "className": "org.joget.apps.userview.lib.HtmlPage",
+                                "properties": {
+                                    "userviewCacheDuration": "20",
+                                    "userviewCacheScope": "",
+                                    "enableOffline": "",
+                                    "id": "FCB51115A90349C9FAB9E0734DE7314C",
+                                    "label": "Rich Text",
+                                    "customId": "",
+                                    "content": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 14pt;\">2️\u20e3 Assign Signatories:<\/span><\/strong><br><span style=\"font-size: 14pt; color: rgb(102, 102, 102);\">Designate individuals who need to sign the document, specifying their names and email addresses for the signing process.<\/span><\/p>"
+                                }
+                            }],
+                            "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                            "properties": {}
+                        },
+                        {
+                            "elements": [{
+                                "className": "org.joget.apps.userview.lib.HtmlPage",
+                                "properties": {
+                                    "userviewCacheDuration": "20",
+                                    "userviewCacheScope": "",
+                                    "enableOffline": "",
+                                    "id": "E6626668B36441FDC80D3590A9D3DA03",
+                                    "label": "Rich Text",
+                                    "customId": "",
+                                    "content": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 14pt;\">3️\u20e3 Send Invites to Sign Document:<\/span><\/strong><br><span style=\"color: rgb(102, 102, 102); font-size: 14pt;\">Send invitations to the designated signatories, prompting them to participate in signing the document through email.<\/span><\/p>"
+                                }
+                            }],
+                            "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                            "properties": {}
+                        }
+                    ],
+                    "className": "org.joget.apps.userview.lib.component.ColumnsComponent",
+                    "properties": {
+                        "attr-data-events-listening": [],
+                        "gutter": "5px",
+                        "columns": [
+                            {
+                                "style-mobile-max-width": "",
+                                "style-max-width": "",
+                                "style-tablet-max-width": ""
+                            },
+                            {
+                                "style-mobile-max-width": "",
+                                "style-max-width": "",
+                                "style-tablet-max-width": ""
+                            },
+                            {
+                                "style-mobile-max-width": "",
+                                "style-max-width": "",
+                                "style-tablet-max-width": ""
+                            }
+                        ],
+                        "css-mobile-stack-columns": "true",
+                        "id": "5E217293CAE045539D1E3FE29AA1052B",
+                        "customId": ""
+                    }
+                },
+                {
+                    "elements": [
+                        {
+                            "elements": [{
+                                "className": "org.joget.apps.userview.lib.HtmlPage",
+                                "properties": {
+                                    "userviewCacheDuration": "20",
+                                    "userviewCacheScope": "",
+                                    "enableOffline": "",
+                                    "id": "BF3CB95B97E541851417E26A3090BBE8",
+                                    "label": "Rich Text",
+                                    "customId": "",
+                                    "content": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 14pt;\">4️\u20e3 Send Documents to Creator:<\/span><\/strong><br><span style=\"font-size: 14pt; color: rgb(102, 102, 102);\">Collect all signatures, append them to the original PDF, and forward the completed document to the creator for record-keeping.<\/span><\/p>"
+                                }
+                            }],
+                            "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                            "properties": {}
+                        },
+                        {
+                            "elements": [{
+                                "className": "org.joget.apps.userview.lib.HtmlPage",
+                                "properties": {
+                                    "userviewCacheDuration": "20",
+                                    "userviewCacheScope": "",
+                                    "enableOffline": "",
+                                    "id": "3F7996A5D4C64D800911EC162204D0C4",
+                                    "label": "Rich Text",
+                                    "customId": "",
+                                    "content": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 14pt;\">5️\u20e3 Refresh Document:<\/span><\/strong><br><span style=\"font-size: 14pt; color: rgb(102, 102, 102);\">Stay updated on the signing progress by using the \"Refresh Document \" feature to track completed signatures and pending actions.<\/span><\/p>"
+                                }
+                            }],
+                            "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                            "properties": {}
+                        },
+                        {
+                            "elements": [{
+                                "className": "org.joget.apps.userview.lib.HtmlPage",
+                                "properties": {
+                                    "userviewCacheDuration": "20",
+                                    "userviewCacheScope": "",
+                                    "enableOffline": "",
+                                    "id": "6D3D2E640727446F60B17AFC560FFB04",
+                                    "label": "Rich Text",
+                                    "customId": "",
+                                    "content": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 14pt;\">6️\u20e3 Close:<\/span><\/strong><br><span style=\"font-size: 14pt; color: rgb(102, 102, 102);\">Conclude the signing process when all parties have signed, indicating that the document is fully executed and no further changes are needed.<\/span><\/p>"
+                                }
+                            }],
+                            "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                            "properties": {}
+                        }
+                    ],
+                    "className": "org.joget.apps.userview.lib.component.ColumnsComponent",
+                    "properties": {
+                        "attr-data-events-listening": [],
+                        "gutter": "5px",
+                        "columns": [
+                            {
+                                "style-mobile-max-width": "",
+                                "style-max-width": "",
+                                "style-tablet-max-width": ""
+                            },
+                            {
+                                "style-mobile-max-width": "",
+                                "style-max-width": "",
+                                "style-tablet-max-width": ""
+                            },
+                            {
+                                "style-mobile-max-width": "",
+                                "style-max-width": "",
+                                "style-tablet-max-width": ""
+                            }
+                        ],
+                        "css-mobile-stack-columns": "true",
+                        "id": "9A3B16C5373248344362219D5F4C19E0",
+                        "customId": ""
+                    }
+                },
+                {
+                    "elements": [
+                        {
+                            "elements": [{
+                                "className": "org.joget.apps.userview.lib.HtmlPage",
+                                "properties": {
+                                    "userviewCacheDuration": "20",
+                                    "userviewCacheScope": "",
+                                    "enableOffline": "",
+                                    "id": "1278BAD5AE8A45B7506DD552A965E40F",
+                                    "label": "Rich Text",
+                                    "customId": "",
+                                    "content": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 14pt;\">7️\u20e3 View:<\/span><\/strong><br><span style=\"font-size: 14pt; color: rgb(102, 102, 102);\">Access the document to see the current signing status, including completed and pending signatures.<\/span><\/p>"
+                                }
+                            }],
+                            "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                            "properties": {}
+                        },
+                        {
+                            "elements": [{
+                                "className": "org.joget.apps.userview.lib.HtmlPage",
+                                "properties": {
+                                    "userviewCacheDuration": "20",
+                                    "userviewCacheScope": "",
+                                    "enableOffline": "",
+                                    "id": "FDB493E71954435CA2ECB2363D3DB3B5",
+                                    "label": "Rich Text",
+                                    "customId": "",
+                                    "content": "<p style=\"text-align: left;\"><strong><span style=\"font-size: 14pt;\">8️\u20e3 Reopen:<\/span><\/strong><br><span style=\"font-size: 14pt; color: rgb(102, 102, 102);\">If revisions or additional signatures are required, use the \"Reopen\" option to revisit the signing process and make necessary adjustments.<\/span><\/p>"
+                                }
+                            }],
+                            "className": "org.joget.apps.userview.lib.component.ColumnComponent",
+                            "properties": {}
+                        }
+                    ],
+                    "className": "org.joget.apps.userview.lib.component.ColumnsComponent",
+                    "properties": {
+                        "attr-data-events-listening": [],
+                        "gutter": "5px",
+                        "columns": [
+                            {
+                                "style-mobile-max-width": "",
+                                "style-max-width": "",
+                                "style-tablet-max-width": ""
+                            },
+                            {
+                                "style-mobile-max-width": "",
+                                "style-max-width": "",
+                                "style-tablet-max-width": ""
+                            }
+                        ],
+                        "css-mobile-stack-columns": "true",
+                        "id": "F7F631A62CD942EE0110FB2CFFB3E46B",
+                        "customId": ""
+                    }
+                }
+            ],
+            "className": "org.joget.apps.userview.lib.component.ContainerComponent",
+            "properties": {
+                "attr-data-events-listening": [],
+                "style-background-color": "var(--theme-content-background, #ffffffcc)",
+                "style-padding-right": "30px",
+                "style-margin-top": "10px",
+                "style-padding-bottom": "30px",
+                "id": "CC2E243059FA4477612F51E39EBD11D4",
+                "style-padding-top": "30px",
+                "customId": "",
+                "style-padding-left": "30px"
+            }
+        }
+    ],
+    "className": "org.joget.apps.userview.model.UserviewPage",
+    "properties": {"id": "up-272EEDC546574091B395D11182BA0060"}
+}

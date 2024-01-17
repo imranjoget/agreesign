@@ -1,0 +1,272 @@
+{
+    "considerFilterWhenGetTotal": "",
+    "responsiveView": [
+        {
+            "view": "Mobile",
+            "columns": "",
+            "breakpoint": ""
+        },
+        {
+            "view": "Tablet",
+            "columns": "",
+            "breakpoint": ""
+        }
+    ],
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "showPageSizeSelector": "true",
+    "responsiveMode": "",
+    "columns": [
+        {
+            "hidden": "false",
+            "include_export": "",
+            "permission_rules": {},
+            "renderHtml": "",
+            "format": {
+                "className": "org.joget.plugin.enterprise.BeanShellFormatter",
+                "properties": {"script": "if(value.equalsIgnoreCase(\"Sign\")){\n    return \"<i class=\\\"fas fa-signature\\\"><\/i>\";\n}else if(value.equalsIgnoreCase(\"View\")){\n    return \"<i class=\\\"far fa-eye\\\"><\/i>\";\n}else if(value.equalsIgnoreCase(\"Invite\")){\n    return \"<i class=\\\"zmdi zmdi-accounts-add\\\"><\/i>\";\n}else if(value.equalsIgnoreCase(\"Complete\")){\n    return \"<i class=\\\"zmdi zmdi-check-circle\\\"><\/i>\";\n}else if(value.equalsIgnoreCase(\"Remind\")){\n    return \"<i class=\\\"zmdi zmdi-notifications-none\\\"><\/i>\";\n}else{\n    return value;\n}"}
+            },
+            "label": "Action",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "true",
+            "headerAlignment": "",
+            "name": "action",
+            "width": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "text-align: center",
+            "id": "column_0",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "include_export": "",
+            "permission_rules": {},
+            "renderHtml": "",
+            "format": {
+                "className": "org.joget.plugin.enterprise.BeanShellFormatter",
+                "properties": {"script": "import org.joget.apps.app.service.AppUtil;\nimport org.joget.apps.datalist.model.DataList;\nimport java.util.Map;\nimport java.util.regex.Matcher;\nimport java.util.regex.Pattern;\nimport org.joget.commons.util.StringUtil;\n\nString replaceValueFromIteratorRecord(String expr, Map row, DataList dataList) {\n    Pattern pattern = Pattern.compile(\"\\\\{([a-zA-Z0-9_\\\\.]+)\\\\}\");\n    Matcher matcher = pattern.matcher(expr);\n    \n    while (matcher.find()) {\n        String key = matcher.group(1);\n        String value = \"\";\n        \n        if (key.equalsIgnoreCase(\"detail\")){\n                value = (String)row.get(key);\n                if (value.equalsIgnoreCase(\"All Signed\")){\n                    value = \"\";\n                } else {\n                    value = \"<b>Unsigned Location<\/b>: \" + value + \"<br>\";\n                }\n            }else{\n                value = (String)row.get(key);\n            }\n        \n        if (value != null) {\n            expr = expr.replaceAll(StringUtil.escapeRegex(\"{\"+key+\"}\"), value);\n        }\n    }\n    \n    return expr;\n}\n\nString process(Map row, String value, DataList datalist){\n    String action = row.get(\"action\");\n    String user = value;\n    \n    String content = \"$form.ags_message.message[\"+ action + \"]$\";\n    content = content.replaceAll(\"\\\\$\", \"#\");\n    content = AppUtil.processHashVariable(content, null, null, null);\n    content = replaceValueFromIteratorRecord(content, row, datalist);\n    content = content.replaceAll(\"\\\\$\", \"#\");\n    content = AppUtil.processHashVariable(content, null, null, null);\n    \n    return content;\n};\n\n\nreturn process(row, value, datalist);"}
+            },
+            "label": "Name",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "true",
+            "headerAlignment": "",
+            "name": "createdBy",
+            "width": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_4",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "include_export": "",
+            "permission_rules": {},
+            "renderHtml": "",
+            "format": {
+                "className": "org.joget.plugin.enterprise.BeanShellFormatter",
+                "properties": {"script": "if(value.indexOf(',') != 0){\n    String v = value;\n    String[] vv = value.split(\",\");\n    if(vv.length > 1){\n        return \"<p>\" + vv[0] + \"<br/>\" + vv[1] + \" #currentUser.timeZone#<\/p>\";\n    }else{\n        return \"<p>\" + v + \" #currentUser.timeZone#<\/p>\";\n    }\n}else{\n    return value;\n}"}
+            },
+            "label": "Date & Time",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "true",
+            "headerAlignment": "",
+            "name": "dateCreated",
+            "width": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_3",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "true",
+            "include_export": "",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Detail",
+            "sortable": "false",
+            "datalist_type": "column",
+            "name": "detail",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_8",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "true",
+            "include_export": "",
+            "permission_rules": {},
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Source",
+            "sortable": "false",
+            "datalist_type": "column",
+            "headerAlignment": "",
+            "name": "source",
+            "width": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_5",
+            "alignment": ""
+        },
+        {
+            "hidden": "true",
+            "include_export": "",
+            "permission_rules": {},
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Document ID",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "headerAlignment": "",
+            "name": "request_id",
+            "width": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_1",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "true",
+            "include_export": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Invited",
+            "sortable": "false",
+            "datalist_type": "column",
+            "headerAlignment": "",
+            "name": "invited",
+            "width": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_2",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "true",
+            "include_export": "",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Created By Name",
+            "sortable": "false",
+            "datalist_type": "column",
+            "name": "createdByName",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_7",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "true",
+            "include_export": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Path",
+            "sortable": "false",
+            "datalist_type": "column",
+            "headerAlignment": "",
+            "name": "path",
+            "width": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_6",
+            "alignment": ""
+        }
+    ],
+    "permission_rules": [],
+    "rowActions": [],
+    "cardCollapsible": "",
+    "description": "",
+    "orderBy": "dateCreated",
+    "pageSize": "0",
+    "showDataWhenFilterSet": "",
+    "disableResponsive": "",
+    "checkboxPosition": "left",
+    "cardCollapseByDefault": "",
+    "id": "auditTrailViewAgreement",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "trail"}
+    },
+    "order": "1",
+    "useSession": "",
+    "searchPopup": "",
+    "draggabletable": "",
+    "filters": [{
+        "hidden": "true",
+        "permission_rules": {},
+        "name": "request_id",
+        "id": "filter_0",
+        "label": "Document ID",
+        "datalist_type": "filter",
+        "type": {
+            "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+            "properties": {"defaultValue": ""}
+        },
+        "filterParamName": "d-2582503-fn_request_id"
+    }],
+    "buttonPosition": "bottomLeft",
+    "hidePageSize": "true",
+    "pageSizeSelectorOptions": "1000",
+    "name": "Audit Trail (View Agreement)",
+    "rowActionsMode": "",
+    "showhidecolumns": "",
+    "actions": []
+}

@@ -1,0 +1,700 @@
+{
+    "actions": [],
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "request"}
+    },
+    "buttonPosition": "bottomLeft",
+    "checkboxPosition": "left",
+    "columns": [
+        {
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "alignment": "",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "headerAlignment": "",
+            "hidden": "false",
+            "id": "column_0",
+            "label": "Document ID",
+            "name": "id",
+            "sortable": "true",
+            "style": "",
+            "width": ""
+        },
+        {
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "alignment": "",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "filterable": true,
+            "format": {
+                "className": "org.joget.plugin.enterprise.NestedDatalistFormatter",
+                "properties": {
+                    "addEmptyRow": "true",
+                    "customHeaderColor": "true",
+                    "exportOptions": "",
+                    "headerColor": "#439E23",
+                    "headerFontColor": "#FFFFFF",
+                    "listId": "signatureList",
+                    "requestParams": [{
+                        "defaultValue": "",
+                        "hrefColumn": "id",
+                        "param": "d-5531776-fn_c_request_id"
+                    }]
+                }
+            },
+            "headerAlignment": "",
+            "hidden": "false",
+            "id": "column_2",
+            "label": "Title",
+            "name": "title",
+            "sortable": "true",
+            "style": "",
+            "width": "min-width: 200px;"
+        },
+        {
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "alignment": "",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "filterable": true,
+            "format": {
+                "className": "org.joget.plugin.enterprise.BeanShellFormatter",
+                "properties": {"script": "String color = \"black\";\nif(value.equalsIgnoreCase(\"New\")){\n    color = \"grey\";\n}else if(value.equalsIgnoreCase(\"Preparing\")){\n    color = \"green\";\n}else if(value.equalsIgnoreCase(\"Invited\")){\n    color = \"purple\";\n}else if(value.equalsIgnoreCase(\"Completed\")){\n    color = \"blue\";\n}\n\nreturn \"<span class=\\\"statusBox\\\" style=\\\"font-weight: bold; background-color: \" + color + \" !important;\\\">\" + value + \"<\/span>\";"}
+            },
+            "headerAlignment": "",
+            "hidden": "true",
+            "id": "column_3",
+            "include_export": "",
+            "label": "Status",
+            "name": "status",
+            "sortable": "true",
+            "style": "",
+            "width": ""
+        },
+        {
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "alignment": "",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "filterable": true,
+            "format": {
+                "className": "org.joget.marketplace.ConditionalMultiFormatters",
+                "properties": {
+                    "continueExecutionOnMatchedCondition": "false",
+                    "debug": "false",
+                    "firstCondition": "[\"New\", \"Preparing\", \"Invited\", \"Completed\", \"Closed\"].indexOf({status}) >= 0",
+                    "firstConditionFormatter": {
+                        "className": "org.joget.marketplace.BootstrapStepsDisplayFormatter",
+                        "properties": {
+                            "connector": "line",
+                            "iconBackgroundColor": "#F5F5F5",
+                            "iconBackgroundColorComplete": "#0DA9EF",
+                            "iconColor": "#D3E6EE",
+                            "options": [
+                                {
+                                    "icon": "pe-7s-magic-wand",
+                                    "label": "New",
+                                    "numbering": "1",
+                                    "value": "New"
+                                },
+                                {
+                                    "icon": "pe-7s-edit",
+                                    "label": "Preparing",
+                                    "numbering": "2",
+                                    "value": "Preparing"
+                                },
+                                {
+                                    "icon": "pe-7s-mail",
+                                    "label": "Invited",
+                                    "numbering": "3",
+                                    "value": "Invited"
+                                },
+                                {
+                                    "icon": "pe-7s-star",
+                                    "label": "Completed",
+                                    "numbering": "4",
+                                    "value": "Completed"
+                                },
+                                {
+                                    "icon": "pe-7s-close-circle",
+                                    "label": "Closed",
+                                    "numbering": "5",
+                                    "value": "Closed"
+                                }
+                            ],
+                            "theme": "2"
+                        }
+                    },
+                    "formatterNumber": "2",
+                    "secondCondition": "{status} == \"Aborted\"",
+                    "secondConditionFormatter": {
+                        "className": "org.joget.marketplace.BootstrapStepsDisplayFormatter",
+                        "properties": {
+                            "connector": "line",
+                            "iconBackgroundColor": "#F5F5F5",
+                            "iconBackgroundColorComplete": "#0DA9EF",
+                            "iconColor": "#FFFFFF",
+                            "options": [{
+                                "icon": "fa fa-exclamation",
+                                "label": "Aborted",
+                                "numbering": "1",
+                                "value": "Aborted"
+                            }],
+                            "theme": "2"
+                        }
+                    }
+                }
+            },
+            "headerAlignment": "",
+            "hidden": "false",
+            "id": "column_5",
+            "label": "status",
+            "name": "status",
+            "sortable": "true",
+            "style": "width: 340px",
+            "width": "350px"
+        },
+        {
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "alignment": "",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "filterable": true,
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "headerAlignment": "",
+            "hidden": "false",
+            "id": "column_1",
+            "label": "Created By",
+            "name": "createdByName",
+            "sortable": "true",
+            "style": "",
+            "width": ""
+        },
+        {
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "alignment": "",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "filterable": true,
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "headerAlignment": "",
+            "hidden": "false",
+            "id": "column_4",
+            "label": "Date Created",
+            "name": "dateCreated",
+            "sortable": "true",
+            "style": "",
+            "width": ""
+        }
+    ],
+    "considerFilterWhenGetTotal": "",
+    "description": "",
+    "disableResponsive": "",
+    "filters": [
+        {
+            "datalist_type": "filter",
+            "filterParamName": "d-6462712-fn_id",
+            "hidden": "true",
+            "id": "filter_0",
+            "label": "ID",
+            "name": "id",
+            "type": {
+                "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+                "properties": {"defaultValue": ""}
+            }
+        },
+        {
+            "datalist_type": "filter",
+            "filterParamName": "d-6462712-fn_title",
+            "hidden": "",
+            "id": "filter_1",
+            "label": "Document ID, Title",
+            "name": "title",
+            "type": {
+                "className": "org.joget.marketplace.TextFieldDataListFilterTypeExtra",
+                "properties": {
+                    "defaultValue": "",
+                    "filterSelection": "",
+                    "searchFields": "id;title"
+                }
+            }
+        },
+        {
+            "datalist_type": "filter",
+            "filterParamName": "d-6462712-fn_status",
+            "hidden": "",
+            "id": "filter_2",
+            "label": "Status",
+            "name": "status",
+            "type": {
+                "className": "org.joget.plugin.TypeAheadMultiSelectSearch",
+                "properties": {
+                    "controlField": "",
+                    "defaultValue": "",
+                    "options": [
+                        {
+                            "grouping": "",
+                            "label": "New",
+                            "value": "New"
+                        },
+                        {
+                            "grouping": "",
+                            "label": "Preparing",
+                            "value": "Preparing"
+                        },
+                        {
+                            "grouping": "",
+                            "label": "Invited",
+                            "value": "Invited"
+                        },
+                        {
+                            "grouping": "",
+                            "label": "Completed",
+                            "value": "Completed"
+                        }
+                    ],
+                    "optionsBinder": {
+                        "className": "",
+                        "properties": {}
+                    },
+                    "searchFilter": "",
+                    "selectAll": ""
+                }
+            }
+        }
+    ],
+    "hidePageSize": "",
+    "id": "requestListAll",
+    "name": "Request (List All)",
+    "order": "1",
+    "orderBy": "dateCreated",
+    "pageSize": "50",
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "responsiveView": [
+        {
+            "breakpoint": "",
+            "columns": "",
+            "view": "Mobile"
+        },
+        {
+            "breakpoint": "",
+            "columns": "",
+            "view": "Tablet"
+        }
+    ],
+    "rowActions": [
+        {
+            "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+            "icon": "<i class=\"fas fa-link\"><\/i>",
+            "id": "rowAction_2",
+            "label": "Hyperlink",
+            "name": "Data List Hyperlink Action",
+            "properties": {
+                "confirmation": "",
+                "datalist_type": "row_action",
+                "href": "E88CFBF3791A4300B3934C5F88E2E37F",
+                "hrefColumn": "id",
+                "hrefParam": "id",
+                "label": "Edit Document",
+                "rules": [{
+                    "field": "status",
+                    "join": "AND",
+                    "operator": "NOT IN",
+                    "value": "Closed;Aborted"
+                }],
+                "target": "_self"
+            },
+            "type": "text"
+        },
+        {
+            "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+            "icon": "<i class=\"fas fa-link\"><\/i>",
+            "id": "rowAction_1",
+            "label": "Hyperlink",
+            "name": "Data List Hyperlink Action",
+            "properties": {
+                "confirmation": "",
+                "datalist_type": "row_action",
+                "href": "C92F3D5A983A40408400F7ADAA34BF40",
+                "hrefColumn": "id",
+                "hrefParam": "id",
+                "label": "Assign Signatories",
+                "rules": [{
+                    "field": "status",
+                    "join": "AND",
+                    "operator": "NOT IN",
+                    "value": "Closed;Aborted"
+                }],
+                "target": "_self"
+            },
+            "type": "text"
+        },
+        {
+            "className": "org.joget.marketplace.FormUpdateProcessToolDatalistAction",
+            "icon": "<i class=\"fas fa-tools\"><\/i>",
+            "id": "rowAction_3",
+            "label": "Form Update and Process Tool Datalist Action",
+            "name": "Form Update and Process Tool Datalist Action",
+            "properties": {
+                "additionalDataListAction": {
+                    "className": "org.joget.plugin.enterprise.JdbcDatalistAction",
+                    "properties": {
+                        "confirmation": "",
+                        "jdbcDatasource": "default",
+                        "label": "JDBC",
+                        "query": "UPDATE app_fd_ags_record SET c_status = 'Invited' WHERE id = {id}"
+                    }
+                },
+                "confirmation": "Are You Sure to Send Invites?",
+                "datalist_type": "row_action",
+                "debug": "false",
+                "delay": "1",
+                "htmlScript": "",
+                "label": "Send Invites to Sign Document",
+                "popupFormId": "",
+                "processTool": {
+                    "className": "org.joget.marketplace.IteratorProcessToolRecord",
+                    "properties": {
+                        "debug": "false",
+                        "delay": "1",
+                        "executeProcessTool": {
+                            "className": "org.joget.apps.app.lib.MultiTools",
+                            "properties": {
+                                "comment": "",
+                                "runInMultiThread": "",
+                                "tools": [
+                                    {
+                                        "className": "org.joget.marketplace.EmailToolWithTemplate",
+                                        "properties": {
+                                            "bcc": "#form.ags_setup.email_bcc[0]#",
+                                            "bodyTemplate": "#form.ags_setup.email_template[0]?noescape#",
+                                            "cc": "",
+                                            "fields": [],
+                                            "files": [
+                                                {
+                                                    "embed": "true",
+                                                    "fileName": "logo.png",
+                                                    "path": "#request.domainURL##appResource.signingDoc-Header.png#",
+                                                    "type": "url"
+                                                },
+                                                {
+                                                    "embed": "true",
+                                                    "fileName": "footer.png",
+                                                    "path": "#request.domainURL##appResource.signingDoc-footer.png#",
+                                                    "type": "url"
+                                                },
+                                                {
+                                                    "embed": "true",
+                                                    "fileName": "email-icon.png",
+                                                    "path": "#request.domainURL##appResource.sign-doc-email-icon.png#",
+                                                    "type": "url"
+                                                }
+                                            ],
+                                            "formDefId": "",
+                                            "from": "",
+                                            "host": "",
+                                            "icsAttachement": "",
+                                            "isHtml": "true",
+                                            "message": "Hi {c_name},<br/><br/>\n\nYou are invited to review and sign the document: <strong>#form.ags_record.title#<\/strong>.\n\n<ul>\n<li>Please click the link <a href=\"#request.baseURL#/web/userview/agreesign/v/_/signAgreement?id={id}&otp={c_otp}\">here<\/a> or the button below to proceed.<\/li>\n<li>If you have any questions, please do not hesitate to send an email to <a href=\"mailto:info+signdoc@joget.org\">info+signdoc@joget.org<\/a>.<\/li>\n<\/ul>\n\nThanks and have a great day!!<br/><br/>\n\n=) Joget Team\n\n<\/div>\n<div style=\"margin:auto; width: 90%; background-color: #128ec8; padding:20px;\">\n\t<center>\n\t<a style=\"box-shadow: 0px 0px 5px 1px #074968; border-radius: 8px; background-color: #4CAF50; border: none; color: white; padding: 8px 30px; text-align: center; text-decoration: none; display: inline-block; font-size: 13px; margin: 4px 2px; cursor: pointer;\" href=\"#request.baseURL#/web/userview/agreesign/v/_/signAgreement?id={id}&otp={c_otp}\"><strong style=\"font-family:sans-serif; font-size:10pt; padding:10px;\">REVIEW & SIGN DOCUMENT<\/strong><img style=\"height:35px;\" align=\"absmiddle\" src=\"cid:email-icon.png\"><\/a>\n\t<\/center>",
+                                            "password": "%%%%br+fZEfwK6pvSi6Hj98+3g==%%%%",
+                                            "port": "",
+                                            "security": "",
+                                            "subject": "Signing Request - #form.ags_record.title#",
+                                            "toParticipantId": "",
+                                            "toSpecific": "{c_email}",
+                                            "username": ""
+                                        }
+                                    },
+                                    {
+                                        "className": "org.joget.apps.app.lib.DatabaseUpdateTool",
+                                        "properties": {
+                                            "jdbcDatasource": "default",
+                                            "query": "insert into app_fd_ags_trail (`c_request_id`, `dateCreated`, `dateModified`, `id`, `c_action`, `c_source`, `c_path`, `createdBy`, `c_invited`) VALUES ('#form.ags_record.id#', NOW(), NOW(), UUID(), 'Invite', '#beanshell.getClientIP#', '#request.requestURL#?#request.queryString#', '#currentUser.id#', '{c_name} - {c_email}')"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "iteratorMethod": "Process Tool",
+                        "iteratorProcessTool": {
+                            "className": "org.joget.marketplace.DatabaseQueryProcessTool",
+                            "properties": {
+                                "debug": "false",
+                                "query": "select id, c_name, c_email, c_status, c_otp from app_fd_ags_signatures where c_request_id = '@recordId@'"
+                            }
+                        },
+                        "iteratorToolId": "id"
+                    }
+                },
+                "rules": [{
+                    "field": "status",
+                    "join": "AND",
+                    "operator": "NOT IN",
+                    "value": "Closed;Aborted"
+                }]
+            },
+            "type": "text"
+        },
+        {
+            "className": "org.joget.marketplace.FormUpdateProcessToolDatalistAction",
+            "icon": "<i class=\"fas fa-tools\"><\/i>",
+            "id": "rowAction_6",
+            "label": "Form Update and Process Tool Datalist Action",
+            "name": "Form Update and Process Tool Datalist Action",
+            "properties": {
+                "additionalDataListAction": {
+                    "className": "",
+                    "properties": {}
+                },
+                "confirmation": "Are You Sure to Send Signed Document to All?",
+                "datalist_type": "row_action",
+                "debug": "false",
+                "delay": "1",
+                "htmlScript": "",
+                "label": "Send Signed Document to All",
+                "popupFormId": "",
+                "processTool": {
+                    "className": "org.joget.marketplace.EmailToolWithTemplate",
+                    "properties": {
+                        "bcc": "#form.ags_setup.email_bcc[0]#",
+                        "bodyTemplate": "#form.ags_setup.email_template[0]?noescape#",
+                        "cc": "",
+                        "fields": [{
+                            "embed": "false",
+                            "field": "agreement_generated"
+                        }],
+                        "files": [
+                            {
+                                "embed": "true",
+                                "fileName": "logo.png",
+                                "path": "#request.domainURL##appResource.signingDoc-Header.png#",
+                                "type": "url"
+                            },
+                            {
+                                "embed": "true",
+                                "fileName": "footer.png",
+                                "path": "#request.domainURL##appResource.signingDoc-footer.png#",
+                                "type": "url"
+                            }
+                        ],
+                        "formDefId": "viewRequest",
+                        "from": "",
+                        "host": "",
+                        "icsAttachement": "",
+                        "isHtml": "true",
+                        "message": "Hi there,\n\t\t<br/><br/>\n\t\tPlease see the attached signed document for your reference and storage. If you have any questions, please do not \n\t\thesitate to send an email to <a href=\"mailto:info+signdoc@joget.org\">info+signdoc@joget.org<\/a>.\n\t\t<br/><br/>\n\t\tThanks and have a great day!!\n\t\t<br/><br/>\n\t\t=) Joget Team",
+                        "password": "%%%%br+fZEfwK6pvSi6Hj98+3g==%%%%",
+                        "port": "",
+                        "security": "",
+                        "subject": "#form.ags_record.id# - #form.ags_record.title# - Everyone has Signed",
+                        "toParticipantId": "",
+                        "toSpecific": "$$beanshell.getAllRequestSignatoriesEmailsByAGSRecordID[rid=@recordId@]$$",
+                        "username": ""
+                    }
+                },
+                "rules": [{
+                    "field": "status",
+                    "join": "AND",
+                    "operator": "NOT IN",
+                    "value": "Closed;Aborted"
+                }]
+            },
+            "type": "text"
+        },
+        {
+            "className": "org.joget.marketplace.FormUpdateProcessToolDatalistAction",
+            "icon": "<i class=\"fas fa-tools\"><\/i>",
+            "id": "rowAction_5",
+            "label": "Form Update and Process Tool Datalist Action",
+            "name": "Form Update and Process Tool Datalist Action",
+            "properties": {
+                "additionalDataListAction": {
+                    "className": "",
+                    "properties": {}
+                },
+                "confirmation": "Are You Sure?",
+                "datalist_type": "row_action",
+                "debug": "false",
+                "delay": "0",
+                "htmlScript": "",
+                "label": "Send Document to Creator",
+                "popupFormId": "",
+                "processTool": {
+                    "className": "org.joget.marketplace.EmailToolWithTemplate",
+                    "properties": {
+                        "bcc": "#form.ags_setup.email_bcc[0]#",
+                        "bodyTemplate": "#form.ags_setup.email_template[0]?noescape#",
+                        "cc": "",
+                        "fields": [{
+                            "embed": "false",
+                            "field": "agreement_generated"
+                        }],
+                        "files": [
+                            {
+                                "embed": "true",
+                                "fileName": "logo.png",
+                                "path": "#request.domainURL##appResource.signingDoc-Header.png#",
+                                "type": "url"
+                            },
+                            {
+                                "embed": "true",
+                                "fileName": "footer.png",
+                                "path": "#request.domainURL##appResource.signingDoc-footer.png#",
+                                "type": "url"
+                            }
+                        ],
+                        "formDefId": "viewRequest",
+                        "from": "",
+                        "host": "",
+                        "icsAttachement": "",
+                        "isHtml": "true",
+                        "message": "This email is sent to the creator of the document. Please see the attached document for your reference.\n\t<br/><br/>\n\tThanks and have a great day!!\n\t<br/><br/>\n\t=) Joget Team",
+                        "password": "%%%%br+fZEfwK6pvSi6Hj98+3g==%%%%",
+                        "port": "",
+                        "security": "",
+                        "subject": "#form.ags_record.id# - #form.ags_record.title# - Agreement Generated",
+                        "toParticipantId": "",
+                        "toSpecific": "#form.ags_record.createdBy#",
+                        "username": ""
+                    }
+                },
+                "rules": [{
+                    "field": "status",
+                    "join": "AND",
+                    "operator": "NOT IN",
+                    "value": "Closed;Aborted"
+                }]
+            },
+            "type": "text"
+        },
+        {
+            "className": "org.joget.marketplace.FormUpdateProcessToolDatalistAction",
+            "icon": "<i class=\"fas fa-tools\"><\/i>",
+            "id": "rowAction_0",
+            "label": "Form Update and Process Tool Datalist Action",
+            "name": "Form Update and Process Tool Datalist Action",
+            "properties": {
+                "additionalDataListAction": {
+                    "className": "",
+                    "properties": {}
+                },
+                "confirmation": "Are You Sure?",
+                "datalist_type": "row_action",
+                "debug": "false",
+                "delay": "0",
+                "htmlScript": "",
+                "label": "Refresh Document",
+                "popupFormId": "",
+                "processTool": {
+                    "className": "org.joget.apps.app.lib.MultiTools",
+                    "properties": {
+                        "comment": "",
+                        "runInMultiThread": "",
+                        "tools": [{
+                            "className": "org.joget.marketplace.pluginTemplate.template.PluginTemplateProcessTool",
+                            "properties": {"templateId": "pt-generatePDFRecordID"}
+                        }]
+                    }
+                },
+                "rules": []
+            },
+            "type": "text"
+        },
+        {
+            "className": "org.joget.plugin.enterprise.JdbcDatalistAction",
+            "icon": "<i class=\"fas fa-database\"><\/i>",
+            "id": "rowAction_9",
+            "label": "JDBC",
+            "name": "JDBC Datalist Action",
+            "properties": {
+                "confirmation": "Are You Sure to Abort?",
+                "datalist_type": "row_action",
+                "jdbcDatasource": "default",
+                "label": "Abort",
+                "query": "UPDATE app_fd_ags_record SET c_status = 'Aborted' WHERE id = {id}",
+                "rules": [{
+                    "field": "status",
+                    "join": "AND",
+                    "operator": "NOT IN",
+                    "value": "Completed;Closed"
+                }]
+            },
+            "type": "text"
+        },
+        {
+            "className": "org.joget.plugin.enterprise.JdbcDatalistAction",
+            "icon": "<i class=\"fas fa-database\"><\/i>",
+            "id": "rowAction_7",
+            "label": "JDBC",
+            "name": "JDBC Datalist Action",
+            "properties": {
+                "confirmation": "Are You Sure to Close?",
+                "datalist_type": "row_action",
+                "jdbcDatasource": "default",
+                "label": "Close",
+                "query": "UPDATE app_fd_ags_record SET c_status = 'Closed' WHERE id = {id}",
+                "rules": [{
+                    "field": "status",
+                    "join": "AND",
+                    "operator": "=",
+                    "value": "Completed"
+                }]
+            },
+            "type": "text"
+        },
+        {
+            "className": "org.joget.plugin.enterprise.JdbcDatalistAction",
+            "icon": "<i class=\"fas fa-database\"><\/i>",
+            "id": "rowAction_8",
+            "label": "JDBC",
+            "name": "JDBC Datalist Action",
+            "properties": {
+                "confirmation": "Are You Sure to Reopen?",
+                "datalist_type": "row_action",
+                "jdbcDatasource": "default",
+                "label": "Reopen",
+                "query": "UPDATE app_fd_ags_record SET c_status = 'Completed' WHERE id = {id}",
+                "rules": [{
+                    "field": "status",
+                    "join": "AND",
+                    "operator": "IN",
+                    "value": "Closed;Aborted"
+                }]
+            },
+            "type": "text"
+        }
+    ],
+    "searchPopup": "",
+    "showDataWhenFilterSet": "",
+    "showPageSizeSelector": "true",
+    "useSession": ""
+}

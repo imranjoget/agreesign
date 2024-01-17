@@ -1,0 +1,320 @@
+<appDefinition>
+   <id>agreesign</id>
+   <version></version>
+   <name>SigningDoc</name>
+   <packageDefinitionList/>
+   <formDefinitionList/>
+   <userviewDefinitionList/>
+   <datalistDefinitionList/>
+   <builderDefinitionList/>
+   <pluginDefaultPropertiesList/>
+   <environmentVariableList>
+      <environmentVariable>
+         <id>appName</id>
+         <appId>agreesign</appId>
+         <appVersion>1</appVersion>
+         <value>SignDoc</value>
+      </environmentVariable>
+      <environmentVariable>
+         <id>counter</id>
+         <appId>agreesign</appId>
+         <appVersion>1</appVersion>
+         <value>11</value>
+         <remarks>Used for plugin: Id Generator Field</remarks>
+      </environmentVariable>
+      <environmentVariable>
+         <id>generatePDF</id>
+         <appId>agreesign</appId>
+         <appVersion>1</appVersion>
+         <value>import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.apache.commons.io.FileUtils;
+import org.joget.apps.app.dao.DatalistDefinitionDao;
+import org.joget.apps.app.model.AppDefinition;
+import org.joget.apps.app.model.DatalistDefinition;
+import org.joget.apps.app.service.AppService;
+import org.joget.apps.app.service.AppUtil;
+import org.joget.apps.datalist.model.DataList;
+import org.joget.apps.datalist.model.DataListAction;
+import org.joget.apps.datalist.service.DataListService;
+import org.joget.apps.form.model.FormRow;
+import org.joget.apps.form.model.FormRowSet;
+import org.joget.apps.form.service.FileUtil;
+import org.joget.marketplace.PDFFileDownloadSignature;
+import org.springframework.context.ApplicationContext;
+import org.joget.commons.util.LogUtil;
+
+String recordId = key[0];
+String datalistId = &quot;requestPDFGeneration&quot;;
+String actionParamValue = &quot;rowAction_0&quot;;
+
+LogUtil.info(&quot;Signing App&quot;, &quot;Generating PDF for [&quot; + recordId + &quot;]&quot;);
+
+
+byte[] pdfFile = null;
+
+ApplicationContext ac = AppUtil.getApplicationContext();
+AppService appService = (AppService) ac.getBean(&quot;appService&quot;);
+DataListService dataListService = (DataListService) ac.getBean(&quot;dataListService&quot;);
+DatalistDefinitionDao datalistDefinitionDao = (DatalistDefinitionDao) ac.getBean(&quot;datalistDefinitionDao&quot;);
+AppDefinition appDef = AppUtil.getCurrentAppDefinition();
+DatalistDefinition datalistDefinition = datalistDefinitionDao.loadById(datalistId, appDef);
+
+DataList datalist = dataListService.fromJson(datalistDefinition.getJson());
+
+Map requestParamMap = new HashMap();
+requestParamMap.put(&quot;d-7402985-ac&quot;, &quot;rowAction_0&quot;);
+requestParamMap.put(&quot;d-7402985-checkbox_id&quot;, &quot;&quot;);
+
+datalist.setUseSession(true);
+datalist.setRequestParamMap(requestParamMap);
+
+for (DataListAction action : datalist.getRowActions()) {
+    String actionId = action.getPropertyString(&quot;id&quot;);
+    if (actionParamValue.equals(actionId)) {
+        // invoke action
+        try{
+            //generate pdf
+            //PDFFileDownloadSignature pdfAction = (PDFFileDownloadSignature) action;
+            pdfFile = action.processPDF(recordId);
+            
+            //get original agreement file name
+            FormRowSet set = appService.loadFormData(appDef.getAppId(), appDef.getVersion().toString(), &quot;viewRequest&quot;, recordId);
+            FormRow row = set.get(0);
+            
+            String agreementFileName = (String)row.get(&quot;agreement&quot;);
+            agreementFileName = agreementFileName.replace(&quot;.pdf&quot;, &quot;&quot;);
+                    
+            //store pdf
+            String path = FileUtil.getUploadPath(&quot;ags_record&quot;, recordId);
+            String fileName = agreementFileName + &quot;-Generated.pdf&quot;;
+            final File file = new File(path + fileName);
+            FileUtils.writeByteArrayToFile(file, pdfFile);
+            
+            row.put(&quot;agreement_generated&quot;, fileName);
+            set.remove(0);
+            set.add(0, row);
+            appService.storeFormData(appDef.getAppId(), appDef.getVersion().toString(), &quot;viewRequest&quot;, set, recordId);
+            
+            
+        } catch (Exception ex) {
+            LogUtil.error(&quot;Signing App&quot;, ex, &quot;Failed to generate PDF for [&quot; + recordId + &quot;]&quot;);
+        }
+        break;
+    }
+}</value>
+         <remarks>to be called using beanshell hash and expecting parameter key=id</remarks>
+      </environmentVariable>
+      <environmentVariable>
+         <id>generateUUID</id>
+         <appId>agreesign</appId>
+         <appVersion>1</appVersion>
+         <value>String uuid = UUID.randomUUID().toString().replace(&quot;-&quot;, &quot;&quot;);
+
+return uuid;</value>
+      </environmentVariable>
+      <environmentVariable>
+         <id>getAllRequestSignatoriesEmails</id>
+         <appId>agreesign</appId>
+         <appVersion>1</appVersion>
+         <value>import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.sql.DataSource;
+import org.joget.commons.util.LogUtil;
+import org.joget.apps.app.service.AppUtil;
+
+String result = &quot;&quot;;
+String requestId = &quot;#form.ags_signatures.request_id#&quot;;
+
+Connection con = null;
+try {
+    // retrieve connection from the default datasource
+    DataSource ds = (DataSource)AppUtil.getApplicationContext().getBean(&quot;setupDataSource&quot;);
+    con = ds.getConnection();
+    PreparedStatement stmt = con.prepareStatement(&quot;SELECT c_email FROM app_fd_ags_signatures WHERE c_request_id = ?&quot;);
+    
+    stmt.setObject(1, requestId);
+    
+    ResultSet rs = stmt.executeQuery();
+    
+    while (rs.next()) {
+        result += rs.getString(&quot;c_email&quot;) + &quot;;&quot;;
+    }
+
+} catch(Exception e) {
+    LogUtil.error(&quot;Agreement Sign Form 4&quot;, e, &quot;Cannot get all emails in environment hash bean shell&quot;);
+} finally {
+    //always close the connection after used
+    try {
+        if(con != null) {
+            con.close();
+        }
+    } catch(SQLException e) {/* ignored */}
+}
+
+if(result.length() &gt; 0)
+    result = result.substring(0, result.length() - 1);
+
+return result;</value>
+      </environmentVariable>
+      <environmentVariable>
+         <id>getAllRequestSignatoriesEmailsByAGSRecordID</id>
+         <appId>agreesign</appId>
+         <appVersion>1</appVersion>
+         <value>import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.sql.DataSource;
+import org.joget.commons.util.LogUtil;
+import org.joget.apps.app.service.AppUtil;
+
+String result = &quot;&quot;;
+Connection con = null;
+
+try {
+    // retrieve connection from the default datasource
+    DataSource ds = (DataSource)AppUtil.getApplicationContext().getBean(&quot;setupDataSource&quot;);
+    con = ds.getConnection();
+    PreparedStatement stmt = con.prepareStatement(&quot;SELECT c_email FROM app_fd_ags_signatures WHERE c_request_id = ?&quot;);
+    
+    stmt.setObject(1, rid[0]);
+    
+    ResultSet rs = stmt.executeQuery();
+    
+    while (rs.next()) {
+        result += rs.getString(&quot;c_email&quot;) + &quot;;&quot;;
+    }
+
+} catch(Exception e) {
+    LogUtil.error(&quot;Agreement Sign Form 4&quot;, e, &quot;Cannot get all emails in environment hash bean shell&quot;);
+} finally {
+    //always close the connection after used
+    try {
+        if(con != null) {
+            con.close();
+        }
+    } catch(SQLException e) {/* ignored */}
+}
+
+if(result.length() &gt; 0)
+    result = result.substring(0, result.length() - 1);
+
+return result;</value>
+      </environmentVariable>
+      <environmentVariable>
+         <id>getAllRequestSignatoriesNameAndEmail</id>
+         <appId>agreesign</appId>
+         <appVersion>1</appVersion>
+         <value>import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.sql.DataSource;
+import org.joget.commons.util.LogUtil;
+import org.joget.apps.app.service.AppUtil;
+
+String result = &quot;&quot;;
+String requestId = &quot;#form.ags_signatures.request_id#&quot;;
+
+if(requestId.startsWith(&quot;#&quot;)){
+    if(id instanceof Object[]){
+        requestId = id[0];
+    }
+}
+
+if(requestId.startsWith(&quot;#&quot;)){
+    return &quot;&quot;;
+}
+
+Connection con = null;
+try {
+    // retrieve connection from the default datasource
+    DataSource ds = (DataSource)AppUtil.getApplicationContext().getBean(&quot;setupDataSource&quot;);
+    con = ds.getConnection();
+    PreparedStatement stmt = con.prepareStatement(&quot;SELECT c_name, c_email FROM app_fd_ags_signatures WHERE c_request_id = ?&quot;);
+    
+    stmt.setObject(1, requestId);
+    
+    ResultSet rs = stmt.executeQuery();
+    
+    while (rs.next()) {
+        result += rs.getString(&quot;c_name&quot;) + &quot; (&quot; + rs.getString(&quot;c_email&quot;) + &quot;)&lt;br/&gt;&quot;;
+    }
+
+} catch(Exception e) {
+    LogUtil.error(&quot;Agreement Sign Form 4&quot;, e, &quot;Cannot get all name and email in environment hash bean shell&quot;);
+} finally {
+    //always close the connection after used
+    try {
+        if(con != null) {
+            con.close();
+        }
+    } catch(SQLException e) {/* ignored */}
+}
+
+//if(result.length() &gt; 0)
+//    result = result.substring(0, result.length() - 1);
+
+return result;</value>
+      </environmentVariable>
+      <environmentVariable>
+         <id>getClientIP</id>
+         <appId>agreesign</appId>
+         <appVersion>1</appVersion>
+         <value>import org.joget.workflow.util.WorkflowUtil;
+import org.joget.apps.app.service.AppUtil;
+import javax.servlet.http.HttpServletRequest;
+
+String result = &quot;&quot;;
+HttpServletRequest request = WorkflowUtil.getHttpServletRequest();
+result = AppUtil.getClientIp(request);
+
+return result;</value>
+      </environmentVariable>
+      <environmentVariable>
+         <id>getSecurityCode</id>
+         <appId>agreesign</appId>
+         <appVersion>1</appVersion>
+         <value>import org.joget.commons.util.SecurityUtil;
+import org.joget.commons.util.StringUtil;
+
+String recordId = id[0];
+
+String nonce = SecurityUtil.generateNonce(new String[]{recordId, &quot;abc132&quot;}, 8);
+
+System.out.println(&quot;getSecurityCode for &quot; + recordId);
+System.out.println( nonce );
+System.out.println( StringUtil.escapeString(nonce, StringUtil.TYPE_URL, null) );
+System.out.println(&quot;getSecurityCode End&quot;);
+
+return StringUtil.escapeString(nonce, StringUtil.TYPE_URL, null);</value>
+      </environmentVariable>
+      <environmentVariable>
+         <id>pt-generatePDFRecordID</id>
+         <appId>agreesign</appId>
+         <appVersion>1</appVersion>
+         <value>{&quot;script&quot;:&quot;import java.io.File;\nimport java.util.HashMap;\nimport java.util.Map;\nimport java.util.logging.Level;\nimport java.util.logging.Logger;\nimport org.apache.commons.io.FileUtils;\nimport org.joget.apps.app.dao.DatalistDefinitionDao;\nimport org.joget.apps.app.model.AppDefinition;\nimport org.joget.apps.app.model.DatalistDefinition;\nimport org.joget.apps.app.service.AppService;\nimport org.joget.apps.app.service.AppUtil;\nimport org.joget.apps.datalist.model.DataList;\nimport org.joget.apps.datalist.model.DataListAction;\nimport org.joget.apps.datalist.service.DataListService;\nimport org.joget.apps.form.model.FormRow;\nimport org.joget.apps.form.model.FormRowSet;\nimport org.joget.apps.form.service.FileUtil;\nimport org.joget.marketplace.PDFFileDownloadSignature;\nimport org.springframework.context.ApplicationContext;\nimport org.joget.commons.util.LogUtil;\n\nString recordId = \&quot;#assignment.processId#\&quot;;\/\/@recordId@\&quot;;\nString datalistId = \&quot;requestPDFGeneration\&quot;;\nString actionParamValue = \&quot;rowAction_0\&quot;;\n\nLogUtil.info(\&quot;Signing App - recordID\&quot;, \&quot;Generating PDF for [\&quot; + recordId + \&quot;]\&quot;);\n\nbyte[] pdfFile = null;\n\nApplicationContext ac = AppUtil.getApplicationContext();\nAppService appService = (AppService) ac.getBean(\&quot;appService\&quot;);\nDataListService dataListService = (DataListService) ac.getBean(\&quot;dataListService\&quot;);\nDatalistDefinitionDao datalistDefinitionDao = (DatalistDefinitionDao) ac.getBean(\&quot;datalistDefinitionDao\&quot;);\nAppDefinition appDef = AppUtil.getCurrentAppDefinition();\nDatalistDefinition datalistDefinition = datalistDefinitionDao.loadById(datalistId, appDef);\n\nDataList datalist = dataListService.fromJson(datalistDefinition.getJson());\n\nMap requestParamMap = new HashMap();\nrequestParamMap.put(\&quot;d-7402985-ac\&quot;, \&quot;rowAction_0\&quot;);\nrequestParamMap.put(\&quot;d-7402985-checkbox_id\&quot;, \&quot;\&quot;);\n\ndatalist.setUseSession(true);\ndatalist.setRequestParamMap(requestParamMap);\n\nfor (DataListAction action : datalist.getRowActions()) {\n    String actionId = action.getPropertyString(\&quot;id\&quot;);\n    if (actionParamValue.equals(actionId)) {\n        \/\/ invoke action\n        try{\n            \/\/generate pdf\n            \/\/PDFFileDownloadSignature pdfAction = (PDFFileDownloadSignature) action;\n            pdfFile = action.processPDF(recordId);\n            \n            \/\/get original agreement file name\n            FormRowSet set = appService.loadFormData(appDef.getAppId(), appDef.getVersion().toString(), \&quot;viewRequest\&quot;, recordId);\n            FormRow row = set.get(0);\n            \n            String agreementFileName = (String)row.get(\&quot;agreement\&quot;);\n            agreementFileName = agreementFileName.replace(\&quot;.pdf\&quot;, \&quot;\&quot;);\n                    \n            \/\/store pdf\n            String path = FileUtil.getUploadPath(\&quot;ags_record\&quot;, recordId);\n            String fileName = agreementFileName + \&quot;-Generated.pdf\&quot;;\n            final File file = new File(path + fileName);\n            FileUtils.writeByteArrayToFile(file, pdfFile);\n            \n            row.put(\&quot;agreement_generated\&quot;, fileName);\n            set.remove(0);\n            set.add(0, row);\n            appService.storeFormData(appDef.getAppId(), appDef.getVersion().toString(), \&quot;viewRequest\&quot;, set, recordId);\n            \n            \n        } catch (Exception ex) {\n            LogUtil.error(\&quot;Signing App - recordID\&quot;, ex, \&quot;Failed to generate PDF for [\&quot; + recordId + \&quot;]\&quot;);\n        }\n        break;\n    }\n}&quot;}</value>
+         <remarks>{&quot;name&quot;:&quot;Generate PDF using recordID&quot;,&quot;description&quot;:&quot;Please do not modify the code here.&quot;,&quot;pluginClass&quot;:&quot;org.joget.apps.app.lib.BeanShellTool&quot;}</remarks>
+      </environmentVariable>
+      <environmentVariable>
+         <id>reportTrail</id>
+         <appId>agreesign</appId>
+         <appVersion>1</appVersion>
+         <value>import org.joget.apps.app.service.AppUtil;
+
+String replacedValue = &quot;#datalist.html.list_trail[d-2582503-fn_request_id={assignment.processId}]?java#&quot;;
+replacedValue = replacedValue.replaceAll( &quot;&lt;td style=\&quot;([^\&quot;]*)\&quot;&quot;, &quot;&lt;td&quot;);
+
+return replacedValue;</value>
+      </environmentVariable>
+   </environmentVariableList>
+   <messageList/>
+   <resourceList/>
+   <license>GF3yMAaqoPX+TLFPKpy3Oixu0YEM4PcTRUx80pcRHjUFLJDPdi5xa/ij5zbqCApA</license>
+</appDefinition>
